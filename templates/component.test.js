@@ -5,14 +5,14 @@ import toJson from 'enzyme-to-json'
 import Comp from '.'
 
 const setup = props => {
-	const comp = shallow(<Comp {...props} />)
+  const comp = shallow(<Comp {...props} />)
 
-	return {
-		comp: comp,
-	}
+  return {
+    comp,
+  }
 }
 
 test('snapshot', () => {
-	const { comp } = setup()
-	expect(toJson(comp)).toMatchSnapshot()
+  const { comp } = setup()
+  expect(toJson(comp)).toMatchSnapshot()
 })

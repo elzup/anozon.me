@@ -11,7 +11,7 @@
 	},
 	"stages": {
 		"production": {
-			"domain": "farmcon.planckunits.io",
+			"domain": "anozon.me",
 			"path": "/"
 		}
 	}
