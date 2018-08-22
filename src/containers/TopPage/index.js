@@ -7,7 +7,11 @@ import type { State as RootState } from '../../types'
 type Props = {}
 
 const C = (props: Props) => {
-  return <div>{JSON.stringify(props)}</div>
+	return (
+		<div>
+			<p>hoge</p>
+		</div>
+	)
 }
 
 class TopPage extends React.Component<Props> {

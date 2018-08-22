@@ -29,5 +29,8 @@ type ThunkDispatch<A> = (ta: ThunkAction) => A
 export type Dispatch = ReduxDispatch<Action> & ThunkDispatch<Action>
 export type Store = ReduxStore<State, Action, Dispatch>
 
-export type Product = { 
+export type Product = {
+}
+
+export type System = {
 }

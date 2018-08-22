@@ -9,7 +9,7 @@ export const initialState: State = {}
 export default function(
   state: State = initialState,
   action: Action
-): Exact<State> {
+): State {
   switch (action.type) {
     default:
       return state

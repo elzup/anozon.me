@@ -1,3 +1,4 @@
 // @flow
 
-import 'moment/locale/ja'
+import 'normalize.css'
+// import 'moment/locale/ja'
