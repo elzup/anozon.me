@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 
 import type { State as RootState } from '../../types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // import * as selectors from './selectors'
 
@@ -38,10 +39,10 @@ const C = (props: Props) => {
 	return (
 		<MainFrame>
 			<TopScreen>
-				<h1>another node</h1>
-				<a>about</section>
-				<section>products</section>
-				<section>arts</section>
+				<h1>2nd node</h1>
+				<a href="">
+					<FontAwesomeIcon icon={['fab', 'twitter-square']} />
+				</a>
 			</TopScreen>
 		</MainFrame>
 	)
