@@ -9,47 +9,66 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // import * as selectors from './selectors'
 
-const meta = {
-	w: 650,
-	h: 650,
-}
-
 const MainFrame = styled.div`
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	min-width: ${meta.w}px;
-	min-height: ${meta.h}px;
+	min-width: 100vmin;
+	min-height: 100vmin;
 `
 
 const TopScreen = styled.div`
 	position: absolute;
-	left: calc(50% - ${meta.w / 2}px);
-	top: calc(50% - ${meta.h / 2}px);
-	width: ${meta.w}px;
-	height: ${meta.h}px;
+	left: calc(50% - 50vmin);
+	top: calc(50% - 50vmin);
+	width: 100vmin;
+	height: 100vmin;
 	background-color: #aaa;
 	overflow: hidden;
 `
 
 const SecondScreen = styled.div`
 	position: absolute;
-	left: calc(50% - ${meta.w / 2}px);
+	left: 0;
 	top: 100%;
-	width: ${meta.w}px;
+	width: 100%;
 	background-color: orange;
 	overflow: hidden;
 `
+
+const Circle = styled.div`
+	position: absolute;
+	top: calc(100% / 2 - 100vmax / 2);
+	left: calc(100% / 2 - 100vmax / 2);
+	width: 100vmax;
+	height: 100vmax;
+	border: solid black 1px;
+	border-radius: 50%;
+`
+
+const DecoWrap = styled.div`
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+`
+
+const Decoration = () => (
+	<DecoWrap>
+		<Circle />
+	</DecoWrap>
+)
 
 type Props = {}
 
 const C = (props: Props) => {
 	return (
 		<MainFrame>
+			<Decoration />
 			<TopScreen>
-				<h1>2nd node</h1>
+				<h1>new node</h1>
 				<a href="#profile">Profile</a>
 				<a href="#work">Work</a>
 				<a href="#hobby">Hobby</a>
