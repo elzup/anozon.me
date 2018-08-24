@@ -1,10 +1,18 @@
 // @flow
 
+import { injectGlobal } from 'styled-components'
 import 'normalize.css'
+
 // import 'moment/locale/ja'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPenNib, faGift, faGamepad } from '@fortawesome/free-solid-svg-icons'
+import {
+	faPenNib,
+	faPalette,
+	faGift,
+	faGamepad,
+	faCoffee,
+} from '@fortawesome/free-solid-svg-icons'
 import {
 	faTwitter,
 	faGithub,
@@ -14,10 +22,28 @@ import {
 
 library.add(
 	faPenNib,
+	faPalette,
 	faGift,
 	faGamepad,
+	faCoffee,
 	faTwitter,
 	faGithub,
 	faYoutube,
 	faTumblr,
 )
+
+injectGlobal`
+  @font-face {
+    font-family: 'Operator Mono';
+    src: url('../fonts/Operator-Mono.ttf');
+  }
+
+  body {
+    margin: 0;
+  }
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+`

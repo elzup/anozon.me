@@ -2,7 +2,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Menu from '../Menu'
+import Links from '../Links'
+import { Decoration } from './Decoration'
 
 type Props = {}
 
@@ -21,57 +23,23 @@ const Content = styled.div`
 	height: 100vmin;
 	background-color: #aaa;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 `
 
-const Circle = styled.div`
-	position: absolute;
-	top: calc(100% / 2 - 100vmax / 2);
-	left: calc(100% / 2 - 100vmax / 2);
-	width: 100vmax;
-	height: 100vmax;
-	border: solid black 1px;
-	border-radius: 50%;
+const EyeCatch = styled.div`
+	flex: 1;
 `
-
-const DecoWrap = styled.div`
-	position: absolute;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-`
-
-const Decoration = () => (
-	<DecoWrap>
-		<Circle />
-	</DecoWrap>
-)
-
 const TopScreen = (props: Props) => {
 	return (
 		<Wrapper>
 			<Decoration />
 			<Content>
-				<div>
+				<EyeCatch>
 					<h1>new node</h1>
-				</div>
-				<a href="#profile">Profile</a>
-				<a href="#work">Work</a>
-				<a href="#hobby">Hobby</a>
-				<a href="">
-					<FontAwesomeIcon icon={['fab', 'twitter']} />
-				</a>
-				<a href="">
-					<FontAwesomeIcon icon={['fab', 'github']} />
-				</a>
-				<a href="">
-					<FontAwesomeIcon icon={['fab', 'youtube']} />
-				</a>
-				<a href="">
-					<FontAwesomeIcon icon={'pen-nib'} />
-				</a>
-				<a href="">
-					<FontAwesomeIcon icon={'gift'} />
-				</a>
+				</EyeCatch>
+				<Menu />
+				<Links />
 			</Content>
 		</Wrapper>
 	)
