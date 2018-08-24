@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 
 import type { State as RootState } from '../../types'
+
 // import * as selectors from './selectors'
 
 const meta = {
@@ -31,15 +32,6 @@ const TopScreen = styled.div`
 	overflow: hidden;
 `
 
-const SecondScreen = styled.div`
-	position: absolute;
-	left: calc(50% - ${meta.w / 2}px);
-	top: 100%;
-	width: ${meta.w}px;
-	background-color: orange;
-	overflow: hidden;
-`
-
 type Props = {}
 
 const C = (props: Props) => {
@@ -47,11 +39,10 @@ const C = (props: Props) => {
 		<MainFrame>
 			<TopScreen>
 				<h1>another node</h1>
-				<section>about</section>
+				<a>about</section>
 				<section>products</section>
 				<section>arts</section>
 			</TopScreen>
-			<SecondScreen>hoge</SecondScreen>
 		</MainFrame>
 	)
 }

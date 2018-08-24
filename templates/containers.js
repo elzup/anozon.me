@@ -10,7 +10,7 @@ const C = (props: Props) => {
   return <div>{JSON.stringify(props)}</div>
 }
 
-class TopPage extends React.Component<Props> {
+class <%= DIRNAME %> extends React.Component<Props> {
 	render() {
 		const { props } = this
 		return C(props)
@@ -24,4 +24,4 @@ const conn = connect(
 	{},
 )
 
-export default conn(TopPage)
+export default conn(<%= DIRNAME %>)
