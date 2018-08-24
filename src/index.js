@@ -18,7 +18,7 @@ const rootEl = document.getElementById('root')
 if (rootEl !== null) {
 	ReactDOM.render(
 		<Provider store={store}>
-			<PersistGate loading={<h3>Loading</h3>} persistor={persistor}>
+			<PersistGate loading={<div />} persistor={persistor}>
 				<App />
 			</PersistGate>
 		</Provider>,
