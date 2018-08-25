@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 const Title = styled.h2`
 	text-align: center;
 	border-bottom: solid 1px gray;
+	width: 100%;
 	&:before {
 		content: '-';
 	}
