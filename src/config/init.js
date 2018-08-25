@@ -12,6 +12,7 @@ import {
 	faGift,
 	faGamepad,
 	faCoffee,
+	faArrowCircleUp,
 } from '@fortawesome/free-solid-svg-icons'
 import {
 	faTwitter,
@@ -26,6 +27,7 @@ library.add(
 	faGift,
 	faGamepad,
 	faCoffee,
+	faArrowCircleUp,
 	faTwitter,
 	faGithub,
 	faYoutube,
