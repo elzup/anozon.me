@@ -1680,13 +1680,13 @@ babel-plugin-s2s-action-types@^0.4.11:
     s2s-utils "^0.6.1"
     slash "^1.0.0"
 
-babel-plugin-s2s-initial-state-creater@^0.3.5:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-initial-state-creater/-/babel-plugin-s2s-initial-state-creater-0.3.5.tgz#200adba10c2a8baf1e859c18518d1eafe9cefd3b"
+babel-plugin-s2s-initial-state-creater@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-initial-state-creater/-/babel-plugin-s2s-initial-state-creater-0.3.6.tgz#251f81cb9d9ff324ea15b6af55f9962cf8b2ae7c"
   dependencies:
     babel-generator "^6.26.1"
     babylon "^6.18.0"
-    flow-faker "^0.2.2"
+    flow-faker "^0.2.4"
     json5 "^0.5.1"
     s2s-utils "^0.6.1"
     typed-assign "^0.1.1"
@@ -4607,19 +4607,19 @@ flow-bin@^0.79.1:
   version "0.79.1"
   resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.79.1.tgz#01c9f427baa6556753fa878c192d42e1ecb764b6"
 
-flow-execa@^0.2.0:
+flow-execa@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/flow-execa/-/flow-execa-0.2.1.tgz#7da5d06ccac77b2fe5c9c1ac496eea122f84f871"
   dependencies:
     execa "0.7.0"
 
-flow-faker@^0.2.2:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/flow-faker/-/flow-faker-0.2.1.tgz#f2a83110c7834911139f3da980fe63f8745447ed"
+flow-faker@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/flow-faker/-/flow-faker-0.2.4.tgz#f45a75e93e427df75decb4a87d42c1b9626277ed"
   dependencies:
     babel-traverse "^6.26.0"
     babylon "^6.18.0"
-    flow-execa "^0.2.0"
+    flow-execa "^0.2.1"
 
 flush-write-stream@^1.0.0:
   version "1.0.3"
@@ -8911,14 +8911,14 @@ s2s-hook-prettier@^0.2.4:
   dependencies:
     prettier "^1.11.1"
 
-s2s-plugins-redux@^0.4.7:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/s2s-plugins-redux/-/s2s-plugins-redux-0.4.7.tgz#91e783fe91614062c46c542b5f7e96bf387980ef"
+s2s-plugins-redux@^0.4.8:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/s2s-plugins-redux/-/s2s-plugins-redux-0.4.8.tgz#ea54e40e043b5e7011e7f1ce074a70937c0ae38a"
   dependencies:
     babel-plugin-s2s-action-creater "^0.3.1"
     babel-plugin-s2s-action-root "^0.4.2"
     babel-plugin-s2s-action-types "^0.4.11"
-    babel-plugin-s2s-initial-state-creater "^0.3.5"
+    babel-plugin-s2s-initial-state-creater "^0.3.6"
     babel-plugin-s2s-reducer-case-creater "^0.1.10"
     babel-plugin-s2s-reducer-root "^0.3.4"
     babel-plugin-s2s-reducer-test-case "^0.4.11"

@@ -1,11 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
+
 const Circle = styled.div`
 	position: absolute;
-	top: calc(100% / 2 - 100vmax / 2);
-	left: calc(100% / 2 - 100vmax / 2);
-	width: 100vmax;
-	height: 100vmax;
+	top: calc(50% - 90vmax / 2);
+	left: calc(50% - 90vmax / 2);
+	width: 90vmax;
+	height: 90vmax;
 	border: solid black 1px;
 	border-radius: 50%;
 `

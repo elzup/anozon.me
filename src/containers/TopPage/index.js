@@ -2,8 +2,10 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import TopScreen from '../../components/TopScreen'
+import ProfileScreen from '../../components/ProfileScreen'
+import WorkScreen from '../../components/WorkScreen'
+import HobbyScreen from '../../components/HobbyScreen'
 
 import type { State as RootState } from '../../types'
 
@@ -24,8 +26,6 @@ const SecondScreen = styled.div`
 	left: 0;
 	top: 100%;
 	width: 100%;
-	background-color: orange;
-	overflow: hidden;
 `
 type Props = {}
 
@@ -34,8 +34,9 @@ const C = (props: Props) => {
 		<MainFrame>
 			<TopScreen />
 			<SecondScreen>
-				<div id="work">Work line</div>
-				<div id="hobby">Hobby line</div>
+				<ProfileScreen />
+				<WorkScreen />
+				<HobbyScreen />
 			</SecondScreen>
 		</MainFrame>
 	)
