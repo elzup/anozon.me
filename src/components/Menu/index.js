@@ -5,7 +5,8 @@ import MenuItem from '../MenuItem'
 
 type Props = {}
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
+	margin: 10px 0;
 	display: flex;
 	justify-content: center;
 `

@@ -11,7 +11,7 @@ const A = styled.a`
 	border-radius: 5px;
 	background: black;
 	font-size: 30px;
-	line-height: 45px;
+	line-height: 47px;
 	margin: 5px;
 `
 

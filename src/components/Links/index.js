@@ -5,7 +5,8 @@ import LinksItem, { type Props as LinksItemProps } from '../LinksItem'
 
 type Props = {}
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
+	margin: 10px 0;
 	display: flex;
 	justify-content: center;
 `
@@ -13,27 +14,28 @@ const Wrapper = styled.div`
 const links: LinksItemProps[] = [
 	{
 		title: 'Twitter',
-		href: '',
+		href: 'https://twitter.com/anozon',
 		icon: ['fab', 'twitter'],
 	},
 	{
 		title: 'GitHub',
-		href: '',
+		href: 'https://github.com/elzup',
 		icon: ['fab', 'github'],
 	},
 	{
 		title: 'YouTube',
-		href: '',
+		href: 'https://www.youtube.com/channel/UCMo7HkIMW9AmbvODRkxwfnw',
 		icon: ['fab', 'youtube'],
 	},
 	{
 		title: 'HatenaBlog',
-		href: '',
+		href: 'https://anozon.hatenablog.com/',
 		icon: 'pen-nib',
 	},
 	{
 		title: 'Amazon',
-		href: '',
+		href:
+			'https://www.amazon.co.jp/registry/wishlist/Y1RL67S3309E/ref=cm_sw_r_cp_ep_ws_0E5FBbDE819XC',
 		icon: 'gift',
 	},
 ]
