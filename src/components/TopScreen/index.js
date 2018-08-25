@@ -6,7 +6,7 @@ import Menu from '../Menu'
 import Links from '../Links'
 import { Decoration } from './Decoration'
 
-import eyeCatch from './eyecatch.png'
+import eyeCatch from './eyecatch.svg'
 
 type Props = {}
 
@@ -32,14 +32,15 @@ const Content = styled.div`
 const EyeCatch = styled.div`
 	flex: 4;
 	display: flex;
-	width: 100%;
+	width: 100vmin;
 	justify-content: center;
 `
 const ImageDiv = styled.div`
-	width: 100%;
+	width: 100vmin;
 	height: auto;
 	background-image: url(${eyeCatch});
 	background-position: center;
+	background-size: 95% auto;
 	background-repeat: no-repeat;
 	object-fit: contain;
 `
