@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
 	margin: 5vh auto 0;
 	padding: 10px;
-	width: 550px;
+	width: 650px;
 `
 
 const Title = styled.h2`
