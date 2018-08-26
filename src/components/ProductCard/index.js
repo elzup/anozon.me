@@ -12,7 +12,7 @@ const Wrapper = styled.a`
 	position: relative;
 	&:before {
 		position: absolute;
-		top: 0;
+		top: 0.5em;
 		left: -0.5em;
 		content: '⬢';
 	}

@@ -9,6 +9,9 @@ const Wrapper = styled.section`
 	margin: 10px 0;
 	display: flex;
 	justify-content: center;
+	@media (max-width: 700px) {
+		margin: 0;
+	}
 `
 
 const links: LinksItemProps[] = [

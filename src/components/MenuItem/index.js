@@ -10,6 +10,12 @@ const A = styled.a`
 	padding: 5px;
 	margin: 0 5px;
 	font-size: 40px;
+	width: 20vw;
+	border-bottom: dashed;
+	justify-content: center;
+	@media (max-width: 700px) {
+		width: auto;
+	}
 `
 const Button = styled.div`
 	margin-left: 5px;
