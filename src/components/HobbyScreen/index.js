@@ -76,12 +76,30 @@ const hobbies: Category[] = [
 				text: '見たアニメ',
 			},
 			{
-				href: 'https://annict.jp/@elzup/TODO',
-				text: '好きなアニメ',
+				href: 'https://annict.jp/@elzup/tags/S',
+				text: '特に好きなアニメ',
 			},
 			{
-				href: 'https://elzup.tumblr.com/tagged/yome',
+				href: 'https://anozon10.tumblr.com/tagged/yome',
 				text: '嫁',
+			},
+		],
+	},
+	{
+		category: 'コード',
+		description: 'JavaScript, Vim, 競プロ, CTF',
+		links: [
+			{
+				href: 'https://github.com/elzup/DesktopStickers',
+				text: '好きな技術',
+			},
+			{
+				href: 'https://github.com/elzup/dotfiles',
+				text: 'dotfiles',
+			},
+			{
+				href: 'https://github.com/elzup/Brewfile',
+				text: 'Brewfile',
 			},
 		],
 	},
