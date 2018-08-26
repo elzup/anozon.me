@@ -11,7 +11,7 @@
 	},
 	"stages": {
 		"production": {
-			"domain": "www.anozon.me",
+			"domain": "anozon.me",
 			"path": "/"
 		}
 	}
