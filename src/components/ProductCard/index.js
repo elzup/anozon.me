@@ -1,6 +1,16 @@
 // @flow
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const hilight = keyframes`
+0% {
+	background: white;
+}
+
+100% {
+	background: #eee;
+}
+`
 
 export type Product = {
 	title: string,
@@ -21,6 +31,9 @@ const Wrapper = styled.a`
 		bottom: -0.5em;
 		right: -0.5em;
 		content: '⬢';
+	}
+	&:hover {
+		animation: ${hilight} 0.5s ease 0s forwards;
 	}
 `
 

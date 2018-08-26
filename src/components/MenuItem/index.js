@@ -1,9 +1,21 @@
 // @flow
 
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const invert = keyframes`
+0% {
+	background: white;
+	color: black;
+}
+
+100% {
+	background: black;
+	color: white;
+}
+`
 
 const A = styled.a`
 	display: flex;
@@ -13,8 +25,12 @@ const A = styled.a`
 	width: 20vw;
 	border-bottom: dashed;
 	justify-content: center;
+	border-radius: 5px;
 	@media (max-width: 700px) {
 		width: auto;
+	}
+	&:hover {
+		animation: ${invert} 0.6s ease 0s forwards;
 	}
 `
 const Button = styled.div`

@@ -1,11 +1,22 @@
 // @flow
 
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Label = styled.span`
 	margin-right: 5px;
+`
+
+const hilight = keyframes`
+0% {
+	box-shadow: 3px 3px;
+}
+
+100% {
+	box-shadow: 3px 3px #aaa;
+	background: #cdcdcd;
+}
 `
 
 const Body = styled.div`
@@ -15,6 +26,9 @@ const Body = styled.div`
 	padding: 5px;
 	float: left;
 	box-shadow: 3px 3px;
+	&:hover {
+		animation: ${hilight} 0.5s ease 0s forwards;
+	}
 `
 
 type Props = { href: string, text: string }
