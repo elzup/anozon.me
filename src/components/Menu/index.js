@@ -9,6 +9,7 @@ const Wrapper = styled.section`
 	margin: 10px 0;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 `
 
 const Menu = (props: Props) => {

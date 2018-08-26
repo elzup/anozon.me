@@ -38,7 +38,7 @@ const products: Product[] = [
 
 const WorkScreen = (props: Props) => {
 	return (
-		<Screen id="profile" title="Works" description="作ったもの">
+		<Screen id="work" title="Works" description="作ったもの">
 			<Products>
 				{products.map(product => (
 					<ProductCard product={product} />

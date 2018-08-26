@@ -7,6 +7,9 @@ const Wrapper = styled.div`
 	margin: 5vh auto 0;
 	padding: 10px;
 	width: 650px;
+	@media (max-width: 700px) {
+		width: 95%;
+	}
 `
 
 const Title = styled.h2`

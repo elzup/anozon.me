@@ -11,6 +11,9 @@ const Table = styled.table`
 	td {
 		height: 60px;
 	}
+	@media (max-width: 650px) {
+		font-size: 0.8em;
+	}
 `
 
 const Name = styled.th`
