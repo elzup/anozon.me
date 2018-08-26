@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import Menu from '../Menu'
 import Links from '../Links'
@@ -9,6 +9,16 @@ import { Decoration } from './Decoration'
 import eyeCatch from './eyecatch.svg'
 
 type Props = {}
+
+const show = keyframes`
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+`
 
 const Wrapper = styled.div`
 	position: absolute;
@@ -27,6 +37,8 @@ const Content = styled.div`
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	opacity: 0;
+	animation: ${show} 2s ease 2s forwards;
 `
 
 const EyeCatch = styled.div`
