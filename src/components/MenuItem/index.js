@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
+import Scrollchor from 'react-scrollchor'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -17,7 +18,7 @@ const invert = keyframes`
 }
 `
 
-const A = styled.a`
+const A = styled(Scrollchor)`
 	display: flex;
 	padding: 5px;
 	margin: 0 5px;
@@ -45,7 +46,7 @@ type Props = {
 
 const MenuItem = (props: Props) => {
 	return (
-		<A href={props.href}>
+		<A to={props.href} animate={{ offset: 20, duration: 400 }}>
 			<FontAwesomeIcon icon={props.icon} />
 			<Button>{props.label}</Button>
 		</A>
