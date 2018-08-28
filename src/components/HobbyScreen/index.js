@@ -72,12 +72,13 @@ const hobbies: Category[] = [
 		description: 'コードギアス、進撃の巨人、亜人、キノの旅',
 		links: [
 			{
-				href: 'https://annict.jp/@elzup/watched',
-				text: '見たアニメ',
+				href:
+					'https://annict.jp/@elzup/tags/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85',
+				text: '超好きなアニメ',
 			},
 			{
-				href: 'https://annict.jp/@elzup/tags/S',
-				text: '特に好きなアニメ',
+				href: 'https://annict.jp/@elzup/watched',
+				text: '見たアニメ',
 			},
 			{
 				href: 'https://anozon10.tumblr.com/tagged/yome',
