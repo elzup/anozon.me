@@ -2,6 +2,8 @@
 
 import { injectGlobal } from 'styled-components'
 import 'normalize.css'
+import ReactGA from 'react-ga'
+import config from '.'
 
 // import 'moment/locale/ja'
 
@@ -49,3 +51,8 @@ injectGlobal`
 		text-decoration: none;
 	}
 `
+
+if (!config.isDev) {
+	ReactGA.initialize(config.ga)
+	ReactGA.pageview(window.location.pathname + window.location.search)
+}
