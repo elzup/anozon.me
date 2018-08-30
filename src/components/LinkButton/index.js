@@ -31,13 +31,13 @@ const Body = styled.div`
 	}
 `
 
-type Props = { href: string, text: string }
+type Props = { href: string, text?: string }
 
 const LinkButton = (props: Props) => {
 	return (
 		<a href={props.href} target="_blank" rel="noopener noreferrer">
 			<Body>
-				<Label>{props.text}</Label>
+				{props.text && <Label>{props.text}</Label>}
 				<FontAwesomeIcon transform={{ rotate: 45 }} icon={'arrow-circle-up'} />
 			</Body>
 		</a>

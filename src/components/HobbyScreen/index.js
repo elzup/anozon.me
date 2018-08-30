@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import Screen from '../Screen'
 import LinkButton from '../LinkButton'
 
+import HobbyGallery from './HobbyGallery'
+
 type Props = {}
 
 const Table = styled.table`
@@ -129,6 +131,7 @@ const HobbyScreen = (props: Props) => (
 				</tbody>
 			</Table>
 		</div>
+		<HobbyGallery />
 	</Screen>
 )
 
