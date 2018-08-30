@@ -28,9 +28,14 @@ type ThunkDispatch<A> = (ta: ThunkAction) => A
 export type Dispatch = ReduxDispatch<Action> & ThunkDispatch<Action>
 export type Store = ReduxStore<State, Action, Dispatch>
 
-export type Product = {}
-
 export type System = {}
+
+export type Product = {
+	title: string,
+	url: string,
+	description: string,
+	filename: string,
+}
 
 export type OutLink = {
 	href: string,
@@ -41,4 +46,9 @@ export type Category = {
 	name: string,
 	description: string,
 	links: OutLink[],
+}
+
+export type HobbyImage = {
+	src: string,
+	href: string,
 }

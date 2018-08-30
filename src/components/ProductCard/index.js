@@ -2,6 +2,8 @@
 import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
 
+import type { Product } from '../../types'
+
 const hilight = keyframes`
 0% {
 	background: white;
@@ -12,12 +14,6 @@ const hilight = keyframes`
 }
 `
 
-export type Product = {
-	title: string,
-	url: string,
-	description: string,
-	filename: string,
-}
 const Wrapper = styled.a`
 	position: relative;
 	padding-top: 15px;
