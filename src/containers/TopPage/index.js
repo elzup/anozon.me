@@ -6,6 +6,7 @@ import TopScreen from '../../components/TopScreen'
 import ProfileScreen from '../../components/ProfileScreen'
 import WorkScreen from '../../components/WorkScreen'
 import HobbyScreen from '../../components/HobbyScreen'
+import Footer from '../../components/Footer'
 
 import type { State as RootState } from '../../types'
 
@@ -25,7 +26,6 @@ const SecondScreen = styled.div`
 	position: absolute;
 	left: 0;
 	top: 100%;
-	border-bottom: solid 50vh black;
 	width: 100%;
 `
 type Props = {}
@@ -38,6 +38,7 @@ const C = (props: Props) => {
 				<ProfileScreen />
 				<WorkScreen />
 				<HobbyScreen />
+				<Footer />
 			</SecondScreen>
 		</MainFrame>
 	)
