@@ -11,7 +11,6 @@ type RehydrateAction = {
 
 export type State = _State
 export type Action = _Action | RehydrateAction
-
 export type Reducer = (state: State, action: Action) => State
 export type Reducers = {
 	[key: string]: Reducer,
@@ -29,8 +28,17 @@ type ThunkDispatch<A> = (ta: ThunkAction) => A
 export type Dispatch = ReduxDispatch<Action> & ThunkDispatch<Action>
 export type Store = ReduxStore<State, Action, Dispatch>
 
-export type Product = {
+export type Product = {}
+
+export type System = {}
+
+export type OutLink = {
+	href: string,
+	text: string,
 }
 
-export type System = {
+export type Category = {
+	name: string,
+	description: string,
+	links: OutLink[],
 }
