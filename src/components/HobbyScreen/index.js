@@ -110,17 +110,23 @@ const HobbyScreen = (props: Props) => (
 	<Screen id="hobby" title="Hobby" description="趣味">
 		<div>
 			<Table>
-				{hobbies.map(hobby => (
-					<tr>
-						<Name>{hobby.category}</Name>
-						<td>{hobby.description}</td>
-						<td>
-							{hobby.links.map(link => (
-								<LinkButton href={link.href} text={link.text} />
-							))}
-						</td>
-					</tr>
-				))}
+				<tbody>
+					{hobbies.map(hobby => (
+						<tr key={hobby.category}>
+							<Name>{hobby.category}</Name>
+							<td>{hobby.description}</td>
+							<td>
+								{hobby.links.map(link => (
+									<LinkButton
+										key={link.href}
+										href={link.href}
+										text={link.text}
+									/>
+								))}
+							</td>
+						</tr>
+					))}
+				</tbody>
 			</Table>
 		</div>
 	</Screen>

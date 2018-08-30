@@ -41,7 +41,7 @@ const WorkScreen = (props: Props) => {
 		<Screen id="work" title="Works" description="作ったもの">
 			<Products>
 				{products.map(product => (
-					<ProductCard product={product} />
+					<ProductCard key={product.filename} product={product} />
 				))}
 			</Products>
 		</Screen>
