@@ -14,7 +14,7 @@ import {
 	faGift,
 	faGamepad,
 	faCoffee,
-	faArrowCircleUp,
+	faArrowCircleRight,
 } from '@fortawesome/free-solid-svg-icons'
 import {
 	faTwitter,
@@ -29,7 +29,7 @@ library.add(
 	faGift,
 	faGamepad,
 	faCoffee,
-	faArrowCircleUp,
+	faArrowCircleRight,
 	faTwitter,
 	faGithub,
 	faYoutube,

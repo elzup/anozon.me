@@ -14,9 +14,26 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(gif|jpe?g|png)$/,
+				test: /\.(gif|jpe?g|png|css)$/,
 				loaders: ['url-loader'],
 				include: path.resolve(__dirname, '../'),
+			},
+		],
+		loaders: [
+			// add your custom loaders.
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: 'style-loader',
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+				],
 			},
 		],
 	},
