@@ -1,8 +1,20 @@
 // @flow
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const spin = keyframes`
+50% {
+	background: #444;
+	transform: rotateZ(-10deg);
+}
+
+100% {
+	background: black;
+	transform: rotateZ(0deg);
+}
+`
 
 const A = styled.a`
 	position: relative;
@@ -13,6 +25,9 @@ const A = styled.a`
 	font-size: 30px;
 	line-height: 47px;
 	margin: 5px;
+	&:hover {
+		animation: ${spin} 0.3s ease 0s forwards;
+	}
 `
 
 const Box = styled.div`
