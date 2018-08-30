@@ -11,7 +11,7 @@ type Props = {}
 
 const Table = styled.table`
 	td {
-		height: 60px;
+		height: 80px;
 	}
 	@media (max-width: 650px) {
 		font-size: 0.8em;

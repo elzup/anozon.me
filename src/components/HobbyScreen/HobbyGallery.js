@@ -15,6 +15,7 @@ type Props = {}
 
 const Wrapper = styled.div`
 	display: flex;
+	margin-top: 15px;
 `
 
 const Box = styled.div`

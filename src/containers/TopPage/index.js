@@ -25,7 +25,7 @@ const SecondScreen = styled.div`
 	position: absolute;
 	left: 0;
 	top: 100%;
-	margin-bottom: 80vh;
+	border-bottom: solid 50vh black;
 	width: 100%;
 `
 type Props = {}
