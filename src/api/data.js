@@ -31,7 +31,7 @@ export const categories: Category[] = [
 		description: 'Minecraft, Splatoon2, VRChat, ネクロダンサー',
 		links: [
 			{
-				href: 'https://elzup.tumblr.com/tagged/minecraft',
+				href: 'https://anozon10.tumblr.com/tagged/minecraft',
 				text: 'Minecraft作品',
 			},
 			{
@@ -114,5 +114,11 @@ export const hobbyImages: HobbyImage[] = [
 		href: 'http://elzup.tumblr.com/post/94061387089/screw-cube',
 		src:
 			'https://78.media.tumblr.com/a762d2eb61576016d07652950699ed06/tumblr_n9xs891xSC1ttrer8o1_640.jpg',
+	},
+	{
+		href:
+			'https://anozon10.tumblr.com/post/177571882212/n-zap-%E9%87%91%E6%97%97',
+		src:
+			'https://78.media.tumblr.com/ab2ed8a26b0dbdd22e0ee433676c1c1b/tumblr_peayivCR3W1xe6l2po2_r1_540.jpg',
 	},
 ]
