@@ -8,19 +8,36 @@ import LinkButton from '../LinkButton'
 const Name = styled.th`
 	width: 5em;
 	border-right: solid;
+	border-bottom: solid;
 `
 
 type Props = { category: Category }
 
-const HobbyGallery = ({ category }: Props) => (
-	<tr>
-		<Name>{category.name}</Name>
-		<td>{category.description}</td>
-		<td>
-			{category.links.map(link => (
-				<LinkButton key={link.href} href={link.href} text={link.text} />
-			))}
-		</td>
-	</tr>
+const HobbyTr = ({ category }: Props) => (
+	<React.Fragment>
+		{category.hobbies.map((hobby, i) => (
+			<tr key={i}>
+				{i === 0 && (
+					<Name rowSpan={category.hobbies.length}>{category.name}</Name>
+				)}
+				<td>{hobby.name}</td>
+				<td>
+					{hobby.notes &&
+						hobby.notes.map(note => {
+							if (note.href) {
+								return (
+									<LinkButton
+										key={note.text}
+										href={note.href}
+										text={note.text}
+									/>
+								)
+							}
+							return <p key={note.text}>{note.text}</p>
+						})}
+				</td>
+			</tr>
+		))}
+	</React.Fragment>
 )
-export default HobbyGallery
+export default HobbyTr

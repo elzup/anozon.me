@@ -6,18 +6,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const hilight = keyframes`
 0% {
-	box-shadow: 3px 3px;
+	box-shadow: 1px 1px;
 }
 
 100% {
-	box-shadow: 3px 3px #aaa;
+	box-shadow: 1px 1px #aaa;
 	background: #cdcdcd;
 }
 `
 
 const Body = styled.div`
-	background: #efefef;
-	box-shadow: 3px 3px 1px;
+	background: #fff;
+	box-shadow: 1px 1px;
 	display: inline-flex;
 	margin-top: 5px;
 	// font-size: 0.8em;

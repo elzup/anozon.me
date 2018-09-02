@@ -13,7 +13,10 @@ type Props = {}
 
 const Table = styled.table`
 	td {
-		height: 80px;
+		border-bottom: solid 1px #ddd;
+	}
+	td p {
+		margin: 2px;
 	}
 	@media (max-width: 650px) {
 		font-size: 0.8em;

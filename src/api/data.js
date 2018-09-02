@@ -25,75 +25,158 @@ export const products: Product[] = [
 		tags: ['React', 'Redux'],
 	},
 ]
+
 export const categories: Category[] = [
 	{
 		name: 'ゲーム',
-		description: 'Minecraft, Splatoon2, VRChat, ネクロダンサー',
-		links: [
+		hobbies: [
 			{
-				href: 'https://anozon10.tumblr.com/tagged/minecraft',
-				text: 'Minecraft作品',
+				name: 'Minecraft',
+				notes: [
+					{ text: '@elzup' },
+					{ text: '建築勢' },
+					{
+						href: 'https://anozon10.tumblr.com/tagged/minecraft',
+						text: '作品',
+					},
+				],
 			},
 			{
-				href: 'https://anozon10.tumblr.com/tagged/game',
-				text: 'ゲーム実績',
+				name: 'Splatoon2',
+				notes: [
+					{ text: '持ち武器: N-ZAP95, H3Dリールガン' },
+					{ text: 'X2200' },
+					{
+						href: 'https://anozon10.tumblr.com/tagged/splatoon2',
+						text: '思い出',
+					},
+				],
+			},
+			{
+				name: 'VRChat',
+				notes: [
+					{
+						href:
+							'https://vrchat.net/home/user/usr_806a199f-824d-44ae-9bd2-d77d41862efb',
+						text: 'anozon',
+					},
+				],
+			},
+			{ name: 'ネクロダンサー' },
+			{ name: 'factorio' },
+			{
+				name: 'Switch',
+				notes: [{ text: 'SW-6170-3185-8144' }],
+			},
+			{
+				name: 'Steam ID',
+				notes: [
+					{ href: 'https://steamcommunity.com/id/elzup/', text: 'elzup' },
+				],
+			},
+			{
+				name: '---',
+				notes: [
+					{
+						href: 'https://anozon10.tumblr.com/tagged/game',
+						text: 'その他実績',
+					},
+				],
 			},
 		],
 	},
 	{
 		name: 'パズル',
-		description: 'ルービックキューブ, パズルゲーム, ペンシルパズル',
-		links: [
+		hobbies: [
 			{
-				href: "http://elzup.tumblr.com/tagged/rubick's%20cube",
-				text: 'パターンキューブ作品',
+				name: 'ルービックキューブ',
+				notes: [
+					{
+						href: "http://elzup.tumblr.com/tagged/rubick's%20cube",
+						text: 'パターンキューブ作品',
+					},
+				],
+			},
+			{
+				name: 'パズルゲーム',
+				notes: [
+					{
+						href: 'https://anozon10.tumblr.com/tagged/puzzle',
+						text: 'スマホゲー',
+					},
+				],
+			},
+			{
+				name: 'ペンシルパズル',
+				notes: [{ text: 'スリザーリンク好き' }, { text: 'ニコリのパズル' }],
 			},
 		],
 	},
 	{
 		name: 'ボドゲ',
-		description: 'オセロ, 将棋',
-		links: [
+		hobbies: [
+			{ name: 'オセロ' },
 			{
-				href: 'https://shogiwars.heroz.jp/users/elzup',
-				text: '将棋ウォーズ3級',
+				name: '将棋',
+				notes: [
+					{
+						href: 'https://shogiwars.heroz.jp/users/elzup',
+						text: '将棋ウォーズ',
+					},
+				],
 			},
 		],
 	},
 	{
 		name: 'アニメ',
-		description: 'コードギアス、進撃の巨人、亜人、キノの旅',
-		links: [
+		hobbies: [
+			{ name: 'コードギアス' },
+			{ name: '進撃の巨人' },
+			{ name: '亜人' },
+			{ name: 'キノの旅' },
 			{
-				href:
-					'https://annict.jp/@elzup/tags/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85',
-				text: '超好きなアニメ',
-			},
-			{
-				href: 'https://annict.jp/@elzup/watched',
-				text: '見たアニメ',
-			},
-			{
-				href: 'https://anozon10.tumblr.com/tagged/yome',
-				text: '嫁',
+				name: 'Annict',
+				notes: [
+					{
+						href: 'https://annict.jp/@elzup',
+						text: '@elzup',
+					},
+					{
+						href:
+							'https://annict.jp/@elzup/tags/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85',
+						text: '超好きなアニメ',
+					},
+					{
+						href: 'https://annict.jp/@elzup/watched',
+						text: '見たアニメ',
+					},
+					{
+						href: 'https://anozon10.tumblr.com/tagged/yome',
+						text: '嫁',
+					},
+				],
 			},
 		],
 	},
 	{
 		name: 'コード',
-		description: 'JavaScript, Vim, 競プロ, CTF',
-		links: [
+		hobbies: [
+			{ name: 'JavaScript' },
+			{ name: 'Vim' },
+			{ name: '競プロ' },
+			{ name: 'CTF' },
 			{
-				href: 'https://github.com/elzup/DesktopStickers',
-				text: '好きな技術',
-			},
-			{
-				href: 'https://github.com/elzup/dotfiles',
-				text: 'dotfiles',
-			},
-			{
-				href: 'https://github.com/elzup/Brewfile',
-				text: 'Brewfile',
+				name: '---',
+				notes: [
+					{
+						href: 'https://github.com/elzup/DesktopStickers',
+						text: '好きな技術',
+					},
+					{
+						href: 'https://github.com/elzup/dotfiles',
+						text: 'dotfiles',
+					},
+				],
 			},
 		],
 	},

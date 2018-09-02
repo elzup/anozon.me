@@ -37,15 +37,19 @@ export type Product = {
 	filename: string,
 }
 
-export type OutLink = {
-	href: string,
+export type HobbyNote = {
+	href?: string,
 	text: string,
+}
+
+export type Hobby = {
+	name: string,
+	notes?: HobbyNote[],
 }
 
 export type Category = {
 	name: string,
-	description: string,
-	links: OutLink[],
+	hobbies: Hobby[],
 }
 
 export type HobbyImage = {
