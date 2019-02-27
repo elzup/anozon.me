@@ -53,7 +53,12 @@ const getIcon = (url: string): IconProp => {
 const LinkButton = (props: Props) => {
 	const icon = getIcon(props.href)
 	return (
-		<a href={props.href} target="_blank" rel="noopener noreferrer">
+		<a
+			href={props.href}
+			aria-label={props.text}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
 			<div>
 				<Body>
 					{props.text && <Label>{props.text}</Label>}

@@ -1235,6 +1235,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-lazyload@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@types/react-lazyload/-/react-lazyload-2.3.1.tgz#6a1814432f668081ff693abfa8e09bff09aa3649"
+  integrity sha512-A6JP3TWmWP7I7V1yIme0yIZGHj+6Lhf9kos3A6eRw9ADy1eK3poP3XC0o6KBWvBHZbHJXoZAAni+mX6GE4dMKg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@*":
   version "0.57.38"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.38.tgz#2ff6ed1a7cc207afbfd87bf496513d96931d1446"
@@ -8957,6 +8964,11 @@ react-is@^16.3.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is
   version "16.8.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
+
+react-lazyload@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.5.0.tgz#7ed20bf0408dc684c10e808060e51d904cc0ab8d"
+  integrity sha512-RkEwpJDqEUVkXodxBXAI/UDyGYUBTZCU9kdG0Lwmg8BIv8zDvP+exFwUzc7wP4HX6n33CCsz+cjG2FpwdRoxpw==
 
 react-redux@^6.0.1:
   version "6.0.1"

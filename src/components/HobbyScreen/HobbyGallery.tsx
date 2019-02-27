@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import LazyLoad from 'react-lazyload'
 import { GridFrame } from '../'
-
 import LinkButton from '../LinkButton'
 
 import { hobbyImages } from '../../api/data'
@@ -33,7 +33,9 @@ const HobbyGallery = (props: Props) => (
 		<GridFrame>
 			{hobbyImages.map((hi, i) => (
 				<Box key={i}>
-					<Image src={hi.src} alt="" />
+					<LazyLoad>
+						<Image src={hi.src} alt="" />
+					</LazyLoad>
 					<LinkBox>
 						<LinkButton href={hi.href} />
 					</LinkBox>

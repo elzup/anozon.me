@@ -28,6 +28,7 @@
 		"react-dom": "^16.8.3",
 		"react-ga": "^2.5.7",
 		"react-image": "^2.0.0",
+		"react-lazyload": "^2.5.0",
 		"react-redux": "^6.0.1",
 		"react-router-dom": "^4.3.1",
 		"react-scripts": "^2.1.5",
@@ -43,6 +44,7 @@
 	"devDependencies": {
 		"@types/node": "^11.9.5",
 		"@types/react-dom": "^16.8.2",
+		"@types/react-lazyload": "^2.3.1",
 		"@types/react-redux": "^7.0.1",
 		"@types/react-router-dom": "^4.3.1",
 		"@types/styled-components": "^4.1.10",
