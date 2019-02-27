@@ -6,9 +6,6 @@
 	"static": {
 		"dir": "build"
 	},
-	"hooks": {
-		"build": ". .env.production && node scripts/build.js"
-	},
 	"stages": {
 		"production": {
 			"domain": "anozon.me",
