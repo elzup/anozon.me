@@ -36,7 +36,7 @@ const Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	opacity: 0;
-	animation: ${show} 2s ease 2s forwards;
+	animation: ${show} 1s ease 1s forwards;
 `
 
 const EyeCatch = styled.div`

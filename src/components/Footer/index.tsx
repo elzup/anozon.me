@@ -21,7 +21,7 @@ const Another = styled.div`
 
 const Footer = (props: Props) => (
 	<Panel>
-		<Another>anozon</Another>
+		<Another />
 	</Panel>
 )
 

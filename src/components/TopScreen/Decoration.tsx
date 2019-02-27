@@ -25,7 +25,7 @@ const Circle = styled.div`
 	background: white;
 	width: 0;
 	height: 0;
-	animation: ${circleShow} 1s ease 4s forwards;
+	animation: ${circleShow} 1s ease 2s forwards;
 `
 
 const DecoWrap = styled.div`
@@ -70,7 +70,7 @@ const coverClose = keyframes`
 const Cover = styled.div`
 	position: absolute;
 	background: black;
-	animation: ${coverShow} 1s ease 0s forwards, ${coverClose} 1s ease 4s forwards;
+	animation: ${coverShow} 1s ease 0s forwards, ${coverClose} 1s ease 2s forwards;
 `
 
 export const Decoration = () => (
