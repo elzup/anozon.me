@@ -3101,6 +3101,11 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
+css-doodle@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/css-doodle/-/css-doodle-0.6.0.tgz#360c1d10183ce317037afe00df36915d81b96aa3"
+  integrity sha512-/KEsN+uMPDa+DRaG2zkdMiSSbI8hqnGwE6Ro0Zv1fgepajVj8Q6LmWAkcIWFLqE60IWxSVZzavyecNsgBALFdw==
+
 css-has-pseudo@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/css-has-pseudo/-/css-has-pseudo-0.10.0.tgz#3c642ab34ca242c59c41a125df9105841f6966ee"
