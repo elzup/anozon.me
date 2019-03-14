@@ -15,7 +15,6 @@ const hilight = keyframes`
 
 const Wrapper = styled.a`
 	position: relative;
-	padding-top: 15px;
 	&:before {
 		position: absolute;
 		top: 0.5em;
