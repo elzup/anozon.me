@@ -16,7 +16,6 @@
 		"noEmit": true,
 		"jsx": "preserve",
 		"rootDirs": ["src"],
-		"types": ["jest"],
 		"typeRoots": ["src/types"]
 	},
 	"include": ["src/**/*"]

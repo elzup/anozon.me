@@ -21,6 +21,7 @@
 		"@fortawesome/react-fontawesome": "^0.1.4",
 		"@zeit/next-bundle-analyzer": "^0.1.2",
 		"@zeit/next-typescript": "^1.1.1",
+		"css-doodle": "^0.6.0",
 		"next": "^8.0.3",
 		"next-images": "^1.0.4",
 		"query-string": "^6.2.0",
@@ -57,7 +58,7 @@
 		"tslint-react": "^3.6.0"
 	},
 	"lint-staged": {
-		"src/**/*.js": [
+		"src/**/*.{ts,tsx}": [
 			"prettier --config ./.prettierrc --write",
 			"git add"
 		]

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
-import { GridFrame } from '../'
 import LinkButton from '../LinkButton'
 
 import { hobbyImages } from '../../api/data'
@@ -11,10 +10,12 @@ type Props = {}
 const Wrapper = styled.div`
 	display: flex;
 	margin-top: 15px;
+	min-height: 350px;
 `
 
 const Box = styled.div`
 	position: relative;
+	float: left;
 	width: 33%;
 `
 
@@ -30,7 +31,7 @@ const LinkBox = styled.div`
 
 const HobbyGallery = (props: Props) => (
 	<Wrapper>
-		<GridFrame>
+		<div>
 			{hobbyImages.map((hi, i) => (
 				<Box key={i}>
 					<LazyLoad>
@@ -41,7 +42,7 @@ const HobbyGallery = (props: Props) => (
 					</LinkBox>
 				</Box>
 			))}
-		</GridFrame>
+		</div>
 	</Wrapper>
 )
 export default HobbyGallery

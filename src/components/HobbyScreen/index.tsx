@@ -11,6 +11,8 @@ import { categories } from '../../api/data'
 type Props = {}
 
 const Table = styled.table`
+	background: #ffffffb0;
+	width: 100%;
 	td {
 		border-bottom: solid 1px #ddd;
 	}

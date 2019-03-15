@@ -19,12 +19,13 @@ const invert = keyframes`
 
 const A = styled(Scrollchor)`
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 5px;
 	margin: 0 5px;
 	font-size: 40px;
 	width: 20vw;
 	border-bottom: dashed;
-	justify-content: center;
 	border-radius: 5px;
 	@media (max-width: 700px) {
 		width: auto;
