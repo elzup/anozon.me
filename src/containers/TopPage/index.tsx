@@ -24,9 +24,11 @@ const MainFrame = styled.div`
 
 const SecondScreen = styled.div`
 	position: absolute;
+	z-index: -2;
 	left: 0;
 	top: 100%;
 	width: 100%;
+	background: linear-gradient(white 0%, #e6e6e6 100%);
 `
 
 const DoodleBackground = cssDoodle`
@@ -43,9 +45,8 @@ const DoodleBackground = cssDoodle`
     '0 0, 0 0, 0 0',
   ));
 
-  calc(@row() * @col() / @size());
+  background: hsl(0, 0%, calc(95% + @abs(@row() / @size-row() - 0.5) * 10%));
 
-  background: hsl(0, 0%, calc(100% - @row() / @size-row() * 10%));
 	margin: -.5px;
 
 	// transition: all 3s;
@@ -71,7 +72,7 @@ const TopPage: React.SFC<Props> = () => (
 		<SecondScreen>
 			<DoodleBackground
 				style={{
-					zIndex: '-1',
+					zIndex: -1,
 					position: 'absolute',
 				}}
 			/>
