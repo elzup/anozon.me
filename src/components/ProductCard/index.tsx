@@ -27,20 +27,21 @@ const Wrapper = styled.a`
 		right: -0.5em;
 		content: '⬢';
 	}
-	&:hover {
-		animation: ${hilight} 0.5s ease 0s forwards;
-	}
 `
 
 const Card = styled.div`
 	width: 300px;
 	text-align: center;
+	background: #ffffffb0;
 	margin-top: 20px;
 	border: dashed #dcdcdc 1px;
 	padding: 5px;
 	img {
 		width: 95%;
 		border-radius: 5px;
+	}
+	&:hover {
+		animation: ${hilight} 0.5s ease 0s forwards;
 	}
 `
 
