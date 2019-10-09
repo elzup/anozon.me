@@ -1,0 +1,29 @@
+
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.16'
+
+    - name: install & build
+      run: |
+       yarn install
+       yarn build
+       touch ./build/.nojekyll
+
+    - name: GitHub Pages Deploy
+      uses: maxheld83/ghpages@v0.2.1
+      env:
+        BUILD_DIR: ./public
