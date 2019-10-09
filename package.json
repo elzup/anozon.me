@@ -47,7 +47,7 @@
 		"@types/react-dom": "16.9.1",
 		"@types/react-lazyload": "2.5.0",
 		"@types/react-redux": "7.1.4",
-		"@types/react-router-dom": "4.3.1",
+		"@types/react-router-dom": "5.1.0",
 		"@types/styled-components": "4.1.19",
 		"babel-plugin-lodash": "3.3.4",
 		"husky": "3.0.8",
