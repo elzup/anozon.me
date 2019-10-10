@@ -1,4 +1,4 @@
-# [anozon.me](https://anozon.me) [![Build Status](https://travis-ci.org/elzup/anozon.me.svg?branch=master)](https://travis-ci.org/elzup/anozon.me) [![Coverage Status](https://coveralls.io/repos/github/elzup/anozon.me/badge.svg?branch=master)](https://coveralls.io/github/elzup/anozon.me?branch=master)
+# [anozon.me](https://anozon.me) [![Netlify Status](https://api.netlify.com/api/v1/badges/8171ed32-274d-4153-967d-f2c3055829fb/deploy-status)](https://app.netlify.com/sites/blissful-noether-a2e407/deploys)
 
 > anozon homepage web
 ![anozon.me](
