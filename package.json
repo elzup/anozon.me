@@ -22,7 +22,7 @@
 		"@zeit/next-bundle-analyzer": "0.1.2",
 		"@zeit/next-typescript": "1.1.1",
 		"css-doodle": "0.7.3",
-		"next": "8.1.0",
+		"next": "9.1.1",
 		"next-images": "1.2.0",
 		"query-string": "6.8.3",
 		"react": "16.10.2",
