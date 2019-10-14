@@ -53,7 +53,7 @@ const ProductCard = ({ product }: Props) => {
 	return (
 		<Wrapper href={product.url} target="_blank" rel="noopener noreferrer">
 			<Card>
-				<img src={`/imgs/${product.filename}`} alt={product.title} />
+				<img src={`/static/${product.filename}`} alt={product.title} />
 				<h4>{product.title}</h4>
 				<p>{product.description}</p>
 			</Card>

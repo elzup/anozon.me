@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { cssDoodle } from '../../utils'
+import { DoodleBackgroundFooter } from '../Doodle'
 
 const Panel = styled.div`
 	height: 10em;
@@ -23,37 +23,9 @@ const CopyRight = styled.h4`
 	color: white;
 `
 
-const DoodleBackground = cssDoodle`
-  :doodle {
-		@grid: 5x9;
-		width: 100%;
-		height: 10em;
-		z-index: 1;
-		position: absolute;
-	}
-
-	color: #ddd;
-	margin: 4px;
-
-
-	--d: 5;
-	--r: 3;
-	--num: calc(
-		@abs(@abs(@row() - 3) + @abs(@col() - 3) - 5) / 5
-	);
-	
-	background: hsla(
-		0, 0%, 100%, calc(var(--num) / 5)
-	);
-
-  :hover { 
-		transform: rotate(90deg);
-	}
-`
-
 const Footer = () => (
 	<Panel>
-		<DoodleBackground style={{}} />
+		<DoodleBackgroundFooter />
 		<Contents>
 			<CopyRight>© 2019 anozon</CopyRight>
 		</Contents>

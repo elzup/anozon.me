@@ -45,7 +45,7 @@ const EyeCatch = styled.div`
 const ImageDiv = styled.div`
 	width: 100vmin;
 	height: auto;
-	background-image: url(img/eyecatch.svg);
+	background-image: url(static/eyecatch.svg);
 	background-position: center;
 	background-size: 95% auto;
 	background-repeat: no-repeat;

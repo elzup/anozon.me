@@ -51,5 +51,5 @@ export const GlobalStyle = createGlobalStyle`
 
 if (!config.isDev) {
 	ReactGA.initialize(config.ga)
-	ReactGA.pageview(window.location.pathname + window.location.search)
+	ReactGA.pageview('/')
 }

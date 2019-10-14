@@ -35,8 +35,8 @@ const ProfileScreen = () => {
 		<Screen id="profile" title="Profile" description="自己紹介">
 			<Body>
 				<ImagesCol>
-					<img src="./img/anozon-icon.svg" alt="anozon icon" />
-					<img src="./img/launcher-icon.svg" alt="anozon logo" />
+					<img src="/static/anozon-icon.svg" alt="anozon icon" />
+					<img src="/static/launcher-icon.svg" alt="anozon logo" />
 				</ImagesCol>
 				<NameBox>
 					<Name>anozon</Name>

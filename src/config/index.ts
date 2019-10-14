@@ -1,16 +1,11 @@
-let { NODE_ENV, REACT_APP_GA } = process.env
-
-const isDev = NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development'
 
 const configDevelopment = {}
 const configProduction = {}
 
 const config = {
 	isDev,
-	ga: REACT_APP_GA || '',
-	api: {
-		url: '',
-	},
+	ga: process.env.REACT_APP_GA || '',
 	...(isDev ? configDevelopment : configProduction),
 }
 
