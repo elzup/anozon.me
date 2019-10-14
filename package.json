@@ -6,8 +6,10 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
+		"export": "yarn run setenv && yarn run build && next export",
 		"gen:env": "cp templates/temp.env .env.development.local && cp templates/temp.env .env.production.local",
 		"lint": "eslint --ext .ts,.tsx src",
+		"setenv": "node scripts/setup_env.js",
 		"precommit": "lint-staged",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
@@ -37,6 +39,7 @@
 		"@zeit/next-typescript": "^1.1.1",
 		"babel-plugin-lodash": "3.3.4",
 		"babel-plugin-styled-components": "^1.10.6",
+		"dotenv": "^8.1.0",
 		"eslint-config-nzap": "^1.2.4",
 		"husky": "3.0.9",
 		"lint-staged": "9.4.2",

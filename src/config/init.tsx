@@ -34,10 +34,11 @@ library.add(
 )
 
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Operator Mono';
-    src: url('../fonts/Operator-Mono.ttf');
-  }
+	@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
+
+	* {
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
 
   body {
     margin: 0;
