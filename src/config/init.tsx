@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 import ReactGA from 'react-ga'
-import config from '.'
 
 // import 'moment/locale/ja'
 
@@ -19,6 +18,7 @@ import {
 	faYoutube,
 	faTumblr,
 } from '@fortawesome/free-brands-svg-icons'
+import config from '.'
 
 library.add(
 	faPenNib,

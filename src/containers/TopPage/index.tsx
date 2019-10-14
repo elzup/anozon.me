@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
 import styled from 'styled-components'
 import TopScreen from '../../components/TopScreen'
 import ProfileScreen from '../../components/ProfileScreen'
@@ -7,7 +6,6 @@ import WorkScreen from '../../components/WorkScreen'
 import HobbyScreen from '../../components/HobbyScreen'
 import Footer from '../../components/Footer'
 
-import { State as RootState } from '../../types'
 import { cssDoodle } from '../../utils'
 
 // import * as selectors from './selectors'
@@ -65,8 +63,7 @@ const DoodleBackground = cssDoodle`
   }
 `
 
-type Props = {}
-const TopPage: React.SFC<Props> = () => (
+const TopPage = () => (
 	<MainFrame>
 		<TopScreen />
 		<SecondScreen>
@@ -84,11 +81,4 @@ const TopPage: React.SFC<Props> = () => (
 	</MainFrame>
 )
 
-const ms = (state: RootState) => ({})
-
-const conn = connect(
-	ms,
-	{}
-)
-
-export default conn(TopPage)
+export default TopPage

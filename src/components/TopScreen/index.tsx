@@ -4,9 +4,6 @@ import styled, { keyframes } from 'styled-components'
 import Menu from '../Menu'
 import Links from '../Links'
 import { Decoration } from './Decoration'
-import eyeCatchSVG from './eyecatch.svg'
-
-type Props = {}
 
 const show = keyframes`
 0% {
@@ -48,14 +45,14 @@ const EyeCatch = styled.div`
 const ImageDiv = styled.div`
 	width: 100vmin;
 	height: auto;
-	background-image: url(${eyeCatchSVG});
+	background-image: url(img/eyecatch.svg);
 	background-position: center;
 	background-size: 95% auto;
 	background-repeat: no-repeat;
 	object-fit: contain;
 `
 
-const TopScreen = (props: Props) => {
+const TopScreen = () => {
 	return (
 		<Wrapper>
 			<Decoration />

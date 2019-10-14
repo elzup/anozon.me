@@ -2,10 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import Screen from '../Screen'
-import anozonIconSVG from './anozon-icon.svg'
-import launcherIconSVG from './launcher-icon.svg'
-
-type Props = {}
 
 const Body = styled.div`
 	text-align: center;
@@ -34,13 +30,13 @@ const ImagesCol = styled.div`
 	}
 `
 
-const ProfileScreen = (props: Props) => {
+const ProfileScreen = () => {
 	return (
 		<Screen id="profile" title="Profile" description="自己紹介">
 			<Body>
 				<ImagesCol>
-					<img src={anozonIconSVG} alt="anozon icon" />
-					<img src={launcherIconSVG} alt="anozon logo" />
+					<img src="./img/anozon-icon.svg" alt="anozon icon" />
+					<img src="./img/launcher-icon.svg" alt="anozon logo" />
 				</ImagesCol>
 				<NameBox>
 					<Name>anozon</Name>

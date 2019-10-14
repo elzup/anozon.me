@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Category } from '../../types'
 
 import LinkButton from '../LinkButton'
+
 const Name = styled.th`
 	width: 5em;
 	border-right: solid;
@@ -38,4 +39,5 @@ const HobbyTr = ({ category }: Props) => (
 		))}
 	</React.Fragment>
 )
+
 export default HobbyTr

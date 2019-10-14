@@ -2,7 +2,7 @@
 
 declare module 'react-scrollchor'
 namespace JSX {
-	interface IntrinsicElements {
-		'css-doodle': any
+	type IntrinsicElements = {
+		'css-doodle': unknown
 	}
 }

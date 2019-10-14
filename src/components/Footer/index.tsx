@@ -1,8 +1,6 @@
 import * as React from 'react'
-import styled, { withTheme } from 'styled-components'
+import styled from 'styled-components'
 import { cssDoodle } from '../../utils'
-
-type Props = {}
 
 const Panel = styled.div`
 	height: 10em;
@@ -53,7 +51,7 @@ const DoodleBackground = cssDoodle`
 	}
 `
 
-const Footer = (props: Props) => (
+const Footer = () => (
 	<Panel>
 		<DoodleBackground style={{}} />
 		<Contents>
