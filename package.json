@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
-		"export": "yarn run setenv && yarn run build && next export",
+		"export": "yarn build && next export",
 		"gen:env": "cp templates/temp.env .env.development.local && cp templates/temp.env .env.production.local",
 		"lint": "eslint --ext .ts,.tsx src",
 		"setenv": "node scripts/setup_env.js",
