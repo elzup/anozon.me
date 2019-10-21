@@ -1,7 +1,12 @@
-require('dotenv').config()
+/* eslint @typescript-eslint/no-require-imports: 0 */
+/* eslint @typescript-eslint/no-var-requires: 0 */
+/* eslint import/no-extraneous-dependencies: 0 */
+
+const webpack = require('webpack')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 
-const path = require('path')
+require('dotenv').config()
+
 const dist = __dirname + '/dist'
 
 module.exports = {
@@ -11,6 +16,7 @@ module.exports = {
 			acc[`process.env.${curr}`] = JSON.stringify(process.env[curr])
 			return acc
 		}, {})
+
 		config.plugins.push(new webpack.DefinePlugin(env))
 		config.plugins.push(
 			new WorkboxWebpackPlugin.GenerateSW({

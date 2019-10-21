@@ -27,8 +27,7 @@
 		"react-ga": "2.7.0",
 		"react-lazyload": "2.6.2",
 		"react-scrollchor": "6.0.0",
-		"styled-components": "^4.4.0",
-		"typescript": "3.6.4"
+		"styled-components": "^4.4.0"
 	},
 	"devDependencies": {
 		"@types/node": "12.7.12",
@@ -43,6 +42,8 @@
 		"husky": "3.0.9",
 		"lint-staged": "9.4.2",
 		"prettier": "1.18.2",
+		"typescript": "3.6.4",
+		"webpack": "^4.41.2",
 		"workbox-webpack-plugin": "^4.3.1"
 	},
 	"lint-staged": {

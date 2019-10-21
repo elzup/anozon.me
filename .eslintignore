@@ -1,6 +1,2 @@
 templates/
 node_modules/
-
-next.config.js
-
-scripts/setup_env.js
