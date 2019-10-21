@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import ReactGA from 'react-ga'
 
-// import 'moment/locale/ja'
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
 	faPenNib,
