@@ -30,8 +30,8 @@ const links: LinksItemProps[] = [
 		icon: ['fab', 'youtube'],
 	},
 	{
-		title: 'HatenaBlog',
-		href: 'https://anozon.hatenablog.com/',
+		title: 'Blog',
+		href: 'https://blog.anozon.me/',
 		icon: 'pen-nib',
 	},
 	{

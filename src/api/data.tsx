@@ -22,7 +22,14 @@ export const products: Product[] = [
 		url: 'https://anozon.me',
 		description: 'このサイト',
 		filename: 'another-node.png',
-		tags: ['React', 'Redux'],
+		tags: ['React', 'Redux', 'TypeScript'],
+	},
+	{
+		title: 'anozonblog',
+		url: 'https://blog.anozon.me',
+		description: 'GatsbyJS と TypeScriptで作ったブログ',
+		filename: 'anozonblog.png',
+		tags: ['GatsbyJS', 'React', 'TypeScript'],
 	},
 ]
 
