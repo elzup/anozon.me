@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 
-export const GA_TRACKING_ID = 'UA-49286104-10'
+export const GA_TRACKING_ID = 'ua-49286104-9'
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = url => {
