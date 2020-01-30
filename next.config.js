@@ -5,11 +5,15 @@
 const webpack = require('webpack')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+})
+
 require('dotenv').config()
 
 const dist = __dirname + '/dist'
 
-module.exports = {
+const config = {
 	'/': { page: '/' },
 	webpack: config => {
 		const env = Object.keys(process.env).reduce((acc, curr) => {
@@ -29,3 +33,5 @@ module.exports = {
 		return config
 	},
 }
+
+module.exports = withBundleAnalyzer(config)
