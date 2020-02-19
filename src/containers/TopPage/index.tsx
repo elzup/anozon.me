@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled from 'styled-components'
 import TopScreen from '../../components/TopScreen'
 import ProfileScreen from '../../components/ProfileScreen'

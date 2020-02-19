@@ -1,14 +1,10 @@
-import * as React from 'react'
 import styled from 'styled-components'
 
 import Screen from '../Screen'
 
+import { categories } from '../../api/data'
 import HobbyGallery from './HobbyGallery'
 import HobbyTr from './HobbyTr'
-
-import { categories } from '../../api/data'
-
-type Props = {}
 
 const Table = styled.table`
 	background: #ffffffb0;
@@ -24,7 +20,7 @@ const Table = styled.table`
 	}
 `
 
-const HobbyScreen = (props: Props) => (
+const HobbyScreen = () => (
 	<Screen id="hobby" title="Hobby" description="趣味">
 		<div>
 			<Table>

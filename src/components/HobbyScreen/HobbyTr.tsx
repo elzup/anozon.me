@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled from 'styled-components'
 import { Category } from '../../types'
 
@@ -13,7 +12,7 @@ const Name = styled.th`
 type Props = { category: Category }
 
 const HobbyTr = ({ category }: Props) => (
-	<React.Fragment>
+	<>
 		{category.hobbies.map((hobby, i) => (
 			<tr key={i}>
 				{i === 0 && (
@@ -37,7 +36,7 @@ const HobbyTr = ({ category }: Props) => (
 				</td>
 			</tr>
 		))}
-	</React.Fragment>
+	</>
 )
 
 export default HobbyTr

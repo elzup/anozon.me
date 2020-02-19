@@ -1,11 +1,8 @@
-import * as React from 'react'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
 import LinkButton from '../LinkButton'
 
 import { hobbyImages } from '../../api/data'
-
-type Props = {}
 
 const Wrapper = styled.div`
 	display: flex;
@@ -29,7 +26,7 @@ const LinkBox = styled.div`
 	right: 10px;
 `
 
-const HobbyGallery = (props: Props) => (
+const HobbyGallery = () => (
 	<Wrapper>
 		<div>
 			{hobbyImages.map((hi, i) => (
@@ -45,4 +42,5 @@ const HobbyGallery = (props: Props) => (
 		</div>
 	</Wrapper>
 )
+
 export default HobbyGallery

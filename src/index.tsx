@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import TopPage from './containers/TopPage'
 import { GlobalStyle } from './config/init'
 

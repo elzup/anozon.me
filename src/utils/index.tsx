@@ -1,6 +1,8 @@
 import React from 'react'
 /* eslint-disable-next-line */
-import 'css-doodle'
+if (typeof window !== 'undefined') {
+	require('css-doodle')
+}
 
 export function sleep(msec: number): Promise<void> {
 	return new Promise(resolve => setTimeout(resolve, msec))

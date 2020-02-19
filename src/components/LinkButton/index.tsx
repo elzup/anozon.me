@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
@@ -52,6 +51,7 @@ const getIcon = (url: string): IconProp => {
 
 const LinkButton = (props: Props) => {
 	const icon = getIcon(props.href)
+
 	return (
 		<a
 			href={props.href}

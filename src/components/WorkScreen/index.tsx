@@ -1,11 +1,8 @@
-import * as React from 'react'
 import Screen from '../Screen'
 
 import ProductGallery from './ProductGallery'
 
-type Props = {}
-
-const WorkScreen = (props: Props) => {
+const WorkScreen = () => {
 	return (
 		<Screen id="work" title="Works" description="作ったもの">
 			<ProductGallery />

@@ -1,8 +1,5 @@
-import * as React from 'react'
 import styled from 'styled-components'
 import MenuItem from '../MenuItem'
-
-type Props = {}
 
 const Wrapper = styled.section`
 	margin: 10px 0;
@@ -11,7 +8,7 @@ const Wrapper = styled.section`
 	flex-wrap: wrap;
 `
 
-const Menu = (props: Props) => {
+const Menu = () => {
 	return (
 		<Wrapper>
 			<MenuItem href="#profile" label="Profile" icon="coffee" />
