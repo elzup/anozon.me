@@ -1,4 +1,6 @@
-import Index from '../src'
-// const Index = dynamic(() => import('../src'), { ssr: false })
+import { NextPage } from 'next'
 
-export default Index
+// const IndexPage: NextPage = () => <Index />
+const IndexPage: NextPage = () => <div>Hello</div>
+
+export default IndexPage
