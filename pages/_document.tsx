@@ -42,8 +42,13 @@ class Document extends NextDocument {
 			<Html lang="ja">
 				<Head>
 					<title>{config.title}</title>
-					<link rel="shortcut icon" href="icon.png" />
-					<link rel="icon" type="image/png" href="icon.png" sizes="192x192" />
+					<link rel="shortcut icon" href="/static/launcher-icon-4x.png" />
+					<link
+						rel="icon"
+						type="image/png"
+						href="/static/launcher-icon-4x.png"
+						sizes="192x192"
+					/>
 
 					<meta name="description" content={config.description} />
 					<meta property="og:url" content={config.url} />
