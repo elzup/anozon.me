@@ -32,8 +32,6 @@ library.add(
 )
 
 export const GlobalStyle = createGlobalStyle`
-	@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
-
 	* {
 		font-family: 'M PLUS Rounded 1c', sans-serif;
 	}

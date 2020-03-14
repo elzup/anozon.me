@@ -40,8 +40,8 @@ class Document extends NextDocument {
 	render() {
 		return (
 			<Html lang="ja">
+				<title>{config.title}</title>
 				<Head>
-					<title>{config.title}</title>
 					<link rel="shortcut icon" href="/static/launcher-icon-4x.png" />
 					<link
 						rel="icon"
@@ -64,6 +64,8 @@ class Document extends NextDocument {
 						name="viewport"
 						content="width=device-width, initial-scale=1.0"
 					/>
+					<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
 					<script
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
