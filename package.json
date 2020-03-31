@@ -15,26 +15,26 @@
 		"build-storybook": "build-storybook"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "1.2.27",
-		"@fortawesome/free-brands-svg-icons": "5.12.1",
-		"@fortawesome/free-solid-svg-icons": "5.12.1",
+		"@fortawesome/fontawesome-svg-core": "1.2.28",
+		"@fortawesome/free-brands-svg-icons": "5.13.0",
+		"@fortawesome/free-solid-svg-icons": "5.13.0",
 		"@fortawesome/react-fontawesome": "0.1.9",
 		"@zeit/next-preact": "0.1.0",
-		"css-doodle": "0.7.7",
+		"css-doodle": "0.8.4",
 		"eslint": "6.8.0",
-		"next": "9.3.2",
+		"next": "9.3.3",
 		"preact": "10.3.4",
 		"preact-ssr-prepass": "1.0.1",
-		"react": "16.13.0",
-		"react-dom": "16.13.0",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
 		"react-ga": "2.7.0",
-		"react-lazyload": "2.6.5",
+		"react-lazyload": "2.6.6",
 		"react-scrollchor": "6.0.0",
 		"styled-components": "5.0.1"
 	},
 	"devDependencies": {
-		"@next/bundle-analyzer": "9.3.0",
-		"@types/node": "13.9.1",
+		"@next/bundle-analyzer": "9.3.3",
+		"@types/node": "13.9.8",
 		"@types/react-dom": "16.9.5",
 		"@types/react-lazyload": "2.6.0",
 		"@types/styled-components": "5.0.1",
@@ -44,11 +44,11 @@
 		"dotenv": "8.2.0",
 		"eslint-config-nzap": "1.4.6",
 		"husky": "4.2.3",
-		"lint-staged": "10.0.8",
+		"lint-staged": "10.1.1",
 		"prettier": "1.19.1",
 		"typescript": "3.8.3",
-		"webpack": "4.42.0",
-		"workbox-webpack-plugin": "5.0.0"
+		"webpack": "4.42.1",
+		"workbox-webpack-plugin": "5.1.2"
 	},
 	"lint-staged": {
 		"src/**/*.{ts,tsx}": [
