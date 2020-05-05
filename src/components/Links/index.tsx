@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import LinksItem, { Props as LinksItemProps } from '../LinksItem'
 
-type Props = {}
-
 const Wrapper = styled.section`
 	margin: 10px 0;
 	display: flex;
@@ -41,9 +39,9 @@ const links: LinksItemProps[] = [
 	},
 ]
 
-const Links = (props: Props) => (
+const Links = () => (
 	<Wrapper>
-		{links.map(linkProps => (
+		{links.map((linkProps) => (
 			<LinksItem key={linkProps.title} {...linkProps} />
 		))}
 	</Wrapper>
