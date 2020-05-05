@@ -45,7 +45,7 @@
 		"eslint-config-nzap": "1.4.6",
 		"husky": "4.2.5",
 		"lint-staged": "10.2.1",
-		"prettier": "1.19.1",
+		"prettier": "2.0.5",
 		"typescript": "3.8.3",
 		"webpack": "4.43.0",
 		"workbox-webpack-plugin": "5.1.3"
