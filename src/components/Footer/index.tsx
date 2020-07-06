@@ -26,7 +26,7 @@ const Footer = () => (
 	<Panel>
 		<DoodleBackgroundFooter />
 		<Contents>
-			<CopyRight>© 2019 anozon</CopyRight>
+			<CopyRight>© 2020 anozon</CopyRight>
 		</Contents>
 	</Panel>
 )
