@@ -12,7 +12,8 @@
 		"setenv": "node scripts/setup_env.js",
 		"precommit": "lint-staged",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook",
+		"analyze": "ANALYZE=true BUNDLE_ANALYZE=browser next build"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "1.2.29",
@@ -33,7 +34,7 @@
 		"styled-components": "5.1.1"
 	},
 	"devDependencies": {
-		"@next/bundle-analyzer": "9.4.4",
+		"@next/bundle-analyzer": "^9.4.4",
 		"@types/node": "14.0.14",
 		"@types/react-dom": "16.9.8",
 		"@types/react-lazyload": "2.6.0",
