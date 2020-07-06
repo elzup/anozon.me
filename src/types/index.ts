@@ -1,5 +1,3 @@
-export type System = {}
-
 export type Product = {
 	title: string
 	url: string

@@ -8,7 +8,7 @@
 		"build": "next build",
 		"export": "yarn build && next export",
 		"gen:env": "cp templates/temp.env .env.development.local && cp templates/temp.env .env.production.local",
-		"lint": "eslint --ext .ts,.tsx src",
+		"lint": "eslint --ext .ts,.tsx src pages",
 		"setenv": "node scripts/setup_env.js",
 		"precommit": "lint-staged",
 		"storybook": "start-storybook -p 6006",

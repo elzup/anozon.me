@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
 export const GA_TRACKING_ID = 'ua-49286104-9'
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = url => {
+export const pageview = (url) => {
 	// @ts-ignore
 	window.gtag('config', GA_TRACKING_ID, {
 		page_path: url,
