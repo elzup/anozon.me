@@ -23,7 +23,7 @@
 		"@zeit/next-preact": "0.1.0",
 		"css-doodle": "0.8.5",
 		"eslint": "7.12.1",
-		"next": "9.5.5",
+		"next": "10.0.1",
 		"preact": "10.5.5",
 		"preact-ssr-prepass": "1.1.2",
 		"react": "16.14.0",
@@ -34,7 +34,7 @@
 		"styled-components": "5.2.1"
 	},
 	"devDependencies": {
-		"@next/bundle-analyzer": "9.5.5",
+		"@next/bundle-analyzer": "10.0.1",
 		"@types/node": "14.14.6",
 		"@types/react-dom": "16.9.9",
 		"@types/react-lazyload": "3.0.0",
