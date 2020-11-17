@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import React from 'react'
 
 const Wrapper = styled.div`
 	margin: 5vh auto 0;
@@ -32,7 +33,7 @@ type Props = {
 	description: string
 }
 
-const Screen: React.SFC<Props> = props => (
+const Screen: React.FC<Props> = (props) => (
 	<Wrapper id={props.id}>
 		<Header>
 			<Title>

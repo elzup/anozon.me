@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GridFrame } from '../'
+import { GridFrame } from '..'
 
 import ProductCard from '../ProductCard'
 
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const ProductGallery = () => (
 	<Wrapper>
 		<GridFrame>
-			{products.map(product => (
+			{products.map((product) => (
 				<ProductCard key={product.filename} product={product} />
 			))}
 		</GridFrame>

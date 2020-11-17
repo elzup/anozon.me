@@ -1,15 +1,15 @@
+/* eslint-disable react/display-name */
 import React from 'react'
-/* eslint-disable-next-line */
+
 if (typeof window !== 'undefined') {
 	require('css-doodle')
 }
 
 export function sleep(msec: number): Promise<void> {
-	return new Promise(resolve => setTimeout(resolve, msec))
+	return new Promise((resolve) => setTimeout(resolve, msec))
 }
 
-export const cssDoodle = ([rule = '']: TemplateStringsArray): React.SFC<{
+export const cssDoodle = ([rule = '']: TemplateStringsArray): React.FC<{
 	style?: unknown
-	/* eslint-disable-next-line */
 	// @ts-ignore
-}> => props => <css-doodle {...props}>{rule}</css-doodle>
+}> => (props) => <css-doodle {...props}>{rule}</css-doodle>

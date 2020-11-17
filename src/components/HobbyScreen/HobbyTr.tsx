@@ -21,7 +21,7 @@ const HobbyTr = ({ category }: Props) => (
 				<td>{hobby.name}</td>
 				<td>
 					{hobby.notes &&
-						hobby.notes.map(note => {
+						hobby.notes.map((note) => {
 							if (note.href) {
 								return (
 									<LinkButton

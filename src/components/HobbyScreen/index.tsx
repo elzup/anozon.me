@@ -25,7 +25,7 @@ const HobbyScreen = () => (
 		<div>
 			<Table>
 				<tbody>
-					{categories.map(category => (
+					{categories.map((category) => (
 						<HobbyTr key={category.name} category={category} />
 					))}
 				</tbody>

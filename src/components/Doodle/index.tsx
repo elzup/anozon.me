@@ -1,4 +1,3 @@
-import React from 'react'
 import { cssDoodle } from '../../utils'
 
 export const DoodleBackground = cssDoodle`
@@ -34,8 +33,6 @@ export const DoodleBackground = cssDoodle`
     color: white;
   }
 `
-
-export const DoodleTest = () => <p>p</p>
 
 export const DoodleBackgroundFooter = cssDoodle`
   :doodle {
