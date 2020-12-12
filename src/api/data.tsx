@@ -51,8 +51,8 @@ export const categories: Category[] = [
 			{
 				name: 'Splatoon2',
 				notes: [
-					{ text: '持ち武器: N-ZAP95, H3Dリールガン' },
-					{ text: 'X2200' },
+					{ text: '持ち武器: N-ZAP95, H3Dリールガン, ジェッカス' },
+					{ text: 'X2550,最終王冠' },
 					{
 						href: 'https://anozon10.tumblr.com/tagged/splatoon2',
 						text: '思い出',
