@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 const hilight = keyframes`
-0% {
+from {
 	box-shadow: 1px 1px;
 }
 
-100% {
+to {
 	box-shadow: 1px 1px #aaa;
 	background: #cdcdcd;
 }

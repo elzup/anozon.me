@@ -5,11 +5,11 @@ import Links from '../Links'
 import { Decoration } from './Decoration'
 
 const show = keyframes`
-0% {
+from {
 	opacity: 0;
 }
 
-100% {
+to {
 	opacity: 1;
 }
 `

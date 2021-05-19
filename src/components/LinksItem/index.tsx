@@ -1,18 +1,17 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled, { keyframes } from 'styled-components'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconProp } from '@fortawesome/fontawesome-svg-core'
-
 const spin = keyframes`
-50% {
-	background: #444;
-	transform: rotateZ(-10deg);
-}
-
-100% {
-	background: black;
-	transform: rotateZ(0deg);
-}
+  50% {
+  background: #444;
+  transform: rotateZ(-10deg);
+  }
+  
+  100% {
+  	background: black;
+  	transform: rotateZ(0deg);
+  }
 `
 
 const A = styled.a`

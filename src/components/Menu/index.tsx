@@ -11,9 +11,9 @@ const Wrapper = styled.section`
 const Menu = () => {
 	return (
 		<Wrapper>
-			<MenuItem href="#profile" label="Profile" icon="coffee" />
-			<MenuItem href="#work" label="Work" icon="palette" />
-			<MenuItem href="#hobby" label="Hobby" icon="gamepad" />
+			<MenuItem href="profile" label="Profile" icon="coffee" />
+			<MenuItem href="work" label="Work" icon="palette" />
+			<MenuItem href="hobby" label="Hobby" icon="gamepad" />
 		</Wrapper>
 	)
 }
