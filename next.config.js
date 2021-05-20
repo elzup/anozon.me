@@ -23,6 +23,7 @@ const config = {
 		config.plugins.push(new webpack.DefinePlugin(env))
 		config.plugins.push(
 			new WorkboxWebpackPlugin.GenerateSW({
+				maximumFileSizeToCacheInBytes: 1024 * 1024 * 10,
 				swDest: dist + '/sw.js',
 				clientsClaim: true,
 				skipWaiting: true,
