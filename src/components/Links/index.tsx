@@ -31,12 +31,12 @@ const links: LinksItemProps[] = [
 		href: 'https://blog.anozon.me/',
 		icon: 'pen-nib',
 	},
-	{
-		title: 'Amazon',
-		href:
-			'https://www.amazon.co.jp/registry/wishlist/Y1RL67S3309E/ref=cm_sw_r_cp_ep_ws_0E5FBbDE819XC',
-		icon: 'gift',
-	},
+	// {
+	// 	title: 'Amazon',
+	// 	href:
+	// 		'https://www.amazon.co.jp/registry/wishlist/Y1RL67S3309E/ref=cm_sw_r_cp_ep_ws_0E5FBbDE819XC',
+	// 	icon: 'gift',
+	// },
 ]
 
 const Links = () => (

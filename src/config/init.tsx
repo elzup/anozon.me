@@ -1,7 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
+import {
+	config as faConfig,
+	dom,
+	library,
+} from '@fortawesome/fontawesome-svg-core'
+
 import ReactGA from 'react-ga'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
 import {
 	faPenNib,
 	faPalette,
@@ -31,7 +36,10 @@ library.add(
 	faTumblr
 )
 
+faConfig.autoAddCss = false
+
 export const GlobalStyle = createGlobalStyle`
+
 	* {
 		font-family: 'M PLUS Rounded 1c', sans-serif;
 	}
@@ -44,6 +52,7 @@ export const GlobalStyle = createGlobalStyle`
 		color: black;
 		text-decoration: none;
 	}
+	${dom.css()}
 `
 
 if (!config.isDev) {
