@@ -6,6 +6,7 @@ export const products: Product[] = [
 	{
 		title: 'elzup.com',
 		url: 'https://elzup.com',
+		urlLive: true,
 		description: '大学時代の自分跡地',
 		filename: 'elzup.png',
 		tags: ['React'],
@@ -13,6 +14,7 @@ export const products: Product[] = [
 	{
 		title: 'uniballoon',
 		url: 'https://uniballoon.com',
+		urlLive: false,
 		description: 'アイデア共有サイト',
 		filename: 'uniballoon.png',
 		tags: ['Rails', 'React'],
@@ -20,6 +22,7 @@ export const products: Product[] = [
 	{
 		title: 'another-node',
 		url: 'https://anozon.me',
+		urlLive: true,
 		description: 'このサイト',
 		filename: 'another-node.png',
 		tags: ['React', 'Redux', 'TypeScript'],
@@ -27,6 +30,7 @@ export const products: Product[] = [
 	{
 		title: 'anozonblog',
 		url: 'https://blog.anozon.me',
+		urlLive: true,
 		description: 'GatsbyJS と TypeScriptで作ったブログ',
 		filename: 'anozonblog.png',
 		tags: ['GatsbyJS', 'React', 'TypeScript'],
@@ -34,6 +38,7 @@ export const products: Product[] = [
 	{
 		title: 'nozctf',
 		url: 'https://nozctf.web.app',
+		urlLive: true,
 		description: 'Firebase で作った web 問題 CTF サイト',
 		filename: 'nozctf.png',
 		tags: ['GatsbyJS', 'React', 'TypeScript'],
@@ -77,10 +82,6 @@ export const categories: Category[] = [
 			},
 			{ name: 'ネクロダンサー' },
 			{ name: 'factorio' },
-			{
-				name: 'Switch',
-				notes: [{ text: 'SW-6170-3185-8144' }],
-			},
 			{
 				name: 'Steam ID',
 				notes: [

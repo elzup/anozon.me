@@ -1,6 +1,7 @@
 export type Product = {
 	title: string
 	url: string
+	urlLive: boolean
 	description: string
 	filename: string
 	tags: string[]

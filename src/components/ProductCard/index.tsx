@@ -26,6 +26,10 @@ const Wrapper = styled.a`
 		right: -0.5em;
 		content: '⬢';
 	}
+	&[data-disabled='true'] {
+		pointer-events: none;
+		cursor: none;
+	}
 `
 
 const Card = styled.div`
@@ -55,7 +59,12 @@ type Props = {
 
 const ProductCard = ({ product }: Props) => {
 	return (
-		<Wrapper href={product.url} target="_blank" rel="noopener noreferrer">
+		<Wrapper
+			href={product.url}
+			target={'_blank'}
+			data-disabled={!product.urlLive}
+			rel="noopener noreferrer"
+		>
 			<Card>
 				<div>
 					<img src={`/static/${product.filename}`} alt={product.title} />

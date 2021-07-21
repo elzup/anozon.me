@@ -29,6 +29,11 @@ const ImagesCol = styled.div`
 	}
 `
 
+// array random sample
+const sample = <T extends string | unknown[]>(a: T): T[0] =>
+	a[Math.floor(Math.random() * a.length)]
+const dadedo = sample('だでど')
+
 const ProfileScreen = () => {
 	return (
 		<Screen id="profile" title="Profile" description="自己紹介">
@@ -40,7 +45,7 @@ const ProfileScreen = () => {
 				<NameBox>
 					<Name>anozon</Name>
 				</NameBox>
-				<p>「あのぞん」と読む。</p>
+				<p>「あのぞん」{dadedo}す。</p>
 				<p>ある2つのモノのインフラを作るために現れた。</p>
 				<p>未来を想像するのが好き。</p>
 			</Body>
