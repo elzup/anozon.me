@@ -1,7 +1,3 @@
-/* eslint @typescript-eslint/no-require-imports: 0 */
-/* eslint @typescript-eslint/no-var-requires: 0 */
-/* eslint import/no-extraneous-dependencies: 0 */
-
 const webpack = require('webpack')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 

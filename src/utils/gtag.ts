@@ -1,19 +1,13 @@
-export const GA_TRACKING_ID = 'ua-49286104-9'
+import { GA_TRACKING_ID } from '../config'
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url) => {
+export const pageview = (page_path) => {
 	// @ts-ignore
-	window.gtag('config', GA_TRACKING_ID, {
-		page_path: url,
-	})
+	window.gtag('config', GA_TRACKING_ID, { page_path })
 }
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ action, category, label, value }) => {
+export const event = ({ action, event_category, event_label, value }) => {
 	// @ts-ignore
-	window.gtag('event', action, {
-		event_category: category,
-		event_label: label,
-		value: value,
-	})
+	window.gtag('event', action, { event_category, event_label, value })
 }

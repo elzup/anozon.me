@@ -3,8 +3,7 @@ import Head from 'next/head'
 import Router from 'next/router'
 
 import * as gtag from '../src/utils/gtag'
-
-import { GA_TRACKING_ID } from '../src/utils/gtag'
+import { GA_TRACKING_ID } from '../src/config'
 
 const config = {
 	url: 'https://anozon.me',

@@ -3,9 +3,9 @@ const isDev = process.env.NODE_ENV === 'development'
 const configDevelopment = {}
 const configProduction = {}
 
+export const GA_TRACKING_ID = 'ua-49286104-9'
 const config = {
 	isDev,
-	ga: process.env.REACT_APP_GA || '',
 	...(isDev ? configDevelopment : configProduction),
 }
 
