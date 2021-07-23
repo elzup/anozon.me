@@ -2,8 +2,8 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
 
-import * as gtag from '../src/utils/gtag'
-import { GA_TRACKING_ID } from '../src/config'
+import * as gtag from '../utils/gtag'
+import { GA_TRACKING_ID } from '../config'
 
 const config = {
 	url: 'https://anozon.me',
@@ -25,7 +25,6 @@ const App = ({ Component, pageProps }: AppProps) => (
 				href="/static/launcher-icon-4x.png"
 				sizes="192x192"
 			/>
-
 			<meta name="description" content={config.description} />
 			<meta property="og:url" content={config.url} />
 			<meta property="og:type" content="website" />
@@ -37,11 +36,12 @@ const App = ({ Component, pageProps }: AppProps) => (
 			<meta name="twitter:site" content="@anozon" />
 			<meta name="theme-color" content="#eee" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			{/* NOTE: https://github.com/vercel/next.js/issues/26160 */}
+			{/* eslint-disable-next-line @next/next/no-page-custom-font */}
 			<link
 				href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap"
 				rel="stylesheet"
 			/>
-
 			<script
 				async
 				src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

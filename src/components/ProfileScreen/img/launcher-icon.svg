@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>launcher-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="launcher-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="400" height="400"></rect>
+        <g id="simbol" fill="#000000" fill-rule="nonzero">
+            <path d="M200,400 C89.54305,400 0,310.45695 0,200 C0,89.54305 89.54305,0 200,0 C310.45695,0 400,89.54305 400,200 C400,310.45695 310.45695,400 200,400 Z M200,380 C299.411255,380 380,299.411255 380,200 C380,100.588745 299.411255,20 200,20 C100.588745,20 20,100.588745 20,200 C20,299.411255 100.588745,380 200,380 Z" id="Combined-Shape"></path>
+            <rect id="line2" x="190" y="10" width="20" height="380"></rect>
+            <rect id="line1" transform="translate(105.065831, 105.065831) rotate(-315.000000) translate(-105.065831, -105.065831) " x="95.0658307" y="-29.2770513" width="20" height="268.685764"></rect>
+            <rect id="Rectangle" transform="translate(152.568449, 152.568449) rotate(-225.000000) translate(-152.568449, -152.568449) " x="142.568449" y="85.3970082" width="20" height="134.342882"></rect>
+            <rect id="line3" transform="translate(295.065831, 295.065831) rotate(-315.000000) translate(-295.065831, -295.065831) " x="285.065831" y="160.722949" width="20" height="268.685764"></rect>
+        </g>
+    </g>
+</svg>

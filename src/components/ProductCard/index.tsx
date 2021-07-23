@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import Image from 'next/image'
 
 import { Product } from '../../types'
 
@@ -67,7 +68,10 @@ const ProductCard = ({ product }: Props) => {
 		>
 			<Card>
 				<div>
-					<img src={`/static/${product.filename}`} alt={product.title} />
+					<Image
+						src={require(`/static/${product.filename}`)}
+						alt={product.title}
+					/>
 				</div>
 				<h4>{product.title}</h4>
 				<p>{product.description}</p>

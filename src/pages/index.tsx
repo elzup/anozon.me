@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Index from '../src'
+import Index from '../'
 
 const IndexPage: NextPage = () => <Index />
 

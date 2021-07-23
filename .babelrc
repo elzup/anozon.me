@@ -1,16 +1,16 @@
 {
 	"presets": ["next/babel"],
-	"plugins": ["lodash", 
+	"plugins": [
 		[
-      "babel-plugin-styled-components",
-      {
-        "ssr": true,
-        "minify": true,
-        "transpileTemplateLiterals": true,
-        "pure": true,
-        "displayName": true,
-        "preprocess": false
-      }
-    ]
+			"babel-plugin-styled-components",
+			{
+				"ssr": true,
+				"minify": true,
+				"transpileTemplateLiterals": true,
+				"pure": true,
+				"displayName": true,
+				"preprocess": false
+			}
+		]
 	]
 }

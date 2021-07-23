@@ -1,6 +1,10 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
 import Screen from '../Screen'
+import anozonOldPic from './img/anozon-icon.svg'
+import anozonCatPic from './img/anozon_cat.png'
+import anozonLaufrom from './img/launcher-icon.svg'
 
 const Body = styled.div`
 	text-align: center;
@@ -39,9 +43,9 @@ const ProfileScreen = () => {
 		<Screen id="profile" title="Profile" description="自己紹介">
 			<Body>
 				<ImagesCol>
-					<img src="/static/anozon-icon.svg" alt="anozon icon" />
-					<img src="/static/anozon-cat.png" alt="anozon cat icon" />
-					<img src="/static/launcher-icon.svg" alt="anozon logo" />
+					<Image src={anozonOldPic} alt="anozon icon" />
+					<Image src={anozonCatPic} alt="anozon cat icon" />
+					<Image src={anozonLaufrom} alt="anozon logo" />
 				</ImagesCol>
 				<NameBox>
 					<Name>anozon</Name>
