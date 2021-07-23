@@ -21,7 +21,7 @@ import {
 	faYoutube,
 	faTumblr,
 } from '@fortawesome/free-brands-svg-icons'
-import config, { GA_TRACKING_ID } from '.'
+import { GA_TRACKING_ID, isDev } from '.'
 
 library.add(
 	faPenNib,
@@ -55,7 +55,7 @@ export const GlobalStyle = createGlobalStyle`
 	${dom.css()}
 `
 
-if (!config.isDev) {
+if (!isDev) {
 	ReactGA.initialize(GA_TRACKING_ID)
 	ReactGA.pageview('/')
 }
