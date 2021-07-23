@@ -1,4 +1,6 @@
 {
 	"extends": ["next"],
-	"rules": {}
+	"rules": {
+		"@next/next/no-img-element": 0
+	}
 }
