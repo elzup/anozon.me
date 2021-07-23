@@ -40,6 +40,7 @@ const ProfileScreen = () => {
 			<Body>
 				<ImagesCol>
 					<img src="/static/anozon-icon.svg" alt="anozon icon" />
+					<img src="/static/anozon-cat.png" alt="anozon cat icon" />
 					<img src="/static/launcher-icon.svg" alt="anozon logo" />
 				</ImagesCol>
 				<NameBox>

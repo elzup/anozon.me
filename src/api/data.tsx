@@ -9,7 +9,7 @@ export const products: Product[] = [
 		urlLive: true,
 		description: '大学時代の自分跡地',
 		filename: 'elzup.png',
-		tags: ['React'],
+		tags: ['React', 'flow'],
 	},
 	{
 		title: 'uniballoon',
@@ -25,7 +25,7 @@ export const products: Product[] = [
 		urlLive: true,
 		description: 'このサイト',
 		filename: 'another-node.png',
-		tags: ['React', 'Redux', 'TypeScript'],
+		tags: ['Next.js', 'React', 'TypeScript'],
 	},
 	{
 		title: 'anozonblog',
@@ -41,7 +41,15 @@ export const products: Product[] = [
 		urlLive: true,
 		description: 'Firebase で作った web 問題 CTF サイト',
 		filename: 'nozctf.png',
-		tags: ['GatsbyJS', 'React', 'TypeScript'],
+		tags: ['Next.js', 'React', 'TypeScript'],
+	},
+	{
+		title: 'Mitelop',
+		url: 'https://mitelop.anozon.me/',
+		urlLive: true,
+		description: '配信向けガジェット',
+		filename: 'mitelop.png',
+		tags: ['Next.js', 'React', 'TypeScript', 'PWA'],
 	},
 ]
 
