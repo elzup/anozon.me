@@ -22,7 +22,7 @@
 		"@zeit/next-preact": "0.1.0",
 		"css-doodle": "0.19.1",
 		"eslint": "7.31.0",
-		"next": "11.0.1",
+		"next": "11.1.0",
 		"preact": "10.5.14",
 		"preact-ssr-prepass": "1.2.0",
 		"react": "17.0.2",
