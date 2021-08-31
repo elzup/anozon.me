@@ -25,6 +25,10 @@ const ImagesCol = styled.div`
 		height: 140px;
 		border: solid 5px #dcdcdc;
 		border-radius: 50%;
+		@media only screen and (max-width: 500px) {
+			width: 100px;
+			height: 100px;
+		}
 	}
 `
 
