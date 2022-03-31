@@ -18,19 +18,19 @@
 		"@fortawesome/fontawesome-svg-core": "1.2.36",
 		"@fortawesome/free-brands-svg-icons": "5.15.4",
 		"@fortawesome/free-solid-svg-icons": "5.15.4",
-		"@fortawesome/react-fontawesome": "0.1.17",
+		"@fortawesome/react-fontawesome": "0.1.18",
 		"@zeit/next-preact": "0.1.0",
-		"css-doodle": "0.24.2",
+		"css-doodle": "0.26.3",
 		"eslint": "7.32.0",
 		"next": "11.1.4",
-		"preact": "10.6.5",
+		"preact": "10.7.0",
 		"preact-ssr-prepass": "1.2.0",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"react-ga": "3.3.0",
 		"react-lazyload": "3.2.0",
-		"react-scroll": "1.8.4",
-		"styled-components": "5.3.3"
+		"react-scroll": "1.8.6",
+		"styled-components": "5.3.5"
 	},
 	"devDependencies": {
 		"@next/bundle-analyzer": "11.1.4",
@@ -43,8 +43,8 @@
 		"eslint-config-next": "11.1.4",
 		"husky": "7.0.4",
 		"lint-staged": "11.2.6",
-		"typescript": "4.5.5",
-		"webpack": "5.67.0",
+		"typescript": "4.6.3",
+		"webpack": "5.70.0",
 		"workbox-webpack-plugin": "6.5.0"
 	},
 	"lint-staged": {
