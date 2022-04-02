@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import styled from 'styled-components'
 import Screen from '../Screen'
 
@@ -35,9 +36,9 @@ const ImagesCol = styled.div`
 // array random sample
 const sample = <T extends string | unknown[]>(a: T): T[0] =>
 	a[Math.floor(Math.random() * a.length)]
-const dadedo = sample('だでど')
 
 const ProfileScreen = () => {
+	const ddd = useMemo(() => sample('だでど'), [])
 	return (
 		<Screen id="profile" title="Profile" description="自己紹介">
 			<Body>
@@ -49,7 +50,7 @@ const ProfileScreen = () => {
 				<NameBox>
 					<Name>anozon</Name>
 				</NameBox>
-				<p>「あのぞん」{dadedo}す。</p>
+				<p>「あのぞん」{ddd}す。</p>
 				<p>ある2つのモノのインフラを作るために現れた。</p>
 				<p>未来を想像するのが好き。</p>
 			</Body>
