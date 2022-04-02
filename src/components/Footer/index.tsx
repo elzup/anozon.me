@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { DoodleBackgroundFooter } from '../Doodle'
 
 const Panel = styled.div`
 	height: 10em;
@@ -24,7 +23,6 @@ const CopyRight = styled.h4`
 
 const Footer = () => (
 	<Panel>
-		<DoodleBackgroundFooter />
 		<Contents>
 			<CopyRight>© 2020 anozon</CopyRight>
 		</Contents>
