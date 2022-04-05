@@ -8,11 +8,9 @@ assert(NOTION_TARGET_DB, 'NOTION_TARGET_DB not setup')
 const dbId = NOTION_TARGET_DB
 
 async function main() {
-	if (!dbId || NOTION_SECRET) return console.error
-
 	const notion = new Client({ auth: NOTION_SECRET })
 	const db = await notion.databases.query({ database_id: dbId })
 	console.log(db.results)
 }
 
-export default {}
+main()
