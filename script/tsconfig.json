@@ -1,0 +1,4 @@
+{
+	"extends": "@elzup/tsconfig/tsconfig.node.json",
+	"include": ["**/*.ts", "**/*.tsx"]
+}
