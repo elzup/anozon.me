@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components'
-import { Link } from 'react-scroll'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
@@ -16,7 +15,7 @@ const invert = keyframes`
 }
 `
 
-const A = styled(Link)`
+const A = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,7 +45,7 @@ type Props = {
 // <div animate={{ offset: 20, duration: 400 }}>
 const MenuItem = ({ href, label, icon }: Props) => {
 	return (
-		<A to={href} duration={500} smooth>
+		<A href={href}>
 			<FontAwesomeIcon icon={icon} />
 			<Button>{label}</Button>
 		</A>
