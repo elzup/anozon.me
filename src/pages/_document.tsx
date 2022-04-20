@@ -7,8 +7,8 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-class MyDocument extends Document {
-	render() {
+export default class MyDocument extends Document {
+	override render() {
 		return (
 			<Html lang="ja">
 				<Head></Head>
@@ -19,7 +19,7 @@ class MyDocument extends Document {
 			</Html>
 		)
 	}
-	static async getInitialProps(ctx: DocumentContext) {
+	static override async getInitialProps(ctx: DocumentContext) {
 		const sheet = new ServerStyleSheet()
 		const originalRenderPage = ctx.renderPage
 
@@ -45,4 +45,3 @@ class MyDocument extends Document {
 		}
 	}
 }
-export default MyDocument
