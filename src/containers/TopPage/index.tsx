@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import TopScreen from '../../components/TopScreen'
-import ProfileScreen from '../../components/ProfileScreen'
-import WorkScreen from '../../components/WorkScreen'
-import HobbyScreen from '../../components/HobbyScreen'
 import Footer from '../../components/Footer'
-import { DoodleBackground } from '../../components/Doodle'
+import HobbyScreen from '../../components/HobbyScreen'
+import ProfileScreen from '../../components/ProfileScreen'
+import TopScreen from '../../components/TopScreen'
+import WorkScreen from '../../components/WorkScreen'
 
 const MainFrame = styled.div`
 	position: absolute;
@@ -29,12 +28,6 @@ const TopPage = () => (
 	<MainFrame>
 		<TopScreen />
 		<SecondScreen>
-			<DoodleBackground
-				style={{
-					zIndex: -1,
-					position: 'absolute',
-				}}
-			/>
 			<ProfileScreen />
 			<WorkScreen />
 			<HobbyScreen />
