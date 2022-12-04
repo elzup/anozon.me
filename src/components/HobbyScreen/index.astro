@@ -1,0 +1,33 @@
+---
+import Screen from '../Screen/index.astro'
+
+import { categories } from '../../api/data'
+import HobbyGallery from './HobbyGallery.astro'
+import HobbyTr from './HobbyTr.astro'
+---
+
+<Screen id="hobby" title="Hobby" description="趣味">
+	<div>
+		<table>
+			<tbody>
+				{categories.map((category) => <HobbyTr category={category} />)}
+			</tbody>
+		</table>
+	</div>
+	<HobbyGallery />
+</Screen>
+<style>
+	:root {
+		background: #ffffffb0;
+		width: 100%;
+		@media (max-width: 650px) {
+			font-size: 0.8em;
+		}
+	}
+	td {
+		border-bottom: solid 1px #ddd;
+	}
+	td p {
+		margin: 2px;
+	}
+</style>

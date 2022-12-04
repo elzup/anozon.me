@@ -1,27 +1,18 @@
-import { createGlobalStyle } from 'styled-components'
+import { config as faConfig, library } from '@fortawesome/fontawesome-svg-core'
 import {
-	config as faConfig,
-	dom,
-	library,
-} from '@fortawesome/fontawesome-svg-core'
-
-import ReactGA from 'react-ga'
-
-import {
-	faPenNib,
-	faPalette,
-	faGift,
-	faGamepad,
-	faCoffee,
-	faArrowCircleRight,
-} from '@fortawesome/free-solid-svg-icons'
-import {
-	faTwitter,
 	faGithub,
-	faYoutube,
 	faTumblr,
+	faTwitter,
+	faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
-import { GA_TRACKING_ID, isDev } from '.'
+import {
+	faArrowCircleRight,
+	faCoffee,
+	faGamepad,
+	faGift,
+	faPalette,
+	faPenNib,
+} from '@fortawesome/free-solid-svg-icons'
 
 library.add(
 	faPenNib,
@@ -37,25 +28,3 @@ library.add(
 )
 
 faConfig.autoAddCss = false
-
-export const GlobalStyle = createGlobalStyle`
-
-	* {
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-
-  body {
-    margin: 0;
-  }
-
-	a {
-		color: black;
-		text-decoration: none;
-	}
-	${dom.css()}
-`
-
-if (!isDev) {
-	ReactGA.initialize(GA_TRACKING_ID)
-	ReactGA.pageview('/')
-}

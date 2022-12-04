@@ -1,0 +1,35 @@
+---
+import type { Category } from '../../types'
+import LinkButton from '../LinkButton/index.astro'
+
+export interface Props {
+	category: Category
+}
+const { category } = Astro.props
+---
+
+{
+	category.hobbies.map((hobby, i) => (
+		<tr>
+			{i === 0 && <th rowspan={category.hobbies.length}>{category.name}</th>}
+			<td>{hobby.name}</td>
+			<td>
+				{hobby.notes &&
+					hobby.notes.map((note) => {
+						if (note.href) {
+							return <LinkButton href={note.href} text={note.text} />
+						}
+						return <p>{note.text}</p>
+					})}
+			</td>
+		</tr>
+	))
+}
+
+<style>
+	th {
+		width: 5em;
+		border-right: solid;
+		border-bottom: solid;
+	}
+</style>

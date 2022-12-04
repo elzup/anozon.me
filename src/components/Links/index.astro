@@ -1,0 +1,43 @@
+---
+import LinksItem, { Props as LinksItemProps } from '../LinksItem/index.astro'
+
+const links: LinksItemProps[] = [
+	{
+		title: 'Twitter',
+		href: 'https://twitter.com/anozon',
+		icon: ['fab', 'twitter'],
+	},
+	{
+		title: 'GitHub',
+		href: 'https://github.com/elzup',
+		icon: ['fab', 'github'],
+	},
+	{
+		title: 'YouTube',
+		href: 'https://www.youtube.com/channel/UCMo7HkIMW9AmbvODRkxwfnw',
+		icon: ['fab', 'youtube'],
+	},
+	{
+		title: 'Blog',
+		href: 'https://blog.anozon.me/',
+		icon: 'pen-nib',
+	},
+]
+---
+
+<div>
+	{links.map((linkProps) => <LinksItem {...linkProps} />)}
+</div>
+
+<style>
+	:root > div {
+		margin: 10px 0;
+		display: flex;
+		justify-content: center;
+	}
+	@custom-media --md-n-below {
+		:root > div {
+			margin: 0;
+		}
+	}
+</style>

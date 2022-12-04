@@ -1,0 +1,53 @@
+---
+import type { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+export interface Props {
+	label: string
+	href: string
+	icon: IconProp
+}
+
+const { href, label, icon } = Astro.props
+---
+
+<a href={href}>
+	<FontAwesomeIcon icon={icon} />
+	<div class="btn">{label}</div>
+</a>
+
+<style>
+	@keyframes invert {
+		0% {
+			background: white;
+			color: black;
+		}
+
+		100% {
+			background: black;
+			color: white;
+		}
+	}
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px;
+		margin: 0 5px;
+		font-size: 40px;
+		width: 20vw;
+		border-bottom: dashed;
+		border-radius: 5px;
+		@media (max-width: 700px) {
+			width: auto;
+		}
+		&:hover {
+			animation: invert 0.6s ease 0s forwards;
+		}
+	}
+
+	.btn {
+		margin-left: 5px;
+	}
+</style>

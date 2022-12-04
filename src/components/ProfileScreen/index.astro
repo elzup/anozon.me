@@ -1,0 +1,56 @@
+---
+import Screen from '../Screen/index.astro'
+
+const sample = <T extends string | unknown[]>(a: T): T[0] =>
+	a[Math.floor(Math.random() * a.length)]
+const ddd = sample('だでど')
+---
+
+<Screen id="profile" title="Profile" description="自己紹介">
+	<div class="container">
+		<div class="img-col">
+			<img src={'/static/anozon-icon.svg'} alt="anozon icon" />
+			<img src={'/static/anozon_cat.png'} alt="anozon cat icon" />
+			<img src={'/static/launcher-icon.svg'} alt="anozon logo" />
+		</div>
+		<div class="name-box">
+			<h3>anozon</h3>
+		</div>
+		<p>「あのぞん」{ddd}す。</p>
+		<p>ある2つのモノのインフラを作るために現れた。</p>
+		<p>未来を想像するのが好き。</p>
+	</div>
+</Screen>
+
+<style>
+	.container {
+		text-align: center;
+	}
+
+	.name-box {
+		display: flex;
+		justify-content: center;
+		h3 {
+			font-size: 35px;
+			background: #eee;
+			border: double #ddd;
+			padding: 0 1.5em;
+		}
+	}
+
+	.img-col {
+		display: flex;
+		justify-content: center;
+	}
+	img {
+		margin: 0 5px;
+		width: 140px;
+		height: 140px;
+		border: solid 5px #dcdcdc;
+		border-radius: 50%;
+		@media only screen and (max-width: 500px) {
+			width: 100px;
+			height: 100px;
+		}
+	}
+</style>

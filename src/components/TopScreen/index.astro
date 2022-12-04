@@ -1,0 +1,66 @@
+---
+import Links from '../Links/index.astro'
+import Menu from '../Menu/index.astro'
+import Decoration from './Decoration.astro'
+---
+
+<div>
+	<Decoration />
+	<div class="content">
+		<div class="eye-catch">
+			<div class="image-wrap" title="Another Node - anozon"></div>
+		</div>
+		<Menu />
+		<Links />
+	</div>
+</div>
+
+<style>
+	@keyframes show {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	:root > div {
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+
+	.content {
+		position: absolute;
+		left: calc(50% - 50vmin);
+		top: calc(50% - 50vmin);
+		width: 100vmin;
+		height: 100vmin;
+		border-radius: 10%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		opacity: 0;
+		animation: show 1s ease 1s forwards;
+	}
+
+	.eye-catch {
+		flex: 4;
+		display: flex;
+		width: 100vmin;
+		justify-content: center;
+	}
+
+	.image-wrap {
+		width: 100vmin;
+		height: auto;
+		background-image: url(/static/eyecatch.svg);
+		background-position: center;
+		background-size: 95% auto;
+		background-repeat: no-repeat;
+		object-fit: contain;
+	}
+</style>

@@ -1,0 +1,75 @@
+---
+import type { Product } from '../../types'
+export interface Props {
+	product: Product
+}
+const { product } = Astro.props
+---
+
+<a
+	href={product.url}
+	target={'_blank'}
+	data-disabled={!product.urlLive}
+	rel="noopener noreferrer"
+>
+	<div class="card">
+		<div>
+			<img src={`/static/${product.filename}`} alt={product.title} />
+		</div>
+		<h4>{product.title}</h4>
+		<p>{product.description}</p>
+	</div>
+</a>
+
+<style>
+	@keyframes hilight {
+		0% {
+			background: white;
+		}
+
+		100% {
+			background: #eee;
+		}
+	}
+
+	:root > a {
+		position: relative;
+		&:before {
+			position: absolute;
+			top: 0.5em;
+			left: -0.5em;
+			content: '⬢';
+		}
+		&:after {
+			position: absolute;
+			bottom: -0.5em;
+			right: -0.5em;
+			content: '⬢';
+		}
+		&[data-disabled='true'] {
+			pointer-events: none;
+			cursor: none;
+		}
+	}
+
+	.card {
+		width: 300px;
+		text-align: center;
+		background: #ffffffb0;
+		margin-top: 20px;
+		border: dashed #dcdcdc 1px;
+		padding: 5px;
+		:root > div {
+			height: 200px;
+		}
+		&:hover {
+			animation: hilight 0.5s ease 0s forwards;
+		}
+	}
+	img {
+		width: 95%;
+		height: 95%;
+		object-fit: contain;
+		border-radius: 5px;
+	}
+</style>

@@ -1,0 +1,45 @@
+---
+export interface Props {
+	id: string
+	title: string
+	description: string
+}
+const { props } = Astro
+---
+
+<div class="wrap">
+	<div class="header">
+		<h2>
+			{props.title}: {props.description}
+		</h2>
+	</div>
+	<slot />
+</div>
+
+<style>
+	.wrap {
+		margin: 5vh auto 0;
+		padding: 10px;
+		width: 650px;
+		@media (max-width: 700px) {
+			width: 95%;
+		}
+	}
+
+	h2 {
+		text-align: center;
+		border-bottom: solid 1px gray;
+		width: 100%;
+		&:before {
+			content: '-';
+		}
+		&:after {
+			content: '-';
+		}
+	}
+
+	.hdear {
+		display: flex;
+		justify-content: center;
+	}
+</style>

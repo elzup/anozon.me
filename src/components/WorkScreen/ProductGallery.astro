@@ -1,0 +1,21 @@
+---
+import { products } from '../../api/data'
+import ProductCard from '../ProductCard/index.astro'
+---
+
+<div>
+	<div class="grid-frame">
+		{products.map((product) => <ProductCard product={product} />)}
+	</div>
+</div>
+
+<style>
+	:root > div {
+		display: flex;
+	}
+	.grid-frame {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+</style>

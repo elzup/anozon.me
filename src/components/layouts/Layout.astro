@@ -1,0 +1,83 @@
+---
+import '../../config/init'
+import { dom } from '@fortawesome/fontawesome-svg-core'
+import { GA_TRACKING_ID } from '../../config'
+export interface Props {
+	title?: string
+}
+const { title } = Astro.props
+
+const config = {
+	url: 'https://anozon.me',
+	title: "anozon's site",
+	description: 'about anozon. web programmer, my hobbies: game, puzzle.',
+	image: 'https://anozon.me/static/another-node.png',
+	twitter: '@anozon',
+}
+
+const fontAwesomeCss = dom.css()
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>{title || config.title}</title>
+		<link rel="shortcut icon" href="/static/launcher-icon-4x.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="/static/launcher-icon-4x.png"
+			sizes="192x192"
+		/>
+		<meta charset="UTF-8" />
+		<meta name="description" content={config.description} />
+		<meta property="og:url" content={config.url} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={config.title} />
+		<meta property="og:description" content={config.description} />
+		<meta property="og:site_name" content={config.title} />
+		<meta property="og:image" content={config.image} />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@anozon" />
+		<meta name="theme-color" content="#eee" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{/* NOTE: https://github.com/vercel/next.js/issues/26160 */}
+		{/* eslint-disable-next-line @next/next/no-page-custom-font */}
+		<link
+			href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			type="text/partytown"
+			src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+		></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag('js', new Date())
+			gtag('config', '${GA_TRACKING_ID}', {
+				page_path: window.location.pathname,
+			})
+		</script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	* {
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+
+	body {
+		margin: 0;
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+</style>
+<style is:inline set:html={fontAwesomeCss}></style>
