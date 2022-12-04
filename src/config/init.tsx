@@ -1,8 +1,4 @@
-import {
-	config as faConfig,
-	dom,
-	library,
-} from '@fortawesome/fontawesome-svg-core'
+import { config as faConfig, library } from '@fortawesome/fontawesome-svg-core'
 import {
 	faGithub,
 	faTumblr,
@@ -17,9 +13,6 @@ import {
 	faPalette,
 	faPenNib,
 } from '@fortawesome/free-solid-svg-icons'
-import ReactGA from 'react-ga'
-import { createGlobalStyle } from 'styled-components'
-import { GA_TRACKING_ID, isDev } from '.'
 
 library.add(
 	faPenNib,
@@ -35,25 +28,3 @@ library.add(
 )
 
 faConfig.autoAddCss = false
-
-export const GlobalStyle: any = createGlobalStyle`
-
-	* {
-		font-family: 'M PLUS Rounded 1c', sans-serif;
-	}
-
-  body {
-    margin: 0;
-  }
-
-	a {
-		color: black;
-		text-decoration: none;
-	}
-	${dom.css()}
-`
-
-if (!isDev) {
-	ReactGA.initialize(GA_TRACKING_ID)
-	ReactGA.pageview('/')
-}
