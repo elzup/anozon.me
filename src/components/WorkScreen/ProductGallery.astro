@@ -3,7 +3,6 @@ import { products } from '../../api/data'
 import ProductCard from '../ProductCard/index.astro'
 ---
 
-const ProductGallery = () => (
 <div>
 	<div class="grid-frame">
 		{products.map((product) => <ProductCard product={product} />)}

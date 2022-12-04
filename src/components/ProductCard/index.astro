@@ -22,7 +22,7 @@ const { product } = Astro.props
 </a>
 
 <style>
-	@keyframe hilight {
+	@keyframes hilight {
 		0% {
 			background: white;
 		}
@@ -62,14 +62,14 @@ const { product } = Astro.props
 		:root > div {
 			height: 200px;
 		}
-		img {
-			width: 95%;
-			height: 95%;
-			object-fit: contain;
-			border-radius: 5px;
-		}
 		&:hover {
 			animation: hilight 0.5s ease 0s forwards;
 		}
+	}
+	img {
+		width: 95%;
+		height: 95%;
+		object-fit: contain;
+		border-radius: 5px;
 	}
 </style>

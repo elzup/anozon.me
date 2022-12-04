@@ -1,5 +1,5 @@
 ---
-import Screen from '../Screen/index'
+import Screen from '../Screen/index.astro'
 
 const sample = <T extends string | unknown[]>(a: T): T[0] =>
 	a[Math.floor(Math.random() * a.length)]
@@ -8,7 +8,7 @@ const ddd = sample('だでど')
 
 <Screen id="profile" title="Profile" description="自己紹介">
 	<div class="container">
-		<div class="image-col">
+		<div class="img-col">
 			<img src={'/static/anozon-icon.svg'} alt="anozon icon" />
 			<img src={'/static/anozon_cat.png'} alt="anozon cat icon" />
 			<img src={'/static/launcher-icon.svg'} alt="anozon logo" />
@@ -38,19 +38,19 @@ const ddd = sample('だでど')
 		}
 	}
 
-	.iamge-col {
+	.img-col {
 		display: flex;
 		justify-content: center;
-		> img {
-			margin: 0 5px;
-			width: 140px;
-			height: 140px;
-			border: solid 5px #dcdcdc;
-			border-radius: 50%;
-			@media only screen and (max-width: 500px) {
-				width: 100px;
-				height: 100px;
-			}
+	}
+	img {
+		margin: 0 5px;
+		width: 140px;
+		height: 140px;
+		border: solid 5px #dcdcdc;
+		border-radius: 50%;
+		@media only screen and (max-width: 500px) {
+			width: 100px;
+			height: 100px;
 		}
 	}
 </style>
