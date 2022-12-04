@@ -1,6 +1,4 @@
-//@flow
-
-import { Category, Product, HobbyImage } from '../types'
+import type { Category, Product, HobbyImage } from '../types'
 
 export const products: Product[] = [
 	{
@@ -25,7 +23,7 @@ export const products: Product[] = [
 		urlLive: true,
 		description: 'このサイト',
 		filename: 'another-node.png',
-		tags: ['Next.js', 'React', 'TypeScript'],
+		tags: ['astro', 'Next.js', 'React', 'TypeScript'],
 	},
 	{
 		title: 'anozonblog',
