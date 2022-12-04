@@ -1,5 +1,5 @@
 {
-  "extends": "@elzup/tsconfig",
+  "extends": "astro/tsconfigs/strict",
   "exclude": [
     "node_modules",
     "scripts"
@@ -15,6 +15,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
