@@ -5,7 +5,6 @@
 	"homepage": "https://anozon.me/",
 	"scripts": {
 		"dev": "astro dev",
-		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
 		"export": "yarn build && next export",
@@ -52,6 +51,7 @@
 		"postcss-custom-media": "^9.0.1",
 		"postcss-jit-props": "^1.0.8",
 		"postcss-nesting": "^10.2.0",
+		"postcss-preset-env": "^7.8.3",
 		"typescript": "4.8.4"
 	},
 	"lint-staged": {
