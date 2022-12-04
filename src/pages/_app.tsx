@@ -1,9 +1,7 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import Router from 'next/router'
 
 import { GA_TRACKING_ID } from '../config'
-import * as gtag from '../utils/gtag'
 
 const config = {
 	url: 'https://anozon.me',
@@ -13,7 +11,6 @@ const config = {
 	twitter: '@anozon',
 }
 
-Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 const App = ({ Component, pageProps }: AppProps) => (
 	<>
 		<Head>

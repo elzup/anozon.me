@@ -36,6 +36,7 @@
 		"styled-components": "5.3.6"
 	},
 	"devDependencies": {
+		"@astrojs/partytown": "^1.0.2",
 		"@next/bundle-analyzer": "12.3.1",
 		"@notionhq/client": "^2.2.1",
 		"@types/node": "18.8.4",
