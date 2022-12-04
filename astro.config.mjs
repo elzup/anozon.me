@@ -12,8 +12,4 @@ export default defineConfig({
 			},
 		}),
 	],
-	vite: {
-		legacy: { buildSsrCjsExternalHeuristics: true },
-		ssr: { noExternal: ['styled-components'] },
-	},
 })
