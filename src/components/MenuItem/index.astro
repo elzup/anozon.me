@@ -1,18 +1,17 @@
 ---
-import type { IconProp } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Icon } from 'astro-icon'
 
 export interface Props {
 	label: string
 	href: string
-	icon: IconProp
+	icon: string
 }
 
 const { href, label, icon } = Astro.props
 ---
 
 <a href={href}>
-	<FontAwesomeIcon icon={icon} />
+	<Icon name={icon} />
 	<div class="btn">{label}</div>
 </a>
 
@@ -29,6 +28,9 @@ const { href, label, icon } = Astro.props
 		}
 	}
 
+	svg {
+		width: 4rem;
+	}
 	a {
 		display: flex;
 		justify-content: center;

@@ -1,21 +1,20 @@
 ---
-import type { IconProp } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Icon } from 'astro-icon'
 
-const getIcon = (url: string): IconProp => {
+const getIcon = (url: string): string => {
 	if (url.search('github') >= 0) {
-		return ['fab', 'github']
+		return 'mdi:github'
 	} else if (url.search('tumblr') >= 0) {
-		return ['fab', 'tumblr']
+		return 'ri:tumblr-fill'
 		// } else if (url.search('annict') >= 0) {
 		// 	return 'annict'
 	} else {
-		return 'arrow-circle-right'
+		return 'ic:round-insert-link'
 	}
 }
 
 const { href, text } = Astro.props
-const icon = getIcon(href)
+const iconId = getIcon(href)
 
 export interface Props {
 	href: string
@@ -28,7 +27,7 @@ export interface Props {
 		<div class="container">
 			{text && <div class="label">{text}</div>}
 			<div class="icon">
-				<FontAwesomeIcon icon={icon} inverse />
+				<Icon name={iconId} inverse />
 			</div>
 		</div>
 	</div>
@@ -65,5 +64,8 @@ export interface Props {
 		background: black;
 		width: 1em;
 		text-align: center;
+	}
+	[astro-icon] {
+		color: white;
 	}
 </style>

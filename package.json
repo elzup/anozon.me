@@ -17,11 +17,8 @@
 	"dependencies": {
 		"@astrojs/react": "^1.2.2",
 		"@elzup/tsconfig": "^1.1.0",
-		"@fortawesome/fontawesome-svg-core": "6.2.1",
-		"@fortawesome/free-brands-svg-icons": "6.2.1",
-		"@fortawesome/free-solid-svg-icons": "6.2.1",
-		"@fortawesome/react-fontawesome": "0.2.0",
 		"@types/react": "^18.0.21",
+		"astro-icon": "^0.8.0",
 		"eslint": "8.29.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0"

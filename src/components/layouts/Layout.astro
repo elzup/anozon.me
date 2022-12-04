@@ -1,6 +1,4 @@
 ---
-import '../../config/init'
-import { dom } from '@fortawesome/fontawesome-svg-core'
 import { GA_TRACKING_ID } from '../../config'
 export interface Props {
 	title?: string
@@ -14,8 +12,6 @@ const config = {
 	image: 'https://anozon.me/static/another-node.png',
 	twitter: '@anozon',
 }
-
-const fontAwesomeCss = dom.css()
 ---
 
 <!DOCTYPE html>
@@ -78,4 +74,3 @@ const fontAwesomeCss = dom.css()
 		text-decoration: none;
 	}
 </style>
-<style is:inline set:html={fontAwesomeCss}></style>

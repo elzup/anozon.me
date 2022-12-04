@@ -5,32 +5,32 @@ const links: LinksItemProps[] = [
 	{
 		title: 'Twitter',
 		href: 'https://twitter.com/anozon',
-		icon: ['fab', 'twitter'],
+		icon: 'mdi:twitter',
 	},
 	{
 		title: 'GitHub',
 		href: 'https://github.com/elzup',
-		icon: ['fab', 'github'],
+		icon: 'mdi:github',
 	},
 	{
 		title: 'YouTube',
 		href: 'https://www.youtube.com/channel/UCMo7HkIMW9AmbvODRkxwfnw',
-		icon: ['fab', 'youtube'],
+		icon: 'mdi:youtube',
 	},
 	{
 		title: 'Blog',
 		href: 'https://blog.anozon.me/',
-		icon: 'pen-nib',
+		icon: 'ph:pencil-circle',
 	},
 ]
 ---
 
-<div>
+<div class="wrap">
 	{links.map((linkProps) => <LinksItem {...linkProps} />)}
 </div>
 
 <style>
-	:root > div {
+	.wrap {
 		margin: 10px 0;
 		display: flex;
 		justify-content: center;
