@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
 import styled from 'styled-components'
+import { useOnce } from '../../utils/react-util'
 import Screen from '../Screen'
 
 const Body = styled.div`
@@ -38,7 +38,8 @@ const sample = <T extends string | unknown[]>(a: T): T[0] =>
 	a[Math.floor(Math.random() * a.length)]
 
 const ProfileScreen = () => {
-	const ddd = useMemo(() => sample('だでど'), [])
+	const ddd = useOnce(() => sample('だでど'))
+
 	return (
 		<Screen id="profile" title="Profile" description="自己紹介">
 			<Body>

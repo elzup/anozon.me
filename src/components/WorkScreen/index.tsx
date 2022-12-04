@@ -1,5 +1,4 @@
 import Screen from '../Screen'
-
 import ProductGallery from './ProductGallery'
 
 const WorkScreen = () => {

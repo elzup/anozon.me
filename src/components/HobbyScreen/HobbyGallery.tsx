@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import LazyLoad from 'react-lazyload'
 import LinkButton from '../LinkButton'
 
 import { hobbyImages } from '../../api/data'
@@ -31,9 +30,8 @@ const HobbyGallery = () => (
 		<div>
 			{hobbyImages.map((hi, i) => (
 				<Box key={i}>
-					<LazyLoad>
-						<Image src={hi.src} alt="" />
-					</LazyLoad>
+					<Image src={hi.src} alt="" />
+
 					<LinkBox>
 						<LinkButton href={hi.href} />
 					</LinkBox>

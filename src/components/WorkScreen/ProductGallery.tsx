@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import { GridFrame } from '..'
-
-import ProductCard from '../ProductCard'
-
 import { products } from '../../api/data'
+import ProductCard from '../ProductCard'
 
 const Wrapper = styled.div`
 	display: flex;

@@ -4,8 +4,10 @@
 	"private": true,
 	"homepage": "https://anozon.me/",
 	"scripts": {
-		"dev": "next",
-		"build": "next build",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
 		"export": "yarn build && next export",
 		"lint": "eslint --ext .ts,.tsx src",
 		"setenv": "node scripts/setup_env.js",

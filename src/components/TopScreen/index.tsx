@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components'
-
-import Menu from '../Menu'
 import Links from '../Links'
+import Menu from '../Menu'
 import { Decoration } from './Decoration'
 
 const show = keyframes`

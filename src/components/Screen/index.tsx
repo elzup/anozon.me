@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import React from 'react'
+import type { WithChild } from '../../utils/react-util'
 
 const Wrapper = styled.div`
 	margin: 5vh auto 0;
@@ -33,7 +33,7 @@ type Props = {
 	description: string
 }
 
-const Screen: React.FC<Props> = (props) => (
+const Screen = (props: WithChild<Props>) => (
 	<Wrapper id={props.id}>
 		<Header>
 			<Title>

@@ -1,4 +1,4 @@
-import { NextPage } from 'next'
+import type { NextPage } from 'next'
 import Index from '../'
 
 const IndexPage: NextPage = () => <Index />

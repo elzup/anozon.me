@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { Product } from '../../types'
+import type { Product } from '../../types'
 
 const hilight = keyframes`
 0% {

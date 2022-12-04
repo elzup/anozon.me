@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Category } from '../../types'
+import type { Category } from '../../types'
 
 import LinkButton from '../LinkButton'
 

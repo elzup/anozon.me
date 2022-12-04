@@ -1,26 +1,24 @@
-import { createGlobalStyle } from 'styled-components'
 import {
 	config as faConfig,
 	dom,
 	library,
 } from '@fortawesome/fontawesome-svg-core'
-
-import ReactGA from 'react-ga'
-
 import {
-	faPenNib,
-	faPalette,
-	faGift,
-	faGamepad,
-	faCoffee,
-	faArrowCircleRight,
-} from '@fortawesome/free-solid-svg-icons'
-import {
-	faTwitter,
 	faGithub,
-	faYoutube,
 	faTumblr,
+	faTwitter,
+	faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
+import {
+	faArrowCircleRight,
+	faCoffee,
+	faGamepad,
+	faGift,
+	faPalette,
+	faPenNib,
+} from '@fortawesome/free-solid-svg-icons'
+import ReactGA from 'react-ga'
+import { createGlobalStyle } from 'styled-components'
 import { GA_TRACKING_ID, isDev } from '.'
 
 library.add(
@@ -38,7 +36,7 @@ library.add(
 
 faConfig.autoAddCss = false
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle: any = createGlobalStyle`
 
 	* {
 		font-family: 'M PLUS Rounded 1c', sans-serif;

@@ -1,9 +1,9 @@
-import { AppProps } from 'next/app'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
 
-import * as gtag from '../utils/gtag'
 import { GA_TRACKING_ID } from '../config'
+import * as gtag from '../utils/gtag'
 
 const config = {
 	url: 'https://anozon.me',
