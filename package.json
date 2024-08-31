@@ -15,7 +15,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
-		"@astrojs/react": "^1.2.2",
+		"@astrojs/react": "^3.0.0",
 		"@elzup/tsconfig": "^1.1.0",
 		"@types/react": "^18.0.21",
 		"astro-icon": "^0.8.0",
@@ -24,11 +24,11 @@
 		"react-dom": "^18.0.0"
 	},
 	"devDependencies": {
-		"@astrojs/partytown": "^1.0.2",
+		"@astrojs/partytown": "^2.0.0",
 		"@notionhq/client": "^2.2.2",
 		"@types/node": "18.15.11",
 		"@types/react-dom": "^18.0.6",
-		"astro": "^1.6.12",
+		"astro": "^4.0.0",
 		"eslint-config-next": "13.2.4",
 		"husky": "^8.0.2",
 		"lint-staged": "^13.0.4",
