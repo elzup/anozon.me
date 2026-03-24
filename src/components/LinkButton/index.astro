@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 
 const getIcon = (url: string): string => {
 	if (url.search('github') >= 0) {
@@ -65,7 +65,7 @@ export interface Props {
 		width: 1em;
 		text-align: center;
 	}
-	[astro-icon] {
+	[data-icon] {
 		color: white;
 	}
 </style>

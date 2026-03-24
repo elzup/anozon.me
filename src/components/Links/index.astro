@@ -1,5 +1,11 @@
 ---
-import LinksItem, { Props as LinksItemProps } from '../LinksItem/index.astro'
+import LinksItem from '../LinksItem/index.astro'
+
+interface LinksItemProps {
+	title: string
+	href: string
+	icon: string
+}
 
 const links: LinksItemProps[] = [
 	{
