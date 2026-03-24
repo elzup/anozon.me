@@ -1,21 +1,9 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "exclude": [
-    "node_modules",
-    "scripts"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "compilerOptions": {
-    "allowJs": true,
-    "noEmit": true,
-    "incremental": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  }
+	"extends": "astro/tsconfigs/strict",
+	"exclude": ["node_modules", "scripts"],
+	"include": ["**/*.ts", "**/*.tsx"],
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
+	}
 }
