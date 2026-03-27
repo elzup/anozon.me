@@ -1,4 +1,11 @@
 {
-	"extends": "@elzup/tsconfig/tsconfig.node.json",
-	"include": ["**/*.ts", "**/*.tsx"]
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"strict": true,
+		"skipLibCheck": true
+	},
+	"include": ["**/*.ts"]
 }

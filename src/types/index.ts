@@ -1,3 +1,5 @@
+export type ProductSize = 'S' | 'M' | 'L'
+
 export type Product = {
 	title: string
 	url: string
@@ -5,6 +7,7 @@ export type Product = {
 	description: string
 	filename: string
 	tags: string[]
+	size: ProductSize
 }
 
 export type HobbyNote = {

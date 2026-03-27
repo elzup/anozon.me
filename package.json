@@ -4,10 +4,12 @@
 	"private": true,
 	"homepage": "https://anozon.me/",
 	"scripts": {
-		"dev": "astro dev",
+		"dev": "portless run --name anozon-me astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
 		"lint": "oxlint src --ignore-pattern '*.astro'",
+		"sync:pull": "tsx --env-file=.env script/loadProducts.ts",
+		"sync:push": "tsx --env-file=.env script/pushProducts.ts",
 		"setenv": "node scripts/setup_env.js",
 		"prepare": "husky"
 	},
@@ -37,6 +39,7 @@
 		"postcss-jit-props": "^1.0.14",
 		"postcss-nesting": "^13.0.0",
 		"postcss-preset-env": "^10.0.0",
+		"tsx": "^4.21.0",
 		"typescript": "^5.7.0"
 	},
 	"lint-staged": {

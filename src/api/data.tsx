@@ -1,55 +1,6 @@
-import type { Category, Product, HobbyImage } from '../types'
+import type { Category, HobbyImage } from '../types'
 
-export const products: Product[] = [
-	{
-		title: 'elzup.com',
-		url: 'https://elzup.com',
-		urlLive: true,
-		description: '大学時代の自分跡地',
-		filename: 'elzup.png',
-		tags: ['React', 'flow'],
-	},
-	{
-		title: 'uniballoon',
-		url: 'https://uniballoon.com',
-		urlLive: false,
-		description: 'アイデア共有サイト',
-		filename: 'uniballoon.png',
-		tags: ['Rails', 'React'],
-	},
-	{
-		title: 'another-node',
-		url: 'https://anozon.me',
-		urlLive: true,
-		description: 'このサイト',
-		filename: 'another-node.png',
-		tags: ['astro', 'Next.js', 'React', 'TypeScript'],
-	},
-	{
-		title: 'anozonblog',
-		url: 'https://blog.anozon.me',
-		urlLive: true,
-		description: 'GatsbyJS と TypeScriptで作ったブログ',
-		filename: 'anozonblog.png',
-		tags: ['GatsbyJS', 'React', 'TypeScript'],
-	},
-	{
-		title: 'nozctf',
-		url: 'https://nozctf.web.app',
-		urlLive: true,
-		description: 'Firebase で作った web 問題 CTF サイト',
-		filename: 'nozctf.png',
-		tags: ['Next.js', 'React', 'TypeScript'],
-	},
-	{
-		title: 'Mitelop',
-		url: 'https://mitelop.anozon.me/',
-		urlLive: true,
-		description: '配信向けガジェット',
-		filename: 'mitelop.png',
-		tags: ['Next.js', 'React', 'TypeScript', 'PWA'],
-	},
-]
+export { products } from './products'
 
 export const categories: Category[] = [
 	{
