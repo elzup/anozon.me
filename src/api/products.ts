@@ -3,7 +3,7 @@ import type { Product } from '../types'
 export const products: Product[] = [
 	{
 		title: "Dentime",
-		url: "",
+		url: "https://tools.anozon.me/dentime",
 		urlLive: false,
 		description: "時間割時刻管理ツール",
 		filename: "dentime.png",
@@ -12,7 +12,7 @@ export const products: Product[] = [
 	},
 	{
 		title: "苦手タイパー",
-		url: "",
+		url: "https://tools.anozon.me/nigate-typer",
 		urlLive: false,
 		description: "簡易単語タイピングツール",
 		filename: "nigate-typer.png",
@@ -39,7 +39,7 @@ export const products: Product[] = [
 	},
 	{
 		title: "Clipsh",
-		url: "",
+		url: "https://tools.anozon.me/clipsh",
 		urlLive: false,
 		description: "クリップボードエディタ",
 		filename: "clipsh.png",
@@ -57,7 +57,7 @@ export const products: Product[] = [
 	},
 	{
 		title: "anozon.me",
-		url: "",
+		url: "https://anozon.me",
 		urlLive: false,
 		description: "プロフィールサイト",
 		filename: "another-node.png",
@@ -75,7 +75,7 @@ export const products: Product[] = [
 	},
 	{
 		title: "ピクブルMEMO",
-		url: "",
+		url: "https://tools.anozon.me/pikuburu-memo",
 		urlLive: false,
 		description: "ピクミンブルーム苗管理アプリ",
 		filename: "pikuburu-memo.png",
@@ -84,7 +84,7 @@ export const products: Product[] = [
 	},
 	{
 		title: "Mitelop",
-		url: "",
+		url: "https://mitelop.anozon.me/",
 		urlLive: false,
 		description: "配信ガジェット",
 		filename: "mitelop.png",
