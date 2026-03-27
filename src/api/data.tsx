@@ -18,6 +18,13 @@ export const categories: Category[] = [
 				],
 			},
 			{
+				name: 'Splatoon3',
+				notes: [
+					{ text: '持ち武器: エクスプロッシャー, もみじ, わかば' },
+					{ text: 'XP2650' },
+				],
+			},
+			{
 				name: 'Splatoon2',
 				notes: [
 					{ text: '持ち武器: N-ZAP95, H3Dリールガン, ジェッカス' },
