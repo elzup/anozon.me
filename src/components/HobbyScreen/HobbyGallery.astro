@@ -1,45 +1,50 @@
 ---
 import LinkButton from '../LinkButton/index.astro'
-
 import { hobbyImages } from '../../api/data'
 ---
 
-<div class="wrapper">
-	<div>
-		{
-			hobbyImages.map((hi, i) => (
-				<div class="box">
-					<img src={hi.src} alt="" />
-
-					<div class="link-box">
-						<LinkButton href={hi.href} />
-					</div>
+<div class="gallery">
+	{
+		hobbyImages.map((hi) => (
+			<div class="box">
+				<img src={hi.src} alt="" loading="lazy" />
+				<div class="link-box">
+					<LinkButton href={hi.href} />
 				</div>
-			))
-		}
-	</div>
+			</div>
+		))
+	}
 </div>
 
 <style>
-	.wrapper {
-		display: flex;
-		margin-top: 15px;
-		min-height: 350px;
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+		gap: 12px;
+		margin-top: 24px;
 	}
 
 	.box {
 		position: relative;
-		float: left;
-		width: 33%;
+		border-radius: 8px;
+		overflow: hidden;
+		aspect-ratio: 1;
+		background: #f0f0f0;
+		transition: transform 0.2s ease;
+		&:hover {
+			transform: scale(1.03);
+		}
 	}
 
 	img {
 		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	.link-box {
 		position: absolute;
-		bottom: 10px;
-		right: 10px;
+		bottom: 8px;
+		right: 8px;
 	}
 </style>

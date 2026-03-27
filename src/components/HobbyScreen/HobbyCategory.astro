@@ -1,0 +1,125 @@
+---
+import type { Category } from '../../types'
+import LinkButton from '../LinkButton/index.astro'
+
+export interface Props {
+	category: Category
+}
+const { category } = Astro.props
+
+const CATEGORY_ICONS: Record<string, string> = {
+	'ゲーム': '🎮',
+	'パズル': '🧩',
+	'ボドゲ': '♟️',
+	'アニメ': '📺',
+	'コード': '💻',
+}
+const icon = CATEGORY_ICONS[category.name] ?? '⬢'
+---
+
+<div class="category-card">
+	<div class="header">
+		<span class="icon">{icon}</span>
+		<h3>{category.name}</h3>
+	</div>
+	<ul class="hobby-list">
+		{category.hobbies.map((hobby) => (
+			hobby.name === '---' ? (
+				<li class="divider">
+					{hobby.notes && hobby.notes.map((note) => (
+						note.href
+							? <LinkButton href={note.href} text={note.text} />
+							: <span class="note-text">{note.text}</span>
+					))}
+				</li>
+			) : (
+				<li class="hobby-item">
+					<span class="hobby-name">{hobby.name}</span>
+					{hobby.notes && (
+						<div class="notes">
+							{hobby.notes.map((note) => (
+								note.href
+									? <LinkButton href={note.href} text={note.text} />
+									: <span class="note-text">{note.text}</span>
+							))}
+						</div>
+					)}
+				</li>
+			)
+		))}
+	</ul>
+</div>
+
+<style>
+	.category-card {
+		background: #ffffffb0;
+		border: 1px solid #e0e0e0;
+		border-radius: 12px;
+		padding: 16px 20px;
+		width: 280px;
+		transition: box-shadow 0.2s ease;
+		&:hover {
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	.header {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 12px;
+		padding-bottom: 8px;
+		border-bottom: 2px solid #333;
+	}
+
+	.icon {
+		font-size: 1.4rem;
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1.1rem;
+		letter-spacing: 0.05em;
+	}
+
+	.hobby-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.hobby-item {
+		padding: 6px 0;
+		border-bottom: 1px dashed #e8e8e8;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.hobby-name {
+		font-weight: 500;
+		font-size: 0.95rem;
+	}
+
+	.notes {
+		margin-top: 4px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		align-items: center;
+	}
+
+	.note-text {
+		font-size: 0.8rem;
+		color: #666;
+		display: inline-block;
+		margin-right: 4px;
+	}
+
+	.divider {
+		padding: 6px 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+	}
+</style>
