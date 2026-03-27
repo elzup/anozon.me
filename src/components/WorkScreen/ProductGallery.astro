@@ -4,7 +4,7 @@ import ProductCard from '../ProductCard/index.astro'
 ---
 
 <div>
-	<div class="grid-frame">
+	<div class="gallery">
 		{products.map((product) => <ProductCard product={product} />)}
 	</div>
 </div>
@@ -13,9 +13,18 @@ import ProductCard from '../ProductCard/index.astro'
 	:root > div {
 		display: flex;
 	}
-	.grid-frame {
+	.gallery {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: center;
+		gap: 16px;
+	}
+	@supports (display: masonry) {
+		.gallery {
+			display: masonry;
+			masonry-template-tracks: repeat(auto-fill, minmax(200px, 1fr));
+			gap: 16px;
+			justify-items: center;
+		}
 	}
 </style>
