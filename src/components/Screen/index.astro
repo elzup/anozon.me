@@ -4,17 +4,18 @@ export interface Props {
 	title: string
 	description: string
 }
-const { props } = Astro
+const { id, title, description } = Astro.props
 ---
 
-<div class="wrap">
+<section id={id} class="wrap">
 	<div class="header">
 		<h2>
-			{props.title}: {props.description}
+			<span class="title">{title}</span>
+			<span class="desc">{description}</span>
 		</h2>
 	</div>
 	<slot />
-</div>
+</section>
 
 <style>
 	.wrap {
@@ -26,20 +27,30 @@ const { props } = Astro
 		}
 	}
 
-	h2 {
-		text-align: center;
-		border-bottom: solid 1px gray;
-		width: 100%;
-		&:before {
-			content: '-';
-		}
-		&:after {
-			content: '-';
-		}
-	}
-
-	.hdear {
+	.header {
 		display: flex;
 		justify-content: center;
+	}
+
+	h2 {
+		text-align: center;
+		border-bottom: solid 1px #ccc;
+		padding-bottom: 8px;
+		width: 100%;
+		display: flex;
+		align-items: baseline;
+		justify-content: center;
+		gap: 8px;
+	}
+
+	.title {
+		font-size: 1.4rem;
+		letter-spacing: 0.05em;
+	}
+
+	.desc {
+		font-size: 0.9rem;
+		color: #888;
+		font-weight: normal;
 	}
 </style>

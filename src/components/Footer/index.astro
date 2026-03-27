@@ -1,28 +1,26 @@
-<div class="wrap">
-	<div class="contacts">
-		<h4>© 2020 anozon</h4>
-	</div>
-</div>
+---
+const year = new Date().getFullYear()
+---
+
+<footer>
+	<p>© {year} anozon</p>
+</footer>
 
 <style>
-	.wrap {
-		height: 10em;
+	footer {
+		height: 6em;
 		width: 100%;
-		background: black;
+		background: #222;
 		display: flex;
-		justify-content: center;
-	}
-
-	.contacts {
-		display: flex;
-		width: 100%;
-		z-index: 10;
-		padding: 8px 16px;
-		align-items: flex-end;
 		justify-content: flex-end;
+		align-items: flex-end;
+		padding: 16px 24px;
+		box-sizing: border-box;
 	}
 
-	h4 {
-		color: white;
+	p {
+		color: #aaa;
+		font-size: 0.85rem;
+		margin: 0;
 	}
 </style>
