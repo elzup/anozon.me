@@ -9,8 +9,7 @@ const { category } = Astro.props
 
 const CATEGORY_ICONS: Record<string, string> = {
 	'ゲーム': '🎮',
-	'パズル': '🧩',
-	'ボドゲ': '♟️',
+	'パズル・ボドゲ': '🧩',
 	'アニメ': '📺',
 	'コード': '💻',
 }
@@ -54,31 +53,32 @@ const icon = CATEGORY_ICONS[category.name] ?? '⬢'
 	.category-card {
 		background: #ffffffb0;
 		border: 1px solid #e0e0e0;
-		border-radius: 12px;
-		padding: 16px 20px;
-		width: 280px;
+		border-radius: 8px;
+		padding: 10px 12px;
+		flex: 1 1 180px;
+		min-width: 150px;
 		transition: box-shadow 0.2s ease;
 		&:hover {
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 		}
 	}
 
 	.header {
 		display: flex;
 		align-items: center;
-		gap: 8px;
-		margin-bottom: 12px;
-		padding-bottom: 8px;
+		gap: 6px;
+		margin-bottom: 8px;
+		padding-bottom: 6px;
 		border-bottom: 2px solid #333;
 	}
 
 	.icon {
-		font-size: 1.4rem;
+		font-size: 1.1rem;
 	}
 
 	h3 {
 		margin: 0;
-		font-size: 1.1rem;
+		font-size: 0.9rem;
 		letter-spacing: 0.05em;
 	}
 
@@ -89,7 +89,7 @@ const icon = CATEGORY_ICONS[category.name] ?? '⬢'
 	}
 
 	.hobby-item {
-		padding: 6px 0;
+		padding: 4px 0;
 		border-bottom: 1px dashed #e8e8e8;
 		&:last-child {
 			border-bottom: none;
@@ -98,28 +98,28 @@ const icon = CATEGORY_ICONS[category.name] ?? '⬢'
 
 	.hobby-name {
 		font-weight: 500;
-		font-size: 0.95rem;
+		font-size: 0.8rem;
 	}
 
 	.notes {
-		margin-top: 4px;
+		margin-top: 2px;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 4px;
+		gap: 3px;
 		align-items: center;
 	}
 
 	.note-text {
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 		color: #666;
 		display: inline-block;
-		margin-right: 4px;
+		margin-right: 3px;
 	}
 
 	.divider {
-		padding: 6px 0;
+		padding: 4px 0;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 4px;
+		gap: 3px;
 	}
 </style>

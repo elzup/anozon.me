@@ -44,6 +44,7 @@ export const categories: Category[] = [
 					},
 				],
 			},
+			{ name: 'Dyson Sphere Program' },
 			{ name: 'ネクロダンサー' },
 			{ name: 'factorio' },
 			{
@@ -64,7 +65,7 @@ export const categories: Category[] = [
 		],
 	},
 	{
-		name: 'パズル',
+		name: 'パズル・ボドゲ',
 		hobbies: [
 			{
 				name: 'ルービックキューブ',
@@ -88,11 +89,6 @@ export const categories: Category[] = [
 				name: 'ペンシルパズル',
 				notes: [{ text: 'スリザーリンク好き' }, { text: 'ニコリのパズル' }],
 			},
-		],
-	},
-	{
-		name: 'ボドゲ',
-		hobbies: [
 			{ name: 'オセロ' },
 			{
 				name: '将棋',
