@@ -14,17 +14,9 @@ import ProductCard from '../ProductCard/index.astro'
 		display: flex;
 	}
 	.gallery {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 140px);
+		gap: 8px;
 		justify-content: center;
-		gap: 16px;
-	}
-	@supports (display: masonry) {
-		.gallery {
-			display: masonry;
-			masonry-template-tracks: repeat(auto-fill, minmax(200px, 1fr));
-			gap: 16px;
-			justify-items: center;
-		}
 	}
 </style>

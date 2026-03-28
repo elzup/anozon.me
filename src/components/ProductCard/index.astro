@@ -40,19 +40,23 @@ const hasImage = product.hasImage ?? false
 		}
 	}
 
+	/* S=1col, M=2col, L=3col (grid column unit = 140px, gap = 8px) */
 	:root > a {
 		position: relative;
+		grid-column: span 1;
 		&:before {
 			position: absolute;
 			top: 0.5em;
-			left: -0.5em;
+			left: -0.3em;
 			content: '⬢';
+			font-size: 0.6rem;
 		}
 		&:after {
 			position: absolute;
-			bottom: -0.5em;
-			right: -0.5em;
+			bottom: -0.3em;
+			right: -0.3em;
 			content: '⬢';
+			font-size: 0.6rem;
 		}
 		&[data-disabled='true'] {
 			pointer-events: none;
@@ -60,52 +64,55 @@ const hasImage = product.hasImage ?? false
 		}
 	}
 
+	[data-size='M'] {
+		grid-column: span 2;
+	}
+	[data-size='L'] {
+		grid-column: span 3;
+	}
+
 	.card {
-		width: 180px;
+		width: 100%;
 		text-align: center;
 		background: #ffffffb0;
-		margin-top: 12px;
-		border: dashed #dcdcdc 1px;
-		padding: 4px;
+		border: solid #e0e0e0 1px;
+		padding: 2px;
+		box-sizing: border-box;
 		&:hover {
 			animation: hilight 0.5s ease 0s forwards;
 		}
 	}
 
 	h4 {
-		font-size: 0.8rem;
-		margin: 4px 0 2px;
+		font-size: 0.7rem;
+		margin: 2px 0 1px;
+		line-height: 1.2;
 	}
 
 	p {
-		font-size: 0.7rem;
-		margin: 0 0 4px;
+		font-size: 0.6rem;
+		margin: 0 0 2px;
 		color: #666;
+		line-height: 1.2;
 	}
 
 	.img-wrap {
-		height: 110px;
+		height: 100px;
 	}
 
-	[data-size='S'] .card {
-		width: 140px;
-	}
-	[data-size='S'] .img-wrap {
-		height: 80px;
+	[data-size='M'] .img-wrap {
+		height: 140px;
 	}
 
-	[data-size='L'] .card {
-		width: 240px;
-	}
 	[data-size='L'] .img-wrap {
-		height: 150px;
+		height: 180px;
 	}
 
 	img {
-		width: 95%;
-		height: 95%;
-		object-fit: contain;
-		border-radius: 5px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 2px;
 	}
 
 	.placeholder {
@@ -115,10 +122,10 @@ const hasImage = product.hasImage ?? false
 		align-items: center;
 		justify-content: center;
 		background: linear-gradient(135deg, #e0e0e0 0%, #c8c8c8 100%);
-		border-radius: 5px;
+		border-radius: 4px;
 	}
 	.placeholder span {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 		color: #888;
 		font-weight: bold;
 	}
