@@ -6,8 +6,6 @@ const getIcon = (url: string): string => {
 		return 'mdi:github'
 	} else if (url.search('tumblr') >= 0) {
 		return 'ri:tumblr-fill'
-		// } else if (url.search('annict') >= 0) {
-		// 	return 'annict'
 	} else {
 		return 'ic:round-insert-link'
 	}
@@ -22,50 +20,37 @@ export interface Props {
 }
 ---
 
-<a href={href} aria-label={text} target="_blank" rel="noopener noreferrer">
-	<div>
-		<div class="container">
-			{text && <div class="label">{text}</div>}
-			<div class="icon">
-				<Icon name={iconId} inverse />
-			</div>
-		</div>
-	</div>
+<a href={href} aria-label={text || href} target="_blank" rel="noopener noreferrer" class="link-btn">
+	<Icon name={iconId} />
+	{text && <span class="label">{text}</span>}
 </a>
 
 <style>
-	@keyframes hilight {
-		from {
-			box-shadow: 1px 1px;
-		}
-
-		to {
-			box-shadow: 1px 1px #aaa;
-			background: #cdcdcd;
+	.link-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 3px;
+		padding: 2px 6px;
+		color: #1a6dcc;
+		font-size: 0.7rem;
+		line-height: 1.3;
+		white-space: nowrap;
+		text-decoration: none;
+		border-bottom: 1px solid #1a6dcc;
+		transition: color 0.2s, border-color 0.2s;
+		&:hover {
+			color: #0d4a8b;
+			border-color: #0d4a8b;
 		}
 	}
 
-	.container {
-		background: #fff;
-		box-shadow: 1px 1px;
-		display: inline-flex;
-		margin-top: 5px;
-		&:hover {
-			animation: hilight 0.5s ease 0s forwards;
-		}
+	[data-icon] {
+		color: currentColor;
+		width: 0.85em;
+		height: 0.85em;
 	}
 
 	.label {
-		padding: 5px;
-	}
-
-	.icon {
-		padding: 5px;
-		background: black;
-		width: 1em;
-		text-align: center;
-	}
-	[data-icon] {
-		color: white;
+		color: currentColor;
 	}
 </style>
