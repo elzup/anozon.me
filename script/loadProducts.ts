@@ -46,9 +46,9 @@ function normalizeTag(tag: string): string {
 function extractProduct(page: PageObjectResponse): Product | null {
 	const props = page.properties
 
-	// skip WIP
-	const wipProp = props['WIP']
-	if (wipProp?.type === 'checkbox' && wipProp.checkbox) return null
+	// only status=有効
+	const statusProp = props['status']
+	if (statusProp?.type === 'select' && statusProp.select?.name !== '有効') return null
 
 	// only Web category
 	const catProp = props['Category']

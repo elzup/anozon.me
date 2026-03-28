@@ -3,8 +3,8 @@ import type { Product } from '../types'
 export const products: Product[] = [
 	{
 		title: "Dentime",
-		url: "https://tools.anozon.me/dentime",
-		urlLive: false,
+		url: "https://dentime.anozon.me/",
+		urlLive: true,
 		description: "時間割時刻管理ツール",
 		filename: "dentime.png",
 		tags: ["PWA","React"],
@@ -49,7 +49,7 @@ export const products: Product[] = [
 		filename: "scope-timer.png",
 		tags: ["React","TypeScript"],
 		size: "M",
-		hasImage: false,
+		hasImage: true,
 	},
 	{
 		title: "Code Explorer",
@@ -60,16 +60,6 @@ export const products: Product[] = [
 		tags: ["React","TypeScript"],
 		size: "L",
 		hasImage: true,
-	},
-	{
-		title: "Speecher",
-		url: "https://tools.anozon.me/speecher",
-		urlLive: true,
-		description: "音声合成・読み上げツール",
-		filename: "speecher.png",
-		tags: ["React","TypeScript"],
-		size: "M",
-		hasImage: false,
 	},
 	{
 		title: "Clipsh",
