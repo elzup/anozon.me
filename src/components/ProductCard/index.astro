@@ -5,7 +5,7 @@ export interface Props {
 }
 const { product } = Astro.props
 const size = product.size ?? 'M'
-const hasImage = product.filename && product.filename !== '.png'
+const hasImage = product.hasImage ?? false
 ---
 
 <a
@@ -61,33 +61,44 @@ const hasImage = product.filename && product.filename !== '.png'
 	}
 
 	.card {
-		width: 300px;
+		width: 180px;
 		text-align: center;
 		background: #ffffffb0;
-		margin-top: 20px;
+		margin-top: 12px;
 		border: dashed #dcdcdc 1px;
-		padding: 5px;
+		padding: 4px;
 		&:hover {
 			animation: hilight 0.5s ease 0s forwards;
 		}
 	}
 
+	h4 {
+		font-size: 0.8rem;
+		margin: 4px 0 2px;
+	}
+
+	p {
+		font-size: 0.7rem;
+		margin: 0 0 4px;
+		color: #666;
+	}
+
 	.img-wrap {
-		height: 200px;
+		height: 110px;
 	}
 
 	[data-size='S'] .card {
-		width: 200px;
+		width: 140px;
 	}
 	[data-size='S'] .img-wrap {
-		height: 130px;
+		height: 80px;
 	}
 
 	[data-size='L'] .card {
-		width: 420px;
+		width: 240px;
 	}
 	[data-size='L'] .img-wrap {
-		height: 280px;
+		height: 150px;
 	}
 
 	img {
@@ -107,7 +118,7 @@ const hasImage = product.filename && product.filename !== '.png'
 		border-radius: 5px;
 	}
 	.placeholder span {
-		font-size: 3rem;
+		font-size: 1.8rem;
 		color: #888;
 		font-weight: bold;
 	}

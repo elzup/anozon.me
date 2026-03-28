@@ -8,6 +8,7 @@ export type Product = {
 	filename: string
 	tags: string[]
 	size: ProductSize
+	hasImage: boolean
 }
 
 export type HobbyNote = {

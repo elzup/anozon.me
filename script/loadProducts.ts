@@ -22,6 +22,7 @@ type Product = {
 	filename: string
 	tags: string[]
 	size: ProductSize
+	hasImage: boolean
 }
 
 const TAG_MAP: Record<string, string> = {
@@ -84,7 +85,10 @@ function extractProduct(page: PageObjectResponse): Product | null {
 	const sizeRaw = sizeProp?.type === 'select' ? sizeProp.select?.name : null
 	const size: ProductSize = sizeRaw === 'L' || sizeRaw === 'S' ? sizeRaw : 'M'
 
-	return { title, url, urlLive, description, filename, tags, size }
+	const staticDir = resolve(__dirname, '../public/static')
+	const hasImage = existsSync(resolve(staticDir, filename))
+
+	return { title, url, urlLive, description, filename, tags, size, hasImage }
 }
 
 async function main() {
@@ -144,6 +148,7 @@ function generateDataFile(products: Product[]): string {
 		lines.push(`\t\tfilename: ${JSON.stringify(p.filename)},`)
 		lines.push(`\t\ttags: ${JSON.stringify(p.tags)},`)
 		lines.push(`\t\tsize: ${JSON.stringify(p.size)},`)
+		lines.push(`\t\thasImage: ${p.hasImage},`)
 		lines.push('\t},')
 	}
 

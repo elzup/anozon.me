@@ -9,6 +9,7 @@ export const products: Product[] = [
 		filename: "dentime.png",
 		tags: ["PWA","React"],
 		size: "L",
+		hasImage: true,
 	},
 	{
 		title: "苦手タイパー",
@@ -18,6 +19,7 @@ export const products: Product[] = [
 		filename: "nigate-typer.png",
 		tags: ["React"],
 		size: "S",
+		hasImage: false,
 	},
 	{
 		title: "elzup.com",
@@ -27,6 +29,7 @@ export const products: Product[] = [
 		filename: "elzup.png",
 		tags: ["React"],
 		size: "M",
+		hasImage: true,
 	},
 	{
 		title: "nozctf",
@@ -36,6 +39,7 @@ export const products: Product[] = [
 		filename: "nozctf.png",
 		tags: ["React","TypeScript"],
 		size: "M",
+		hasImage: true,
 	},
 	{
 		title: "Scope Timer",
@@ -45,6 +49,7 @@ export const products: Product[] = [
 		filename: "scope-timer.png",
 		tags: ["React","TypeScript"],
 		size: "M",
+		hasImage: false,
 	},
 	{
 		title: "Code Explorer",
@@ -54,6 +59,7 @@ export const products: Product[] = [
 		filename: "code-explorer.png",
 		tags: ["React","TypeScript"],
 		size: "L",
+		hasImage: true,
 	},
 	{
 		title: "Speecher",
@@ -63,6 +69,7 @@ export const products: Product[] = [
 		filename: "speecher.png",
 		tags: ["React","TypeScript"],
 		size: "M",
+		hasImage: false,
 	},
 	{
 		title: "Clipsh",
@@ -72,6 +79,7 @@ export const products: Product[] = [
 		filename: "clipsh.png",
 		tags: ["React"],
 		size: "M",
+		hasImage: true,
 	},
 	{
 		title: "Saikoron",
@@ -81,6 +89,7 @@ export const products: Product[] = [
 		filename: "saikoron.png",
 		tags: [],
 		size: "M",
+		hasImage: false,
 	},
 	{
 		title: "anozon.me",
@@ -90,6 +99,7 @@ export const products: Product[] = [
 		filename: "another-node.png",
 		tags: ["React"],
 		size: "M",
+		hasImage: true,
 	},
 	{
 		title: "blog.anozon.me",
@@ -99,6 +109,7 @@ export const products: Product[] = [
 		filename: "anozonblog.png",
 		tags: ["React","Gatsby"],
 		size: "L",
+		hasImage: true,
 	},
 	{
 		title: "ピクブルMEMO",
@@ -108,6 +119,7 @@ export const products: Product[] = [
 		filename: "pikuburu-memo.png",
 		tags: ["PWA","React"],
 		size: "M",
+		hasImage: true,
 	},
 	{
 		title: "Mitelop",
@@ -117,5 +129,6 @@ export const products: Product[] = [
 		filename: "mitelop.png",
 		tags: ["PWA","React","TypeScript"],
 		size: "L",
+		hasImage: true,
 	},
 ]
