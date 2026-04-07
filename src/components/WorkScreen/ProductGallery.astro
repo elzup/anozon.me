@@ -15,8 +15,11 @@ import ProductCard from '../ProductCard/index.astro'
 	}
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, 140px);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 8px;
-		justify-content: center;
+		width: 100%;
+		@media (max-width: 500px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 </style>

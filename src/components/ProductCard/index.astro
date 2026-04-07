@@ -6,6 +6,8 @@ export interface Props {
 const { product } = Astro.props
 const size = product.size ?? 'M'
 const hasImage = product.hasImage ?? false
+const imageFit = product.imageFit ?? 'contain'
+const gridStyle = `grid-column: ${product.gridColumn}; grid-row: ${product.gridRow};`
 ---
 
 <a
@@ -13,106 +15,95 @@ const hasImage = product.hasImage ?? false
 	target={'_blank'}
 	data-disabled={!product.urlLive}
 	data-size={size}
+	style={gridStyle}
 	rel="noopener noreferrer"
 >
-	<div class="card">
-		<div class="img-wrap">
+	<article class="card">
+		<div class="img-wrap" data-fit={imageFit}>
 			{hasImage ? (
 				<img src={`/static/${product.filename}`} alt={product.title} />
 			) : (
 				<div class="placeholder">
-					<span>{product.title.slice(0, 2)}</span>
+					<span>{product.title}</span>
 				</div>
 			)}
 		</div>
-		<h4>{product.title}</h4>
-		<p>{product.description}</p>
-	</div>
+		<div class="info">
+			<h4>{product.title}</h4>
+			<p>{product.description}</p>
+		</div>
+	</article>
 </a>
 
 <style>
-	@keyframes hilight {
-		0% {
-			background: white;
-		}
-		100% {
-			background: #eee;
-		}
-	}
-
-	/* S=1col, M=2col, L=3col (grid column unit = 140px, gap = 8px) */
+	/* S=1x1, M=2x1, L=2x2 */
 	:root > a {
-		position: relative;
-		grid-column: span 1;
-		&:before {
-			position: absolute;
-			top: 0.5em;
-			left: -0.3em;
-			content: '⬢';
-			font-size: 0.6rem;
-		}
-		&:after {
-			position: absolute;
-			bottom: -0.3em;
-			right: -0.3em;
-			content: '⬢';
-			font-size: 0.6rem;
-		}
+		display: block;
+		text-decoration: none;
+		color: inherit;
 		&[data-disabled='true'] {
 			pointer-events: none;
-			cursor: none;
 		}
-	}
-
-	[data-size='M'] {
-		grid-column: span 2;
-	}
-	[data-size='L'] {
-		grid-column: span 3;
 	}
 
 	.card {
-		width: 100%;
-		text-align: center;
-		background: #ffffffb0;
-		border: solid #e0e0e0 1px;
-		padding: 2px;
-		box-sizing: border-box;
+		height: 100%;
+		border-radius: 6px;
+		overflow: hidden;
+		background: #fff;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
 		&:hover {
-			animation: hilight 0.5s ease 0s forwards;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 		}
 	}
 
-	h4 {
-		font-size: 0.7rem;
-		margin: 2px 0 1px;
-		line-height: 1.2;
-	}
-
-	p {
-		font-size: 0.6rem;
-		margin: 0 0 2px;
-		color: #666;
-		line-height: 1.2;
-	}
-
 	.img-wrap {
-		height: 100px;
+		flex: 1;
+		min-height: 80px;
+		overflow: hidden;
+		background: #f0f0f0;
 	}
 
-	[data-size='M'] .img-wrap {
-		height: 140px;
+	[data-fit='cover'] img {
+		object-fit: cover;
 	}
-
-	[data-size='L'] .img-wrap {
-		height: 180px;
+	[data-fit='contain'] img {
+		object-fit: contain;
 	}
 
 	img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
-		border-radius: 2px;
+		display: block;
+	}
+
+	.info {
+		padding: 4px 6px;
+		border-top: 1px solid #eee;
+	}
+
+	h4 {
+		font-size: 0.7rem;
+		margin: 0;
+		font-weight: 600;
+		line-height: 1.3;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	p {
+		font-size: 0.55rem;
+		margin: 1px 0 0;
+		color: #888;
+		line-height: 1.3;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.placeholder {
@@ -121,12 +112,15 @@ const hasImage = product.hasImage ?? false
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: linear-gradient(135deg, #e0e0e0 0%, #c8c8c8 100%);
-		border-radius: 4px;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		padding: 12px;
+		box-sizing: border-box;
 	}
+
 	.placeholder span {
-		font-size: 1.5rem;
-		color: #888;
-		font-weight: bold;
+		font-size: 0.85rem;
+		color: white;
+		font-weight: 700;
+		text-align: center;
 	}
 </style>

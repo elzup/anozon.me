@@ -1,4 +1,4 @@
-export type ProductSize = 'S' | 'M' | 'L'
+export type ProductSize = 'XS' | 'S' | 'M' | 'L'
 
 export type Product = {
 	title: string
@@ -9,6 +9,9 @@ export type Product = {
 	tags: string[]
 	size: ProductSize
 	hasImage: boolean
+	imageFit: 'cover' | 'contain'
+	gridColumn: string
+	gridRow: string
 }
 
 export type HobbyNote = {

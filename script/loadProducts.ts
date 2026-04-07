@@ -3,7 +3,8 @@ import type {
 	PageObjectResponse,
 	RichTextItemResponse,
 } from '@notionhq/client/build/src/api-endpoints'
-import { writeFileSync, existsSync } from 'fs'
+import { writeFileSync, existsSync, readFileSync } from 'fs'
+import { execSync } from 'child_process'
 import { resolve } from 'path'
 import assert from 'assert'
 
@@ -12,7 +13,7 @@ const { NOTION_SECRET, NOTION_TARGET_DB } = process.env
 assert(NOTION_SECRET, 'NOTION_SECRET not setup')
 assert(NOTION_TARGET_DB, 'NOTION_TARGET_DB not setup')
 
-type ProductSize = 'S' | 'M' | 'L'
+type ProductSize = 'XS' | 'S' | 'M' | 'L'
 
 type Product = {
 	title: string
@@ -23,6 +24,9 @@ type Product = {
 	tags: string[]
 	size: ProductSize
 	hasImage: boolean
+	imageFit: 'cover' | 'contain'
+	gridColumn: string
+	gridRow: string
 }
 
 const TAG_MAP: Record<string, string> = {
@@ -37,6 +41,17 @@ function richTextToPlain(richText: RichTextItemResponse[]): string {
 
 function toFilename(title: string): string {
 	return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '') + '.png'
+}
+
+function detectImageFit(imgPath: string): 'cover' | 'contain' {
+	try {
+		const out = execSync(`identify -format "%wx%h" "${imgPath}"`, { encoding: 'utf-8' }).trim()
+		const [w, h] = out.split('x').map(Number)
+		// landscape images (wider than 4:3) use cover, others use contain
+		return w > h * 1.2 ? 'cover' : 'contain'
+	} catch {
+		return 'contain'
+	}
 }
 
 function normalizeTag(tag: string): string {
@@ -83,12 +98,15 @@ function extractProduct(page: PageObjectResponse): Product | null {
 
 	const sizeProp = props['Quority']
 	const sizeRaw = sizeProp?.type === 'select' ? sizeProp.select?.name : null
-	const size: ProductSize = sizeRaw === 'L' || sizeRaw === 'S' ? sizeRaw : 'M'
+	const sizeMap: Record<string, ProductSize> = { XS: 'XS', S: 'S', M: 'M', L: 'L' }
+	const size: ProductSize = (sizeRaw && sizeMap[sizeRaw]) ?? 'M'
 
 	const staticDir = resolve(__dirname, '../public/static')
-	const hasImage = existsSync(resolve(staticDir, filename))
+	const imgPath = resolve(staticDir, filename)
+	const hasImage = existsSync(imgPath)
+	const imageFit = hasImage ? detectImageFit(imgPath) : 'contain' as const
 
-	return { title, url, urlLive, description, filename, tags, size, hasImage }
+	return { title, url, urlLive, description, filename, tags, size, hasImage, imageFit }
 }
 
 async function main() {
@@ -126,10 +144,78 @@ async function main() {
 		}
 	}
 
-	const output = generateDataFile(products)
+	const placed = computeGridLayout(products, 4)
+	const output = generateDataFile(placed)
 	const outPath = resolve(__dirname, '../src/api/products.ts')
 	writeFileSync(outPath, output, 'utf-8')
 	console.log(`Written to ${outPath}`)
+}
+
+function sizeToSpan(size: ProductSize): { colSpan: number; rowSpan: number } {
+	switch (size) {
+		case 'XS': return { colSpan: 1, rowSpan: 1 }
+		case 'S': return { colSpan: 1, rowSpan: 1 }
+		case 'M': return { colSpan: 2, rowSpan: 1 }
+		case 'L': return { colSpan: 2, rowSpan: 2 }
+	}
+}
+
+function computeGridLayout(products: Product[], cols: number): Product[] {
+	// grid[row][col] = true if occupied
+	const grid: boolean[][] = []
+
+	function ensureRows(n: number) {
+		while (grid.length < n) {
+			grid.push(new Array(cols).fill(false))
+		}
+	}
+
+	function canPlace(row: number, col: number, cSpan: number, rSpan: number): boolean {
+		if (col + cSpan > cols) return false
+		ensureRows(row + rSpan)
+		for (let r = row; r < row + rSpan; r++) {
+			for (let c = col; c < col + cSpan; c++) {
+				if (grid[r][c]) return false
+			}
+		}
+		return true
+	}
+
+	function occupy(row: number, col: number, cSpan: number, rSpan: number) {
+		ensureRows(row + rSpan)
+		for (let r = row; r < row + rSpan; r++) {
+			for (let c = col; c < col + cSpan; c++) {
+				grid[r][c] = true
+			}
+		}
+	}
+
+	const result: Product[] = []
+
+	for (const p of products) {
+		const { colSpan, rowSpan } = sizeToSpan(p.size)
+		let placed = false
+
+		for (let row = 0; !placed; row++) {
+			ensureRows(row + 1)
+			for (let col = 0; col <= cols - colSpan; col++) {
+				if (canPlace(row, col, colSpan, rowSpan)) {
+					occupy(row, col, colSpan, rowSpan)
+					result.push({
+						...p,
+						gridColumn: `${col + 1} / span ${colSpan}`,
+						gridRow: `${row + 1} / span ${rowSpan}`,
+					})
+					placed = true
+					break
+				}
+			}
+		}
+	}
+
+	const totalRows = grid.length
+	console.log(`Grid layout: ${cols} cols × ${totalRows} rows, ${products.length} items placed`)
+	return result
 }
 
 function generateDataFile(products: Product[]): string {
@@ -149,6 +235,9 @@ function generateDataFile(products: Product[]): string {
 		lines.push(`\t\ttags: ${JSON.stringify(p.tags)},`)
 		lines.push(`\t\tsize: ${JSON.stringify(p.size)},`)
 		lines.push(`\t\thasImage: ${p.hasImage},`)
+		lines.push(`\t\timageFit: ${JSON.stringify(p.imageFit)},`)
+		lines.push(`\t\tgridColumn: ${JSON.stringify(p.gridColumn)},`)
+		lines.push(`\t\tgridRow: ${JSON.stringify(p.gridRow)},`)
 		lines.push('\t},')
 	}
 
