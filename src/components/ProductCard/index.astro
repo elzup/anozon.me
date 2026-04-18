@@ -6,79 +6,160 @@ export interface Props {
 const { product } = Astro.props
 const size = product.size ?? 'M'
 const hasImage = product.hasImage ?? false
-const imageFit = product.imageFit ?? 'contain'
-const gridStyle = `grid-column: ${product.gridColumn}; grid-row: ${product.gridRow};`
+const hasIcon = !!product.iconFilename
+const imageLayout = product.imageLayout ?? 'stack'
+// L=2x2, M=2x1, S=1x1
+const span = size === 'L' ? 2 : size === 'M' ? 2 : 1
+const gridStyle = `grid-column: span ${span};`
+const hasWebUrl = product.url && product.urlLive
+const hasGithub = !!product.githubUrl
+const mainHref = hasWebUrl ? product.url : product.githubUrl ?? '#'
+const isDisabled = !hasWebUrl && !hasGithub
+const isSplit = imageLayout === 'split' && hasImage
+
+const titleHash = product.title.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)
+const hue = titleHash % 360
+const placeholderBg = `hsl(${hue}, 25%, 92%)`
+const placeholderColor = `hsl(${hue}, 30%, 35%)`
 ---
 
-<a
-	href={product.url}
-	target={'_blank'}
-	data-disabled={!product.urlLive}
-	data-size={size}
-	style={gridStyle}
-	rel="noopener noreferrer"
->
-	<article class="card">
-		<div class="img-wrap" data-fit={imageFit}>
-			{hasImage ? (
-				<img src={`/static/${product.filename}`} alt={product.title} />
+<div class="card-wrapper" data-size={size} style={gridStyle}>
+	<a
+		href={mainHref}
+		target="_blank"
+		data-disabled={isDisabled}
+		rel="noopener noreferrer"
+		class="card-link"
+	>
+		<article class:list={['card', { split: isSplit }]}>
+			{isSplit ? (
+				<>
+					<div class="split-info">
+						{hasIcon && (
+							<img src={`/static/${product.iconFilename}`} alt={`${product.title} icon`} class="split-icon" />
+						)}
+						<h4>{product.title}</h4>
+						<p>{product.description}</p>
+					</div>
+					<div class="split-img">
+						<img src={`/static/${product.filename}`} alt={product.title} />
+					</div>
+				</>
 			) : (
-				<div class="placeholder">
-					<span>{product.title}</span>
-				</div>
+				<>
+					{hasImage && (
+						<div class="img-wrap">
+							<img src={`/static/${product.filename}`} alt={product.title} />
+							{hasIcon && (
+								<img src={`/static/${product.iconFilename}`} alt={`${product.title} icon`} class="icon-overlay" />
+							)}
+						</div>
+					)}
+					{!hasImage && hasIcon && (
+						<div class="icon-only">
+							<img src={`/static/${product.iconFilename}`} alt={product.title} class="icon-center" />
+						</div>
+					)}
+					{!hasImage && !hasIcon && (
+						<div class="placeholder" style={`background: ${placeholderBg}; color: ${placeholderColor};`}>
+							<span>{product.title}</span>
+						</div>
+					)}
+					<div class="info">
+						<h4>{product.title}</h4>
+						<p>{product.description}</p>
+					</div>
+				</>
 			)}
-		</div>
-		<div class="info">
-			<h4>{product.title}</h4>
-			<p>{product.description}</p>
-		</div>
-	</article>
-</a>
+		</article>
+	</a>
+	<div class="link-icons">
+		{hasWebUrl && (
+			<a href={product.url} target="_blank" rel="noopener noreferrer" class="ext-link" title="Web">
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="12" cy="12" r="10"/>
+					<line x1="2" y1="12" x2="22" y2="12"/>
+					<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+				</svg>
+			</a>
+		)}
+		{hasGithub && (
+			<a href={product.githubUrl} target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub">
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+				</svg>
+			</a>
+		)}
+	</div>
+</div>
 
 <style>
-	/* S=1x1, M=2x1, L=2x2 */
-	:root > a {
+	.card-wrapper {
+		position: relative;
+	}
+
+	.card-link {
 		display: block;
 		text-decoration: none;
 		color: inherit;
-		&[data-disabled='true'] {
-			pointer-events: none;
-		}
+	}
+
+	.card-link[data-disabled='true'] {
+		pointer-events: none;
 	}
 
 	.card {
-		height: 100%;
 		border-radius: 6px;
 		overflow: hidden;
 		background: #fff;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-		display: flex;
-		flex-direction: column;
 		transition: transform 0.2s ease, box-shadow 0.2s ease;
-		&:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		}
 	}
 
+	.card-link:hover .card {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	/* === Stack layout === */
 	.img-wrap {
-		flex: 1;
-		min-height: 80px;
-		overflow: hidden;
-		background: #f0f0f0;
+		position: relative;
+		line-height: 0;
 	}
 
-	[data-fit='cover'] img {
-		object-fit: cover;
+	.img-wrap > img:first-child {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
-	[data-fit='contain'] img {
+
+	.icon-overlay {
+		position: absolute;
+		bottom: 6px;
+		left: 6px;
+		width: 28px;
+		height: 28px;
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 2px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 		object-fit: contain;
 	}
 
-	img {
-		width: 100%;
-		height: 100%;
-		display: block;
+	.icon-only {
+		aspect-ratio: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #f5f5f5;
+		padding: 16px;
+		box-sizing: border-box;
+	}
+
+	.icon-center {
+		max-width: 64px;
+		max-height: 64px;
+		object-fit: contain;
 	}
 
 	.info {
@@ -86,6 +167,46 @@ const gridStyle = `grid-column: ${product.gridColumn}; grid-row: ${product.gridR
 		border-top: 1px solid #eee;
 	}
 
+	/* === Split layout (portrait images) === */
+	.card.split {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.split-info {
+		width: 35%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 8px;
+		box-sizing: border-box;
+		gap: 4px;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	.split-icon {
+		width: 36px;
+		height: 36px;
+		border-radius: 8px;
+		object-fit: contain;
+	}
+
+	.split-img {
+		width: 65%;
+		line-height: 0;
+		box-shadow: -4px 0 12px rgba(0, 0, 0, 0.12);
+	}
+
+	.split-img img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	/* === Text === */
 	h4 {
 		font-size: 0.7rem;
 		margin: 0;
@@ -106,21 +227,60 @@ const gridStyle = `grid-column: ${product.gridColumn}; grid-row: ${product.gridR
 		text-overflow: ellipsis;
 	}
 
+	.split-info h4,
+	.split-info p {
+		white-space: normal;
+		text-overflow: unset;
+		overflow: visible;
+	}
+
+	/* === Placeholder === */
 	.placeholder {
-		width: 100%;
-		height: 100%;
+		aspect-ratio: 16 / 9;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 		padding: 12px;
 		box-sizing: border-box;
 	}
 
 	.placeholder span {
-		font-size: 0.85rem;
-		color: white;
-		font-weight: 700;
+		font-size: 0.9rem;
+		font-weight: 600;
 		text-align: center;
+		letter-spacing: 0.02em;
+	}
+
+	/* === Link icons === */
+	.link-icons {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		display: flex;
+		gap: 4px;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+
+	.card-wrapper:hover .link-icons {
+		opacity: 1;
+	}
+
+	.ext-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		border-radius: 4px;
+		background: rgba(255, 255, 255, 0.9);
+		color: #555;
+		text-decoration: none;
+		transition: background 0.15s ease, color 0.15s ease;
+	}
+
+	.ext-link:hover {
+		background: #fff;
+		color: #111;
 	}
 </style>
