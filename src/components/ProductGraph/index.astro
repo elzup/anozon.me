@@ -1,0 +1,171 @@
+---
+import { products } from '../../api/data'
+
+// プロダクトのみをノード化。主タグごとにクラスタして静的配置（動き無し）
+const tagHue = (t: string) =>
+	[...t].reduce((acc, c) => acc + c.charCodeAt(0), 0) % 360
+
+const W = 1280
+const H = 820
+
+// 主タグでグループ化
+const groupsMap = new Map<string, typeof products>()
+products.forEach((p) => {
+	const key = p.tags[0] ?? 'other'
+	if (!groupsMap.has(key)) groupsMap.set(key, [])
+	groupsMap.get(key)!.push(p)
+})
+const groups = [...groupsMap.entries()]
+
+const cx = W / 2
+const cy = H / 2
+const ringR = 280
+
+type PNode = {
+	id: string
+	label: string
+	url: string
+	color: string
+	tag: string
+	x: number
+	y: number
+}
+
+const nodes: PNode[] = []
+groups.forEach(([tag, items], gi) => {
+	const ang = (gi / groups.length) * Math.PI * 2 - Math.PI / 2
+	const gx = cx + Math.cos(ang) * ringR
+	const gy = cy + Math.sin(ang) * ringR
+	const per = Math.ceil(Math.sqrt(items.length))
+	items.forEach((p, i) => {
+		const col = i % per
+		const row = Math.floor(i / per)
+		nodes.push({
+			id: `prod:${p.title}`,
+			label: p.title,
+			url: p.urlLive && p.url ? p.url : p.githubUrl ?? '',
+			color: p.tags.length ? `hsl(${tagHue(p.tags[0])}, 50%, 70%)` : '#c8c8c8',
+			tag,
+			x: gx + (col - (per - 1) / 2) * 78,
+			y: gy + (row - (Math.ceil(items.length / per) - 1) / 2) * 52,
+		})
+	})
+})
+
+const graph = { nodes, w: W, h: H }
+---
+
+<div class="graph-wrap">
+	<div class="hint">プロダクトノード（主タグでクラスタ）/ ドラッグで手動配置・ホイールでズーム・クリックで開く</div>
+	<svg id="product-graph" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet"></svg>
+	<script
+		type="application/json"
+		id="graph-data"
+		is:inline
+		set:html={JSON.stringify(graph)}
+	/>
+</div>
+
+<script>
+	import { select } from 'd3-selection'
+	import { drag } from 'd3-drag'
+	import { zoom, zoomTransform } from 'd3-zoom'
+
+	type PNode = {
+		id: string
+		label: string
+		url: string
+		color: string
+		tag: string
+		x: number
+		y: number
+	}
+
+	const dataEl = document.getElementById('graph-data')
+	const svgEl = document.getElementById('product-graph') as SVGSVGElement | null
+	if (dataEl && svgEl) {
+		const graph = JSON.parse(dataEl.textContent || '{}') as { nodes: PNode[] }
+		const svg = select(svgEl)
+		const root = svg.append('g')
+
+		// ズーム/パン（ユーザー操作のみ。自動アニメーション無し）
+		const zoomBehavior = zoom<SVGSVGElement, unknown>()
+			.scaleExtent([0.3, 3])
+			.on('zoom', (e) => root.attr('transform', e.transform))
+		svg.call(zoomBehavior as any)
+
+		const node = root
+			.append('g')
+			.selectAll<SVGGElement, PNode>('g')
+			.data(graph.nodes)
+			.join('g')
+			.attr('transform', (d) => `translate(${d.x},${d.y})`)
+			.style('cursor', 'grab')
+
+		node
+			.append('circle')
+			.attr('r', 7)
+			.attr('fill', (d) => d.color)
+			.attr('stroke', '#fff')
+			.attr('stroke-width', 1.5)
+
+		node
+			.append('text')
+			.text((d) => d.label)
+			.attr('text-anchor', 'middle')
+			.attr('dy', -11)
+			.attr('font-size', 10)
+			.attr('fill', '#444')
+			.attr('stroke', '#fafafa')
+			.attr('stroke-width', 2.5)
+			.style('paint-order', 'stroke')
+			.style('pointer-events', 'none')
+
+		// ドラッグ＝手動配置（シミュレーション無し）。ズーム倍率で移動量を補正
+		node.call(
+			drag<SVGGElement, PNode>()
+				.on('start', function () {
+					select(this).style('cursor', 'grabbing').raise()
+				})
+				.on('drag', function (e, d) {
+					const k = zoomTransform(svgEl).k
+					d.x += e.dx / k
+					d.y += e.dy / k
+					select(this).attr('transform', `translate(${d.x},${d.y})`)
+				})
+				.on('end', function () {
+					select(this).style('cursor', 'grab')
+				}) as any
+		)
+
+		// クリックで開く（ドラッグと区別）
+		node.on('click', (e, d) => {
+			if (!e.defaultPrevented && d.url) window.open(d.url, '_blank')
+		})
+	}
+</script>
+
+<style>
+	.graph-wrap {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background: #fafafa;
+	}
+
+	.hint {
+		position: absolute;
+		top: 10px;
+		left: 12px;
+		font-size: 11px;
+		color: #999;
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	#product-graph {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+</style>

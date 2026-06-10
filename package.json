@@ -18,7 +18,11 @@
 		"@iconify-json/mdi": "^1.2.0",
 		"@iconify-json/ri": "^1.2.0",
 		"astro": "^5.0.0",
-		"astro-icon": "^1.1.0"
+		"astro-icon": "^1.1.0",
+		"d3-drag": "^3.0.0",
+		"d3-force": "^3.0.0",
+		"d3-selection": "^3.0.0",
+		"d3-zoom": "^3.0.0"
 	},
 	"devDependencies": {
 		"@notionhq/client": "2",
