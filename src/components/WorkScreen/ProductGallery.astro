@@ -1,25 +1,206 @@
 ---
 import { products } from '../../api/data'
-import ProductCard from '../ProductCard/index.astro'
+
+// ギリシャ十字テッセレーション
+// 十字の中心は格子ベクトル (1,2) と (2,-1) で並ぶ
+// => 中心(r,c) は (2r - c) ≡ coset (mod 5) を満たす整数点
+const U_COLS = 6 // 窓の横ユニット数（小さいほど十字が大きく・並ぶ数が減る）
+const coset = 1
+
+const centers: { r: number; c: number }[] = []
+let scanRow = 0
+while (centers.length < products.length) {
+	for (let c = 0; c < U_COLS; c++) {
+		if (((2 * scanRow - c) % 5 + 5) % 5 === coset) {
+			centers.push({ r: scanRow, c })
+			if (centers.length >= products.length) break
+		}
+	}
+	scanRow++
+}
+
+// 各十字 = 3x3 ユニットの箱、左上は中心の (r-1, c-1)
+const rawBoxes = centers.map((center, i) => ({
+	product: products[i],
+	top: center.r - 1,
+	left: center.c - 1,
+}))
+const minTop = Math.min(...rawBoxes.map((b) => b.top))
+const minLeft = Math.min(...rawBoxes.map((b) => b.left))
+const boxes = rawBoxes.map((b) => ({
+	...b,
+	top: b.top - minTop,
+	left: b.left - minLeft,
+}))
+const rowsU = Math.max(...boxes.map((b) => b.top + 3))
+const colsU = Math.max(...boxes.map((b) => b.left + 3))
+
+const crossClip =
+	'polygon(33.34% 0,66.66% 0,66.66% 33.34%,100% 33.34%,100% 66.66%,66.66% 66.66%,66.66% 100%,33.34% 100%,33.34% 66.66%,0 66.66%,0 33.34%,33.34% 33.34%)'
+
+// % 換算ヘルパ
+const pct = (n: number, total: number) => `${(n * 100) / total}%`
 ---
 
-<div>
-	<div class="gallery">
-		{products.map((product) => <ProductCard product={product} />)}
-	</div>
+<div
+	class="cross-field"
+	style={`aspect-ratio: ${colsU} / ${rowsU}; --clip: ${crossClip};`}
+>
+	{
+		boxes.map(({ product, top, left }) => {
+			const hasImage = product.hasImage ?? false
+			const hasIcon = !!product.iconFilename
+			const hasWebUrl = product.url && product.urlLive
+			const mainHref = hasWebUrl ? product.url : product.githubUrl ?? '#'
+			const isDisabled = !hasWebUrl && !product.githubUrl
+			const titleHash = product.title
+				.split('')
+				.reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
+			const hue = titleHash % 360
+			const bg = `hsl(${hue}, 32%, 52%)`
+			const imgKind = hasImage ? 'image' : hasIcon ? 'icon' : 'color'
+			return (
+				<a
+					class="cross"
+					data-disabled={isDisabled}
+					href={mainHref}
+					target="_blank"
+					rel="noopener noreferrer"
+					title={`${product.title} - ${product.description}`}
+					style={`top: ${pct(top, rowsU)}; left: ${pct(left, colsU)}; width: ${pct(3, colsU)}; height: ${pct(3, rowsU)};`}
+				>
+					{/* 中央横バー = 画像エリア */}
+					<div class="band band-img" data-kind={imgKind}>
+						{imgKind === 'image' && (
+							<img src={`/static/${product.filename}`} alt={product.title} />
+						)}
+						{imgKind === 'icon' && (
+							<img class="icon" src={`/static/${product.iconFilename}`} alt={product.title} />
+						)}
+						{imgKind === 'color' && <span class="swatch" style={`background:${bg};`} />}
+					</div>
+					{/* 上の腕 = タイトル */}
+					<div class="band band-title">
+						<span>{product.title}</span>
+					</div>
+					{/* 下の腕 = 説明 */}
+					<div class="band band-desc">
+						<span>{product.description}</span>
+					</div>
+				</a>
+			)
+		})
+	}
 </div>
 
 <style>
-	:root > div {
-		display: flex;
-	}
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 8px;
+	.cross-field {
+		position: relative;
 		width: 100%;
-		@media (max-width: 500px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
+		margin: 8px auto;
+		/* フォント基準：十字サイズに追従 */
+		font-size: clamp(7px, 1.5vw, 13px);
+	}
+
+	.cross {
+		position: absolute;
+		clip-path: var(--clip);
+		background: #fff;
+		text-decoration: none;
+		color: inherit;
+		overflow: hidden;
+		transition: filter 0.15s ease;
+	}
+
+	.cross:hover {
+		filter: brightness(1.06);
+		z-index: 3;
+	}
+
+	.cross[data-disabled='true'] {
+		pointer-events: none;
+	}
+
+	.band {
+		position: absolute;
+		overflow: hidden;
+	}
+
+	/* 上+左+中央 の3マス（左上2×2をプラス形でL字クリップ）= 画像 */
+	.band-img {
+		left: 0;
+		top: 0;
+		width: 66.66%;
+		height: 66.66%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #f3f3f3;
+	}
+
+	.band-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.band-img .icon {
+		width: auto;
+		height: 70%;
+		object-fit: contain;
+	}
+
+	.band-img .swatch {
+		width: 100%;
+		height: 100%;
+	}
+
+	/* 右の腕 = タイトル */
+	.band-title {
+		left: 66.66%;
+		top: 33.34%;
+		width: 33.32%;
+		height: 33.32%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 0.2em;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.band-title span {
+		font-weight: 700;
+		font-size: 0.95em;
+		line-height: 1.1;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	/* 下の腕 = 説明 */
+	.band-desc {
+		left: 33.34%;
+		top: 66.66%;
+		width: 33.32%;
+		height: 33.34%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 0.2em;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.band-desc span {
+		font-size: 0.78em;
+		line-height: 1.15;
+		color: #666;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 </style>
