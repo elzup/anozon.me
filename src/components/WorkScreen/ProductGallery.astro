@@ -1,22 +1,59 @@
 ---
 import { products } from '../../api/data'
+import type { ProductSize } from '../../types'
 import ProductCard from '../ProductCard/index.astro'
+
+const order: ProductSize[] = ['L', 'M', 'S', 'XS']
+
+const sections = order
+	.map((size) => ({
+		size,
+		items: products.filter((product) => (product.size ?? 'M') === size),
+	}))
+	.filter((section) => section.items.length > 0)
 ---
 
-<div>
-	<div class="gallery">
-		{products.map((product) => <ProductCard product={product} />)}
-	</div>
+<div class="sections">
+	{
+		sections.map((section) => (
+			<section class="sec">
+				<div class:list={['grid', `grid-${section.size}`]}>
+					{section.items.map((product) => <ProductCard product={product} />)}
+				</div>
+			</section>
+		))
+	}
 </div>
 
 <style>
-	:root > div {
+	.sections {
 		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
 	}
-	.gallery {
+
+	/* セクション内は同サイズ。高さ差はネイティブ masonry でパック
+	   （未対応ブラウザは通常グリッド＝上揃えにフォールバック） */
+	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, 140px);
 		gap: 8px;
-		justify-content: center;
+		align-items: start;
+		grid-template-rows: masonry;
+	}
+
+	/* 列数はコンテナ幅に追従（auto-fill）。最小幅でサイズ感を出す
+	   960px 時の目安: L=3 / M=4 / S=6 列、狭まれば自動で減る */
+	.grid-L {
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+	}
+	.grid-M {
+		grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	}
+	.grid-S {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	}
+	.grid-XS {
+		grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
 	}
 </style>

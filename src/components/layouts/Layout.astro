@@ -1,6 +1,4 @@
 ---
-import { GA_TRACKING_ID } from '../../config'
-
 export interface Props {
 	title?: string
 }
@@ -42,20 +40,6 @@ const pageTitle = title || siteConfig.title
 			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-		{GA_TRACKING_ID && (
-			<script
-				type="text/partytown"
-				src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-			/>
-		)}
-		{GA_TRACKING_ID && (
-			<script type="text/partytown" set:html={`
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-				gtag('config', '${GA_TRACKING_ID}', { page_path: window.location.pathname });
-			`} />
-		)}
 	</head>
 	<body>
 		<slot />

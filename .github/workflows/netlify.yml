@@ -1,25 +1,23 @@
 # .github/workflows/netlify.yml
+# Cloudflare Pages へ移行中だが、Netlify も並行稼働させて両方を最新 main で動かす
 name: Build and Deploy to Netlify
 on:
   push:
   pull_request:
 jobs:
   build:
-    runs-on: ubuntu-18.04
-    strategy:
-      matrix:
-        node-version: [14.x]
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 22
           cache: 'yarn'
-      - run: yarn
+      - run: yarn install --frozen-lockfile
       - run: yarn build
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2
+        uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: './dist'
           production-branch: main
@@ -29,4 +27,4 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
+        timeout-minutes: 5

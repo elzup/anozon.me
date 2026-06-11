@@ -1,14 +1,19 @@
-export type ProductSize = 'S' | 'M' | 'L'
+export type ProductSize = 'XS' | 'S' | 'M' | 'L'
+
+export type ImageLayout = 'stack' | 'split'
 
 export type Product = {
 	title: string
 	url: string
 	urlLive: boolean
+	githubUrl?: string
 	description: string
 	filename: string
+	iconFilename?: string
 	tags: string[]
 	size: ProductSize
 	hasImage: boolean
+	imageLayout?: ImageLayout
 }
 
 export type HobbyNote = {

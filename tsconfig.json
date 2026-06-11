@@ -1,9 +1,5 @@
 {
 	"extends": "astro/tsconfigs/strict",
 	"exclude": ["node_modules", "scripts"],
-	"include": ["**/*.ts", "**/*.tsx"],
-	"compilerOptions": {
-		"jsx": "react-jsx",
-		"jsxImportSource": "react"
-	}
+	"include": ["**/*.ts"]
 }

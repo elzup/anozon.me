@@ -22,3 +22,9 @@ yarn-error.log*
 # build output
 dist/
 .output/
+.astro/
+.next/
+
+# local tooling
+.agents/
+.rigg/
