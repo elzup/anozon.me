@@ -42,45 +42,18 @@ const sections = order
 		grid-template-rows: masonry;
 	}
 
+	/* 列数はコンテナ幅に追従（auto-fill）。最小幅でサイズ感を出す
+	   960px 時の目安: L=3 / M=4 / S=6 列、狭まれば自動で減る */
 	.grid-L {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 	}
 	.grid-M {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 	}
 	.grid-S {
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	}
 	.grid-XS {
-		grid-template-columns: repeat(7, 1fr);
-	}
-
-	/* タブレット */
-	@media (max-width: 768px) {
-		.grid-M {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		.grid-S {
-			grid-template-columns: repeat(4, 1fr);
-		}
-		.grid-XS {
-			grid-template-columns: repeat(5, 1fr);
-		}
-	}
-
-	/* スマホ */
-	@media (max-width: 500px) {
-		.grid-L {
-			grid-template-columns: 1fr;
-		}
-		.grid-M {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		.grid-S {
-			grid-template-columns: repeat(3, 1fr);
-		}
-		.grid-XS {
-			grid-template-columns: repeat(4, 1fr);
-		}
+		grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
 	}
 </style>
