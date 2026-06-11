@@ -8,9 +8,6 @@ const size = product.size ?? 'M'
 const hasImage = product.hasImage ?? false
 const hasIcon = !!product.iconFilename
 const imageLayout = product.imageLayout ?? 'stack'
-// L=2x2, M=2x1, S=1x1
-const span = size === 'L' ? 2 : size === 'M' ? 2 : 1
-const gridStyle = `grid-column: span ${span};`
 const hasWebUrl = product.url && product.urlLive
 const hasGithub = !!product.githubUrl
 const mainHref = hasWebUrl ? product.url : product.githubUrl ?? '#'
@@ -23,7 +20,7 @@ const placeholderBg = `hsl(${hue}, 25%, 92%)`
 const placeholderColor = `hsl(${hue}, 30%, 35%)`
 ---
 
-<div class="card-wrapper" data-size={size} style={gridStyle}>
+<div class="card-wrapper" data-size={size}>
 	<a
 		href={mainHref}
 		target="_blank"

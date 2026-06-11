@@ -1,25 +1,86 @@
 ---
 import { products } from '../../api/data'
+import type { ProductSize } from '../../types'
 import ProductCard from '../ProductCard/index.astro'
+
+const order: ProductSize[] = ['L', 'M', 'S', 'XS']
+
+const sections = order
+	.map((size) => ({
+		size,
+		items: products.filter((product) => (product.size ?? 'M') === size),
+	}))
+	.filter((section) => section.items.length > 0)
 ---
 
-<div>
-	<div class="gallery">
-		{products.map((product) => <ProductCard product={product} />)}
-	</div>
+<div class="sections">
+	{
+		sections.map((section) => (
+			<section class="sec">
+				<div class:list={['grid', `grid-${section.size}`]}>
+					{section.items.map((product) => <ProductCard product={product} />)}
+				</div>
+			</section>
+		))
+	}
 </div>
 
 <style>
-	:root > div {
+	.sections {
 		display: flex;
-	}
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 8px;
+		flex-direction: column;
+		gap: 20px;
 		width: 100%;
-		@media (max-width: 500px) {
+	}
+
+	/* セクション内は同サイズ。高さ差はネイティブ masonry でパック
+	   （未対応ブラウザは通常グリッド＝上揃えにフォールバック） */
+	.grid {
+		display: grid;
+		gap: 8px;
+		align-items: start;
+		grid-template-rows: masonry;
+	}
+
+	.grid-L {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.grid-M {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.grid-S {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.grid-XS {
+		grid-template-columns: repeat(7, 1fr);
+	}
+
+	/* タブレット */
+	@media (max-width: 768px) {
+		.grid-M {
 			grid-template-columns: repeat(2, 1fr);
+		}
+		.grid-S {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.grid-XS {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+
+	/* スマホ */
+	@media (max-width: 500px) {
+		.grid-L {
+			grid-template-columns: 1fr;
+		}
+		.grid-M {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.grid-S {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.grid-XS {
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 </style>

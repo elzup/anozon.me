@@ -3,11 +3,12 @@ export interface Props {
 	id: string
 	title: string
 	description: string
+	width?: number
 }
-const { id, title, description } = Astro.props
+const { id, title, description, width = 650 } = Astro.props
 ---
 
-<section id={id} class="wrap">
+<section id={id} class="wrap" style={`--screen-w: ${width}px;`}>
 	<div class="header">
 		<h2>
 			<span class="title">{title}</span>
@@ -21,10 +22,7 @@ const { id, title, description } = Astro.props
 	.wrap {
 		margin: 5vh auto 0;
 		padding: 10px;
-		width: 650px;
-		@media (max-width: 700px) {
-			width: 95%;
-		}
+		width: min(var(--screen-w, 650px), 94%);
 	}
 
 	.header {
