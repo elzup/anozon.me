@@ -48,12 +48,6 @@ export const categories: Category[] = [
 			{ name: 'ネクロダンサー' },
 			{ name: 'factorio' },
 			{
-				name: 'Steam ID',
-				notes: [
-					{ href: 'https://steamcommunity.com/id/elzup/', text: 'elzup' },
-				],
-			},
-			{
 				name: '---',
 				notes: [
 					{
@@ -81,7 +75,7 @@ export const categories: Category[] = [
 				notes: [
 					{
 						href: 'https://anozon10.tumblr.com/tagged/puzzle',
-						text: 'スマホゲー',
+						text: 'プレイしたゲーム',
 					},
 				],
 			},
@@ -112,11 +106,7 @@ export const categories: Category[] = [
 				name: 'Annict',
 				notes: [
 					{
-						href: 'https://annict.jp/@elzup',
-						text: '@elzup',
-					},
-					{
-						href: 'https://annict.jp/@elzup/tags/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85',
+						href: 'https://annict.com/@elzup/collections/1039',
 						text: '超好きなアニメ',
 					},
 					{
@@ -138,6 +128,8 @@ export const categories: Category[] = [
 			{ name: 'Vim' },
 			{ name: '競プロ' },
 			{ name: 'CTF' },
+			{ name: 'Hash' },
+			{ name: 'メモリースポーツ' },
 			{
 				name: '---',
 				notes: [
