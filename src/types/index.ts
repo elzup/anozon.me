@@ -1,6 +1,6 @@
 export type ProductSize = 'XS' | 'S' | 'M' | 'L'
 
-export type ImageLayout = 'stack' | 'split'
+export type ImageFit = 'cover' | 'contain'
 
 export type Product = {
 	title: string
@@ -13,7 +13,7 @@ export type Product = {
 	tags: string[]
 	size: ProductSize
 	hasImage: boolean
-	imageLayout?: ImageLayout
+	imageFit?: ImageFit
 }
 
 export type HobbyNote = {

@@ -33,13 +33,12 @@ const sections = order
 		width: 100%;
 	}
 
-	/* セクション内は同サイズ。高さ差はネイティブ masonry でパック
-	   （未対応ブラウザは通常グリッド＝上揃えにフォールバック） */
+	/* セクション内はカード形状を統一（画像は 16:10 に固定）。
+	   高さが揃うので通常グリッドで上下とも整列する */
 	.grid {
 		display: grid;
 		gap: 8px;
 		align-items: start;
-		grid-template-rows: masonry;
 	}
 
 	/* 列数はコンテナ幅に追従（auto-fill）。最小幅でサイズ感を出す

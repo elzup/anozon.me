@@ -7,12 +7,11 @@ const { product } = Astro.props
 const size = product.size ?? 'M'
 const hasImage = product.hasImage ?? false
 const hasIcon = !!product.iconFilename
-const imageLayout = product.imageLayout ?? 'stack'
+const imageFit = product.imageFit ?? 'cover'
 const hasWebUrl = product.url && product.urlLive
 const hasGithub = !!product.githubUrl
 const mainHref = hasWebUrl ? product.url : product.githubUrl ?? '#'
 const isDisabled = !hasWebUrl && !hasGithub
-const isSplit = imageLayout === 'split' && hasImage
 
 const titleHash = product.title.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)
 const hue = titleHash % 360
@@ -28,46 +27,29 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 		rel="noopener noreferrer"
 		class="card-link"
 	>
-		<article class:list={['card', { split: isSplit }]}>
-			{isSplit ? (
-				<>
-					<div class="split-info">
-						{hasIcon && (
-							<img src={`/static/${product.iconFilename}`} alt={`${product.title} icon`} class="split-icon" />
-						)}
-						<h4>{product.title}</h4>
-						<p>{product.description}</p>
-					</div>
-					<div class="split-img">
-						<img src={`/static/${product.filename}`} alt={product.title} />
-					</div>
-				</>
-			) : (
-				<>
-					{hasImage && (
-						<div class="img-wrap">
-							<img src={`/static/${product.filename}`} alt={product.title} />
-							{hasIcon && (
-								<img src={`/static/${product.iconFilename}`} alt={`${product.title} icon`} class="icon-overlay" />
-							)}
-						</div>
+		<article class="card">
+			{hasImage && (
+				<div class:list={['media', `fit-${imageFit}`]}>
+					<img src={`/static/${product.filename}`} alt={product.title} />
+					{hasIcon && (
+						<img src={`/static/${product.iconFilename}`} alt={`${product.title} icon`} class="icon-overlay" />
 					)}
-					{!hasImage && hasIcon && (
-						<div class="icon-only">
-							<img src={`/static/${product.iconFilename}`} alt={product.title} class="icon-center" />
-						</div>
-					)}
-					{!hasImage && !hasIcon && (
-						<div class="placeholder" style={`background: ${placeholderBg}; color: ${placeholderColor};`}>
-							<span>{product.title}</span>
-						</div>
-					)}
-					<div class="info">
-						<h4>{product.title}</h4>
-						<p>{product.description}</p>
-					</div>
-				</>
+				</div>
 			)}
+			{!hasImage && hasIcon && (
+				<div class="media icon-only">
+					<img src={`/static/${product.iconFilename}`} alt={product.title} class="icon-center" />
+				</div>
+			)}
+			{!hasImage && !hasIcon && (
+				<div class="media placeholder" style={`background: ${placeholderBg}; color: ${placeholderColor};`}>
+					<span>{product.title}</span>
+				</div>
+			)}
+			<div class="info">
+				<h4>{product.title}</h4>
+				<p>{product.description}</p>
+			</div>
 		</article>
 	</a>
 	<div class="link-icons">
@@ -118,16 +100,30 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	}
 
-	/* === Stack layout === */
-	.img-wrap {
+	/* === Media (uniform fixed-ratio area) === */
+	.media {
 		position: relative;
+		aspect-ratio: 16 / 10;
 		line-height: 0;
+		/* 余白が出るとき（contain / 細長画像）の下地 */
+		background: #ececec;
+		overflow: hidden;
 	}
 
-	.img-wrap > img:first-child {
+	.media > img:first-child {
 		width: 100%;
-		height: auto;
+		height: 100%;
 		display: block;
+	}
+
+	/* デフォルトは上下を切って全面を埋める */
+	.fit-cover > img:first-child {
+		object-fit: cover;
+	}
+
+	/* 細長画像などはレターボックス表示（背景 gray が見える） */
+	.fit-contain > img:first-child {
+		object-fit: contain;
 	}
 
 	.icon-overlay {
@@ -144,7 +140,6 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 	}
 
 	.icon-only {
-		aspect-ratio: 1;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -162,45 +157,6 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 	.info {
 		padding: 4px 6px;
 		border-top: 1px solid #eee;
-	}
-
-	/* === Split layout (portrait images) === */
-	.card.split {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.split-info {
-		width: 35%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 8px;
-		box-sizing: border-box;
-		gap: 4px;
-		text-align: center;
-		position: relative;
-		z-index: 1;
-	}
-
-	.split-icon {
-		width: 36px;
-		height: 36px;
-		border-radius: 8px;
-		object-fit: contain;
-	}
-
-	.split-img {
-		width: 65%;
-		line-height: 0;
-		box-shadow: -4px 0 12px rgba(0, 0, 0, 0.12);
-	}
-
-	.split-img img {
-		width: 100%;
-		height: auto;
-		display: block;
 	}
 
 	/* === Text === */
@@ -224,16 +180,8 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 		text-overflow: ellipsis;
 	}
 
-	.split-info h4,
-	.split-info p {
-		white-space: normal;
-		text-overflow: unset;
-		overflow: visible;
-	}
-
 	/* === Placeholder === */
 	.placeholder {
-		aspect-ratio: 16 / 9;
 		display: flex;
 		align-items: center;
 		justify-content: center;

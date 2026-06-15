@@ -47,7 +47,7 @@ export const products: Product[] = [
 		tags: ["Tauri","React","TypeScript"],
 		size: "M",
 		hasImage: true,
-		imageLayout: "split",
+		imageFit: "contain",
 	},
 	{
 		title: "ImmortaClock",
@@ -134,7 +134,6 @@ export const products: Product[] = [
 		tags: ["TypeScript","React"],
 		size: "M",
 		hasImage: true,
-		imageLayout: "split",
 	},
 	{
 		title: "DesktopStickers",
@@ -156,7 +155,6 @@ export const products: Product[] = [
 		tags: ["TypeScript","React"],
 		size: "S",
 		hasImage: true,
-		imageLayout: "split",
 	},
 	{
 		title: "Clipsh",
@@ -209,7 +207,6 @@ export const products: Product[] = [
 		tags: ["PWA","React"],
 		size: "L",
 		hasImage: true,
-		imageLayout: "split",
 	},
 	{
 		title: "Mitelop",
