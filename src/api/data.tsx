@@ -102,6 +102,9 @@ export const categories: Category[] = [
 			{ name: '進撃の巨人' },
 			{ name: '亜人' },
 			{ name: 'キノの旅' },
+			{ name: 'それでも町は廻っている' },
+			{ name: 'サイバーパンク エッジランナーズ' },
+			{ name: '86-エイティシックス-' },
 			{
 				name: 'Annict',
 				notes: [
