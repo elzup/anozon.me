@@ -58,7 +58,7 @@ export const products: Product[] = [
 		filename: "immortaclock.png",
 		tags: ["HTML","JavaScript"],
 		size: "S",
-		hasImage: false,
+		hasImage: true,
 	},
 	{
 		title: "quota",
@@ -268,7 +268,7 @@ export const products: Product[] = [
 		filename: "spanbox.png",
 		tags: ["React","TypeScript"],
 		size: "M",
-		hasImage: false,
+		hasImage: true,
 	},
 	{
 		title: "シートベルト慣性ロック",
