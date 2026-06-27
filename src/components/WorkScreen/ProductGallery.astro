@@ -5,10 +5,12 @@ import ProductCard from '../ProductCard/index.astro'
 
 const order: ProductSize[] = ['L', 'M', 'S', 'XS']
 
+const visibleProducts = products.filter((product) => !product.hidden)
+
 const sections = order
 	.map((size) => ({
 		size,
-		items: products.filter((product) => (product.size ?? 'M') === size),
+		items: visibleProducts.filter((product) => (product.size ?? 'M') === size),
 	}))
 	.filter((section) => section.items.length > 0)
 ---

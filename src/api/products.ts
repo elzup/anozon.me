@@ -399,6 +399,7 @@ export const products: Product[] = [
 		tags: ["React","TypeScript"],
 		size: "S",
 		hasImage: false,
+		hidden: true,
 	},
 	{
 		title: "無限チョコレートパズル",
@@ -409,6 +410,7 @@ export const products: Product[] = [
 		tags: ["React","TypeScript"],
 		size: "S",
 		hasImage: false,
+		hidden: true,
 	},
 	{
 		title: "進行タイマー",
@@ -429,6 +431,7 @@ export const products: Product[] = [
 		tags: ["React","TypeScript"],
 		size: "S",
 		hasImage: false,
+		hidden: true,
 	},
 	{
 		title: "RGB 全組み合わせ",
@@ -439,6 +442,7 @@ export const products: Product[] = [
 		tags: ["React","TypeScript"],
 		size: "S",
 		hasImage: false,
+		hidden: true,
 	},
 	{
 		title: "ドミノ倒し",
@@ -449,6 +453,7 @@ export const products: Product[] = [
 		tags: ["React","TypeScript","Three.js"],
 		size: "S",
 		hasImage: false,
+		hidden: true,
 	},
 	{
 		title: "Venn, Upset viewer",
@@ -459,5 +464,6 @@ export const products: Product[] = [
 		tags: ["React","TypeScript"],
 		size: "S",
 		hasImage: false,
+		hidden: true,
 	},
 ]

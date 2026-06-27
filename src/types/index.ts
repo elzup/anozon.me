@@ -24,6 +24,8 @@ export type Product = {
 	packageName?: string
 	/** VS Code Marketplace の extension ID */
 	extensionId?: string
+	/** true の作品は Works 一覧に表示しない (データは残す非公開扱い) */
+	hidden?: boolean
 }
 
 export type HobbyNote = {
