@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" role="img" aria-label="A ruler shown at three zoom levels; zooming in reveals finer tick tiers (hour, 15min, 5min, 1min), which is what outscape decides." font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <title>zoomscape outscape — zooming in reveals finer ruler ticks</title>
+  <rect x="0" y="0" width="760" height="440" rx="14" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="759" height="439" rx="14" fill="none" stroke="#e2e8f0"/>
+  <text x="32" y="44" font-size="20" font-weight="700" fill="#0f172a">zoomscape · outscape</text>
+  <text x="32" y="66" font-size="13" fill="#64748b">Same 600px ruler, three zoom levels — finer tick tiers appear as each tick clears viewMinWidth (10px).</text>
+  <!-- range 6h -->
+  <line x1="120" y1="120" x2="720" y2="120" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="104" y="106" font-size="15" font-weight="700" fill="#0f172a" text-anchor="end">zoom 1×</text>
+  <text x="104" y="122" font-size="11.5" fill="#64748b" text-anchor="end">range 6h</text>
+  <line x1="120.0" y1="120" x2="120.0" y2="146" stroke="#0f172a" stroke-width="2"/>
+  <text x="120.0" y="161" font-size="11" fill="#475569" text-anchor="middle">0h</text>
+  <line x1="145.0" y1="120" x2="145.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="170.0" y1="120" x2="170.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="195.0" y1="120" x2="195.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="220.0" y1="120" x2="220.0" y2="146" stroke="#0f172a" stroke-width="2"/>
+  <text x="220.0" y="161" font-size="11" fill="#475569" text-anchor="middle">1h</text>
+  <line x1="245.0" y1="120" x2="245.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="270.0" y1="120" x2="270.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="295.0" y1="120" x2="295.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="320.0" y1="120" x2="320.0" y2="146" stroke="#0f172a" stroke-width="2"/>
+  <text x="320.0" y="161" font-size="11" fill="#475569" text-anchor="middle">2h</text>
+  <line x1="345.0" y1="120" x2="345.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="370.0" y1="120" x2="370.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="395.0" y1="120" x2="395.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="420.0" y1="120" x2="420.0" y2="146" stroke="#0f172a" stroke-width="2"/>
+  <text x="420.0" y="161" font-size="11" fill="#475569" text-anchor="middle">3h</text>
+  <line x1="445.0" y1="120" x2="445.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="470.0" y1="120" x2="470.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="495.0" y1="120" x2="495.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="520.0" y1="120" x2="520.0" y2="146" stroke="#0f172a" stroke-width="2"/>
+  <text x="520.0" y="161" font-size="11" fill="#475569" text-anchor="middle">4h</text>
+  <line x1="545.0" y1="120" x2="545.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="570.0" y1="120" x2="570.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="595.0" y1="120" x2="595.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="620.0" y1="120" x2="620.0" y2="146" stroke="#0f172a" stroke-width="2"/>
+  <text x="620.0" y="161" font-size="11" fill="#475569" text-anchor="middle">5h</text>
+  <line x1="645.0" y1="120" x2="645.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="670.0" y1="120" x2="670.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="695.0" y1="120" x2="695.0" y2="138" stroke="#2563eb" stroke-width="2"/>
+  <line x1="720.0" y1="120" x2="720.0" y2="146" stroke="#0f172a" stroke-width="2"/>
+  <text x="720.0" y="161" font-size="11" fill="#475569" text-anchor="middle">6h</text>
+  <text x="720" y="106" font-size="11" fill="#334155" text-anchor="end" font-family="ui-monospace, Menlo, monospace">[min:✗ 5min:✗ 15min:✓ hour:✓]</text>
+  <!-- range 2h -->
+  <line x1="120" y1="235" x2="720" y2="235" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="104" y="221" font-size="15" font-weight="700" fill="#0f172a" text-anchor="end">zoom 3×</text>
+  <text x="104" y="237" font-size="11.5" fill="#64748b" text-anchor="end">range 2h</text>
+  <line x1="120.0" y1="235" x2="120.0" y2="261" stroke="#0f172a" stroke-width="2"/>
+  <text x="120.0" y="276" font-size="11" fill="#475569" text-anchor="middle">0h</text>
+  <line x1="145.0" y1="235" x2="145.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="170.0" y1="235" x2="170.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="195.0" y1="235" x2="195.0" y2="253" stroke="#2563eb" stroke-width="2"/>
+  <line x1="220.0" y1="235" x2="220.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="245.0" y1="235" x2="245.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="270.0" y1="235" x2="270.0" y2="253" stroke="#2563eb" stroke-width="2"/>
+  <line x1="295.0" y1="235" x2="295.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="320.0" y1="235" x2="320.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="345.0" y1="235" x2="345.0" y2="253" stroke="#2563eb" stroke-width="2"/>
+  <line x1="370.0" y1="235" x2="370.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="395.0" y1="235" x2="395.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="420.0" y1="235" x2="420.0" y2="261" stroke="#0f172a" stroke-width="2"/>
+  <text x="420.0" y="276" font-size="11" fill="#475569" text-anchor="middle">1h</text>
+  <line x1="445.0" y1="235" x2="445.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="470.0" y1="235" x2="470.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="495.0" y1="235" x2="495.0" y2="253" stroke="#2563eb" stroke-width="2"/>
+  <line x1="520.0" y1="235" x2="520.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="545.0" y1="235" x2="545.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="570.0" y1="235" x2="570.0" y2="253" stroke="#2563eb" stroke-width="2"/>
+  <line x1="595.0" y1="235" x2="595.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="620.0" y1="235" x2="620.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="645.0" y1="235" x2="645.0" y2="253" stroke="#2563eb" stroke-width="2"/>
+  <line x1="670.0" y1="235" x2="670.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="695.0" y1="235" x2="695.0" y2="247" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="720.0" y1="235" x2="720.0" y2="261" stroke="#0f172a" stroke-width="2"/>
+  <text x="720.0" y="276" font-size="11" fill="#475569" text-anchor="middle">2h</text>
+  <text x="720" y="221" font-size="11" fill="#334155" text-anchor="end" font-family="ui-monospace, Menlo, monospace">[min:✗ 5min:✓ 15min:✓ hour:✓]</text>
+  <!-- range 30m -->
+  <line x1="120" y1="350" x2="720" y2="350" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="104" y="336" font-size="15" font-weight="700" fill="#0f172a" text-anchor="end">zoom 12×</text>
+  <text x="104" y="352" font-size="11.5" fill="#64748b" text-anchor="end">range 30m</text>
+  <line x1="120.0" y1="350" x2="120.0" y2="376" stroke="#0f172a" stroke-width="2"/>
+  <text x="120.0" y="391" font-size="11" fill="#475569" text-anchor="middle">:00</text>
+  <line x1="140.0" y1="350" x2="140.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="160.0" y1="350" x2="160.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="180.0" y1="350" x2="180.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="200.0" y1="350" x2="200.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="220.0" y1="350" x2="220.0" y2="362" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="240.0" y1="350" x2="240.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="260.0" y1="350" x2="260.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="280.0" y1="350" x2="280.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="300.0" y1="350" x2="300.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="320.0" y1="350" x2="320.0" y2="362" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="340.0" y1="350" x2="340.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="360.0" y1="350" x2="360.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="380.0" y1="350" x2="380.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="400.0" y1="350" x2="400.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="420.0" y1="350" x2="420.0" y2="368" stroke="#2563eb" stroke-width="2"/>
+  <text x="420.0" y="391" font-size="11" fill="#475569" text-anchor="middle">:15</text>
+  <line x1="440.0" y1="350" x2="440.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="460.0" y1="350" x2="460.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="480.0" y1="350" x2="480.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="500.0" y1="350" x2="500.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="520.0" y1="350" x2="520.0" y2="362" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="540.0" y1="350" x2="540.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="560.0" y1="350" x2="560.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="580.0" y1="350" x2="580.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="600.0" y1="350" x2="600.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="620.0" y1="350" x2="620.0" y2="362" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="640.0" y1="350" x2="640.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="660.0" y1="350" x2="660.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="680.0" y1="350" x2="680.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="700.0" y1="350" x2="700.0" y2="357" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="720.0" y1="350" x2="720.0" y2="368" stroke="#2563eb" stroke-width="2"/>
+  <text x="720.0" y="391" font-size="11" fill="#475569" text-anchor="middle">:30</text>
+  <text x="720" y="336" font-size="11" fill="#334155" text-anchor="end" font-family="ui-monospace, Menlo, monospace">[min:✓ 5min:✓ 15min:✓ hour:✓]</text>
+  <text x="104" y="412" font-size="11" fill="#64748b" text-anchor="end">tiers</text>
+  <line x1="120" y1="401" x2="120" y2="415" stroke="#0f172a" stroke-width="2.4"/>
+  <text x="128" y="412" font-size="11" fill="#475569">hour</text>
+  <line x1="180.4" y1="401" x2="180.4" y2="415" stroke="#2563eb" stroke-width="2.4"/>
+  <text x="188.4" y="412" font-size="11" fill="#475569">15min</text>
+  <line x1="247.4" y1="401" x2="247.4" y2="415" stroke="#10b981" stroke-width="2.4"/>
+  <text x="255.4" y="412" font-size="11" fill="#475569">5min</text>
+  <line x1="307.8" y1="401" x2="307.8" y2="415" stroke="#f59e0b" stroke-width="2.4"/>
+  <text x="315.8" y="412" font-size="11" fill="#475569">1min</text>
+</svg>

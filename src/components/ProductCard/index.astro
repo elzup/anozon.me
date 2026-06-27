@@ -5,13 +5,22 @@ export interface Props {
 }
 const { product } = Astro.props
 const size = product.size ?? 'M'
+const kind = product.kind ?? 'app'
+const isPackage = kind === 'package'
+const isVsCodeExtension = kind === 'vscode-extension'
 const hasImage = product.hasImage ?? false
 const hasIcon = !!product.iconFilename
 const imageFit = product.imageFit ?? 'cover'
 const hasWebUrl = product.url && product.urlLive
 const hasGithub = !!product.githubUrl
-const mainHref = hasWebUrl ? product.url : product.githubUrl ?? '#'
-const isDisabled = !hasWebUrl && !hasGithub
+const hasNpm = !!product.npmUrl
+const hasMarketplace = !!product.marketplaceUrl
+const packageName = product.packageName ?? product.title
+const extensionId = product.extensionId ?? product.title
+const mainHref = hasWebUrl
+	? product.url
+	: product.npmUrl ?? product.marketplaceUrl ?? product.githubUrl ?? '#'
+const isDisabled = !hasWebUrl && !hasNpm && !hasMarketplace && !hasGithub
 
 const titleHash = product.title.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)
 const hue = titleHash % 360
@@ -19,7 +28,7 @@ const placeholderBg = `hsl(${hue}, 25%, 92%)`
 const placeholderColor = `hsl(${hue}, 30%, 35%)`
 ---
 
-<div class="card-wrapper" data-size={size}>
+<div class="card-wrapper" data-size={size} data-kind={kind}>
 	<a
 		href={mainHref}
 		target="_blank"
@@ -28,20 +37,51 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 		class="card-link"
 	>
 		<article class="card">
-			{hasImage && (
+			{isPackage && hasImage && (
+				<div class="media pkg-media-img">
+					<div class="pkg-bar pkg-bar-img">
+						<span class="pkg-badge">npm</span>
+						<code class="pkg-cmd"><span class="pkg-prompt">$</span> npm i {packageName}</code>
+					</div>
+					<div class="pkg-frame">
+						<img src={`/static/${product.filename}`} alt={product.title} decoding="async" />
+					</div>
+				</div>
+			)}
+			{isPackage && !hasImage && (
+				<div class="media pkg-media">
+					<div class="pkg-bar">
+						<span class="pkg-badge">npm</span>
+						<span class="pkg-dots"><i></i><i></i><i></i></span>
+					</div>
+					<code class="pkg-cmd"><span class="pkg-prompt">$</span> npm i {packageName}</code>
+				</div>
+			)}
+			{isVsCodeExtension && (
+				<div class="media vscode-media">
+					<div class="vscode-mark">VS</div>
+					<div class="vscode-lines">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<code class="vscode-cmd"><span class="pkg-prompt">$</span> code --install-extension {extensionId}</code>
+				</div>
+			)}
+			{!isPackage && !isVsCodeExtension && hasImage && (
 				<div class:list={['media', `fit-${imageFit}`]}>
-					<img src={`/static/${product.filename}`} alt={product.title} />
+					<img src={`/static/${product.filename}`} alt={product.title} width="16" height="10" decoding="async" />
 					{hasIcon && (
-						<img src={`/static/${product.iconFilename}`} alt={`${product.title} icon`} class="icon-overlay" />
+						<img src={`/static/${product.iconFilename}`} alt={`${product.title} icon`} width="28" height="28" decoding="async" class="icon-overlay" />
 					)}
 				</div>
 			)}
-			{!hasImage && hasIcon && (
+			{!isPackage && !isVsCodeExtension && !hasImage && hasIcon && (
 				<div class="media icon-only">
-					<img src={`/static/${product.iconFilename}`} alt={product.title} class="icon-center" />
+					<img src={`/static/${product.iconFilename}`} alt={product.title} width="64" height="64" decoding="async" class="icon-center" />
 				</div>
 			)}
-			{!hasImage && !hasIcon && (
+			{!isPackage && !isVsCodeExtension && !hasImage && !hasIcon && (
 				<div class="media placeholder" style={`background: ${placeholderBg}; color: ${placeholderColor};`}>
 					<span>{product.title}</span>
 				</div>
@@ -53,8 +93,15 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 		</article>
 	</a>
 	<div class="link-icons">
+		{hasNpm && (
+			<a href={product.npmUrl} target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label={`${product.title} on npm`}>
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"/>
+				</svg>
+			</a>
+		)}
 		{hasWebUrl && (
-			<a href={product.url} target="_blank" rel="noopener noreferrer" class="ext-link" title="Web">
+			<a href={product.url} target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label={`${product.title} website`}>
 				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<circle cx="12" cy="12" r="10"/>
 					<line x1="2" y1="12" x2="22" y2="12"/>
@@ -62,8 +109,15 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 				</svg>
 			</a>
 		)}
+		{hasMarketplace && (
+			<a href={product.marketplaceUrl} target="_blank" rel="noopener noreferrer" class="ext-link" title="VS Code Marketplace" aria-label={`${product.title} on VS Code Marketplace`}>
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M17.4 2.3 8.4 10.5 3.2 6.5 1 7.7v8.6l2.2 1.2 5.2-4 9 8.2L23 19.4V4.6l-5.6-2.3ZM3.6 10.1l2.8 2-2.8 2.1v-4.1Zm13.2 4.7-5.2-3.8 5.2-3.8v7.6Z"/>
+				</svg>
+			</a>
+		)}
 		{hasGithub && (
-			<a href={product.githubUrl} target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub">
+			<a href={product.githubUrl} target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label={`${product.title} on GitHub`}>
 				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
 					<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
 				</svg>
@@ -194,6 +248,195 @@ const placeholderColor = `hsl(${hue}, 30%, 35%)`
 		font-weight: 600;
 		text-align: center;
 		letter-spacing: 0.02em;
+	}
+
+	/* === Package (npm / CLI module) === */
+	.card-wrapper[data-kind='package'] .card {
+		background: #0f1117;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	}
+
+	.card-wrapper[data-kind='package'] .info {
+		border-top: 1px solid #23262e;
+	}
+
+	.card-wrapper[data-kind='package'] h4 {
+		color: #f3f4f6;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.66rem;
+	}
+
+	.card-wrapper[data-kind='package'] p {
+		color: #9aa0aa;
+	}
+
+	.pkg-media {
+		display: flex;
+		flex-direction: column;
+		background: #0f1117;
+		border-bottom: 2px solid #cb3837;
+		box-sizing: border-box;
+		padding: 8px 10px;
+		gap: 8px;
+	}
+
+	.pkg-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 1;
+	}
+
+	.pkg-badge {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.6rem;
+		font-weight: 700;
+		color: #fff;
+		background: #cb3837;
+		padding: 2px 5px;
+		border-radius: 3px;
+		letter-spacing: 0.04em;
+	}
+
+	.pkg-dots {
+		display: flex;
+		gap: 4px;
+	}
+
+	.pkg-dots i {
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: #3a3f4b;
+	}
+
+	.pkg-cmd {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.62rem;
+		color: #d4d8e0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-top: auto;
+	}
+
+	.pkg-prompt {
+		color: #5ce26a;
+		margin-right: 4px;
+	}
+
+	/* === Package with README image (framed) === */
+	.pkg-media-img {
+		display: flex;
+		flex-direction: column;
+		background: #0f1117;
+		border-bottom: 2px solid #cb3837;
+		box-sizing: border-box;
+		padding: 6px 8px 8px;
+		gap: 6px;
+	}
+
+	.pkg-bar-img {
+		justify-content: flex-start;
+		gap: 6px;
+	}
+
+	.pkg-bar-img .pkg-cmd {
+		margin-top: 0;
+		flex: 1;
+		min-width: 0;
+	}
+
+	.pkg-frame {
+		flex: 1;
+		min-height: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.pkg-frame img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		border-radius: 4px;
+		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+	}
+
+	/* === VS Code extension === */
+	.card-wrapper[data-kind='vscode-extension'] .card {
+		background: #09233b;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+	}
+
+	.card-wrapper[data-kind='vscode-extension'] .info {
+		border-top: 1px solid #12395d;
+	}
+
+	.card-wrapper[data-kind='vscode-extension'] h4 {
+		color: #f3f8ff;
+		font-size: 0.66rem;
+	}
+
+	.card-wrapper[data-kind='vscode-extension'] p {
+		color: #b5c6d8;
+	}
+
+	.vscode-media {
+		display: grid;
+		grid-template-columns: 36px 1fr;
+		grid-template-rows: 1fr auto;
+		align-items: center;
+		background: linear-gradient(135deg, #007acc 0%, #0b4f82 100%);
+		border-bottom: 2px solid #22a4f2;
+		box-sizing: border-box;
+		padding: 10px;
+		gap: 8px;
+	}
+
+	.vscode-mark {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 4px;
+		background: rgba(255, 255, 255, 0.16);
+		color: #fff;
+		font-size: 0.78rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.vscode-lines {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.vscode-lines span {
+		display: block;
+		height: 5px;
+		border-radius: 2px;
+		background: rgba(255, 255, 255, 0.42);
+	}
+
+	.vscode-lines span:nth-child(2) {
+		width: 72%;
+	}
+
+	.vscode-lines span:nth-child(3) {
+		width: 48%;
+	}
+
+	.vscode-cmd {
+		grid-column: 1 / -1;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.56rem;
+		color: #eaf6ff;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	/* === Link icons === */
