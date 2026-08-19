@@ -10,8 +10,8 @@
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"lint": "oxlint src --ignore-pattern '*.astro'",
-		"sync:pull": "env -u NOTION_SECRET -u NOTION_TARGET_DB tsx --env-file=.env script/loadProducts.ts",
-		"sync:push": "env -u NOTION_SECRET -u NOTION_TARGET_DB tsx --env-file=.env script/pushProducts.ts",
+		"sync:pull": "env -u NOTION_SECRET -u NOTION_TARGET_DB bun --env-file=.env script/loadProducts.ts",
+		"sync:push": "env -u NOTION_SECRET -u NOTION_TARGET_DB bun --env-file=.env script/pushProducts.ts",
 		"prepare": "husky"
 	},
 	"dependencies": {
@@ -30,9 +30,8 @@
 		"lint-staged": "^15.0.0",
 		"oxlint": "^0.16.0",
 		"postcss-preset-env": "^10.0.0",
-		"tsx": "^4.21.0",
 		"typescript": "^5.7.0",
-		"vitest": "^3"
+		"vitest": "^4.1.11"
 	},
 	"lint-staged": {
 		"src/**/*.{ts,tsx}": [

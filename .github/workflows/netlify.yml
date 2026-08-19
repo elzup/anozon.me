@@ -1,5 +1,5 @@
 # .github/workflows/netlify.yml
-# Cloudflare Pages へ移行中だが、Netlify も並行稼働させて両方を最新 main で動かす
+# ここで build して dist をアップロードする (ホスティング側ではビルドしない)
 name: Build and Deploy to Netlify
 on:
   push:
@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn test
-      - run: yarn build
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      # `bun test` は bun 内蔵ランナーを起動してしまうので run 経由で vitest を呼ぶ
+      - run: bun run test
+      - run: bun run build
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3
