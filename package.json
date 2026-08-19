@@ -7,6 +7,8 @@
 		"dev": "portless run --name anozon-me astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
+		"test": "vitest run",
+		"test:watch": "vitest",
 		"lint": "oxlint src --ignore-pattern '*.astro'",
 		"sync:pull": "env -u NOTION_SECRET -u NOTION_TARGET_DB tsx --env-file=.env script/loadProducts.ts",
 		"sync:push": "env -u NOTION_SECRET -u NOTION_TARGET_DB tsx --env-file=.env script/pushProducts.ts",
@@ -23,12 +25,14 @@
 	"devDependencies": {
 		"@notionhq/client": "2",
 		"@types/node": "^22.0.0",
+		"happy-dom": "^20.11.2",
 		"husky": "^9.0.0",
 		"lint-staged": "^15.0.0",
 		"oxlint": "^0.16.0",
 		"postcss-preset-env": "^10.0.0",
 		"tsx": "^4.21.0",
-		"typescript": "^5.7.0"
+		"typescript": "^5.7.0",
+		"vitest": "^3"
 	},
 	"lint-staged": {
 		"src/**/*.{ts,tsx}": [
