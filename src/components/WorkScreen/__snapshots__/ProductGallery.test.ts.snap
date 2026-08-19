@@ -1,0 +1,1043 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
+"<div class="sections">
+<section class="sec">
+<div class="grid grid-L">
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://dentime.anozon.me/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/dentime.png" alt="Dentime" width="16" height="10" decoding="async">
+<img src="/static/icon-dentime.png" alt="Dentime icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>Dentime</h4>
+<p>時間割時刻管理ツール</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://dentime.anozon.me/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Dentime website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://elzup.com" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/elzup.png" alt="elzup.com" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>elzup.com</h4>
+<p>大学時代の自分跡地</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://elzup.com" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="elzup.com website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://nozctf.web.app" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/nozctf.png" alt="nozctf" width="16" height="10" decoding="async">
+<img src="/static/icon-nozctf.png" alt="nozctf icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>nozctf</h4>
+<p>Firebase で作った web 問題 CTF サイト</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://nozctf.web.app" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="nozctf website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://tools.anozon.me/code-explorer" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/code-explorer.png" alt="Code Explorer" width="16" height="10" decoding="async">
+<img src="/static/icon-code-explorer.png" alt="Code Explorer icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>Code Explorer</h4>
+<p>コード探索・解析ツール</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/code-explorer" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Code Explorer website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://saikorone.web.app/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/saikoron.png" alt="Saikoron" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>Saikoron</h4>
+<p>サイコロ作成・超汎用乱数ツール</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://saikorone.web.app/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Saikoron website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="#" target="_blank" data-disabled="true" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/another-node.png" alt="anozon.me" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>anozon.me</h4>
+<p>プロフィールサイト</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://blog.anozon.me/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/anozonblog.png" alt="blog.anozon.me" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>blog.anozon.me</h4>
+<p>GitHub Actions+Pages で運用しているブログ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://blog.anozon.me/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="blog.anozon.me website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://tools.anozon.me/pikbl-memo" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/pikuburu-memo.png" alt="ピクブルMEMO" width="16" height="10" decoding="async">
+<img src="/static/icon-pikuburu-memo.png" alt="ピクブルMEMO icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>ピクブルMEMO</h4>
+<p>ピクミンブルーム苗管理アプリ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/pikbl-memo" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="ピクブルMEMO website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="L" data-kind="app">
+<a href="https://mitelop.anozon.me/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/mitelop.png" alt="Mitelop" width="16" height="10" decoding="async">
+<img src="/static/icon-mitelop.png" alt="Mitelop icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>Mitelop</h4>
+<p>配信ガジェット</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://mitelop.anozon.me/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Mitelop website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="sec">
+<div class="grid grid-M">
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://elzup.github.io/fupf/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/fupf.png" alt="fupf glyph" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>fupf glyph</h4>
+<p>256 通りのパターン図形を可視化するグリフビューア</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://elzup.github.io/fupf/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="fupf glyph website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/fupf" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="fupf glyph on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://hash-mania.vercel.app/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/hash-mania.png" alt="Hash Mania" width="16" height="10" decoding="async">
+<img src="/static/icon-hash-mania.png" alt="Hash Mania icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>Hash Mania</h4>
+<p>ハッシュを score 形式で学び体系的に理解する PWA</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://hash-mania.vercel.app/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Hash Mania website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/hash-mania" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="Hash Mania on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://github.com/elzup/bayalhost" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/bayalhost.png" alt="bayalhost" width="16" height="10" decoding="async">
+<img src="/static/icon-bayalhost.png" alt="bayalhost icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>bayalhost</h4>
+<p>dev と本番の間で静的ビルドをホストするプレビューサーバー</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://github.com/elzup/bayalhost" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="bayalhost on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://github.com/elzup/dabod" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-contain">
+<img src="/static/dabod.png" alt="dabod" width="16" height="10" decoding="async">
+<img src="/static/icon-dabod.png" alt="dabod icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>dabod</h4>
+<p>Dock 脇に収まる極小デスクトップウィジェット</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://github.com/elzup/dabod" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="dabod on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://github.com/elzup/quota" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/quota.png" alt="quota" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>quota</h4>
+<p>廃棄前の余剰クォータを創作に焚いて貯めるバーナー</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://github.com/elzup/quota" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="quota on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://speed-marubatsu.anozon.workers.dev" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/marubatsu.png" alt="marubatsu" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>marubatsu</h4>
+<p>WebSocket でルーム対戦するリアルタイム◯×ゲーム</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://speed-marubatsu.anozon.workers.dev" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="marubatsu website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/marubatsu" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="marubatsu on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://elzup.github.io/x-clock/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/x-clock.png" alt="x-clock" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>x-clock</h4>
+<p>60進数5桁で時刻を表すデジタル時計 Web Component</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://elzup.github.io/x-clock/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="x-clock website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/x-clock" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="x-clock on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="package">
+<a href="https://www.npmjs.com/package/interval-scheduling" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media pkg-media-img">
+<div class="pkg-bar pkg-bar-img">
+<span class="pkg-badge">npm</span>
+<code class="pkg-cmd">
+<span class="pkg-prompt">$</span> npm i interval-scheduling</code>
+</div>
+<div class="pkg-frame">
+<img src="/static/interval-scheduling.svg" alt="interval-scheduling" decoding="async">
+</div>
+</div>
+<div class="info">
+<h4>interval-scheduling</h4>
+<p>区間スケジューリング最適化アルゴリズム集 (貪欲法ベース)</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://www.npmjs.com/package/interval-scheduling" target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label="interval-scheduling on npm">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/interval-scheduling" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="interval-scheduling on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="package">
+<a href="https://www.npmjs.com/package/rangeize" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media pkg-media-img">
+<div class="pkg-bar pkg-bar-img">
+<span class="pkg-badge">npm</span>
+<code class="pkg-cmd">
+<span class="pkg-prompt">$</span> npm i rangeize</code>
+</div>
+<div class="pkg-frame">
+<img src="/static/rangeize.svg" alt="rangeize" decoding="async">
+</div>
+</div>
+<div class="info">
+<h4>rangeize</h4>
+<p>連続した数値の配列を範囲表現に変換するユーティリティ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://www.npmjs.com/package/rangeize" target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label="rangeize on npm">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/rangeize" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="rangeize on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="package">
+<a href="https://www.npmjs.com/package/zoomscape" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media pkg-media-img">
+<div class="pkg-bar pkg-bar-img">
+<span class="pkg-badge">npm</span>
+<code class="pkg-cmd">
+<span class="pkg-prompt">$</span> npm i zoomscape</code>
+</div>
+<div class="pkg-frame">
+<img src="/static/zoomscape.svg" alt="zoomscape" decoding="async">
+</div>
+</div>
+<div class="info">
+<h4>zoomscape</h4>
+<p>ズーム倍率と表示幅に応じてスケール定規の単位表示を選ぶユーティリティ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://www.npmjs.com/package/zoomscape" target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label="zoomscape on npm">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/zoomscape" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="zoomscape on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="package">
+<a href="https://www.npmjs.com/package/unicode-palette" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media pkg-media-img">
+<div class="pkg-bar pkg-bar-img">
+<span class="pkg-badge">npm</span>
+<code class="pkg-cmd">
+<span class="pkg-prompt">$</span> npm i unicode-palette</code>
+</div>
+<div class="pkg-frame">
+<img src="/static/unicode-palette.png" alt="unicode-palette" decoding="async">
+</div>
+</div>
+<div class="info">
+<h4>unicode-palette</h4>
+<p>Unicode ブロックを一覧化しパレット画像を生成する CLI</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://www.npmjs.com/package/unicode-palette" target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label="unicode-palette on npm">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/unicode-palette" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="unicode-palette on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://elzup.github.io/jigtor/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-contain">
+<img src="/static/jigtor.png" alt="jigtor" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>jigtor</h4>
+<p>config.json をスキーマ駆動フォームで安全に編集するローカル完結エディタ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://elzup.github.io/jigtor/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="jigtor website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/jigtor" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="jigtor on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://tools.anozon.me/scope-timer" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/scope-timer.png" alt="Scope Timer" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>Scope Timer</h4>
+<p>ストリーミングデバッグ用タイマー</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/scope-timer" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Scope Timer website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://tools.anozon.me/clipsh" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/clipsh.png" alt="Clipsh" width="16" height="10" decoding="async">
+<img src="/static/icon-clipsh.png" alt="Clipsh icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>Clipsh</h4>
+<p>クリップボードエディタ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/clipsh" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Clipsh website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="#" target="_blank" data-disabled="true" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/daily-report-ai.png" alt="Daily Report" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>Daily Report</h4>
+<p>AI 日報ダッシュボード</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://tools.anozon.me/spanbox" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/spanbox.png" alt="SpanBox" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>SpanBox</h4>
+<p>グリッド上のブロック配置エディタ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/spanbox" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="SpanBox website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="M" data-kind="app">
+<a href="https://tools.anozon.me/progress-timer" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/progress-timer.png" alt="進行タイマー" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>進行タイマー</h4>
+<p>タイムライン付き進行タイマー</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/progress-timer" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="進行タイマー website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="sec">
+<div class="grid grid-S">
+<div class="card-wrapper" data-size="S" data-kind="app">
+<a href="https://elzup.github.io/ImmortaClock/" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/immortaclock.png" alt="ImmortaClock" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>ImmortaClock</h4>
+<p>依存ゼロで長寿命を狙う単一 HTML の web 時計</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://elzup.github.io/ImmortaClock/" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="ImmortaClock website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/ImmortaClock" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="ImmortaClock on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="package">
+<a href="https://www.npmjs.com/package/random-word-wikipedia" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media pkg-media">
+<div class="pkg-bar">
+<span class="pkg-badge">npm</span>
+<span class="pkg-dots">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</span>
+</div>
+<code class="pkg-cmd">
+<span class="pkg-prompt">$</span> npm i random-word-wikipedia</code>
+</div>
+<div class="info">
+<h4>random-word-wikipedia</h4>
+<p>Wikipedia のランダムページから単語を取得する CLI / module</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://www.npmjs.com/package/random-word-wikipedia" target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label="random-word-wikipedia on npm">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/random-word-wikipedia" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="random-word-wikipedia on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="package">
+<a href="https://www.npmjs.com/package/@elzup/kit" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media pkg-media">
+<div class="pkg-bar">
+<span class="pkg-badge">npm</span>
+<span class="pkg-dots">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</span>
+</div>
+<code class="pkg-cmd">
+<span class="pkg-prompt">$</span> npm i @elzup/kit</code>
+</div>
+<div class="info">
+<h4>@elzup/kit</h4>
+<p>自分用の汎用ユーティリティ詰め合わせ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://www.npmjs.com/package/@elzup/kit" target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label="@elzup/kit on npm">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/kit-js" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="@elzup/kit on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="vscode-extension">
+<a href="https://marketplace.visualstudio.com/items?itemName=anozon.maai-cursor" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media vscode-media">
+<div class="vscode-mark">VS</div>
+<div class="vscode-lines">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</div>
+<code class="vscode-cmd">
+<span class="pkg-prompt">$</span> code --install-extension anozon.maai-cursor</code>
+</div>
+<div class="info">
+<h4>Maai Cursor</h4>
+<p>カーソルから上下 N 行の位置を可視化する VS Code extension</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://marketplace.visualstudio.com/items?itemName=anozon.maai-cursor" target="_blank" rel="noopener noreferrer" class="ext-link" title="VS Code Marketplace" aria-label="Maai Cursor on VS Code Marketplace">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.4 2.3 8.4 10.5 3.2 6.5 1 7.7v8.6l2.2 1.2 5.2-4 9 8.2L23 19.4V4.6l-5.6-2.3ZM3.6 10.1l2.8 2-2.8 2.1v-4.1Zm13.2 4.7-5.2-3.8 5.2-3.8v7.6Z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/vscode-maai-cursor" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="Maai Cursor on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="package">
+<a href="https://www.npmjs.com/package/peeler" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media pkg-media">
+<div class="pkg-bar">
+<span class="pkg-badge">npm</span>
+<span class="pkg-dots">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</span>
+</div>
+<code class="pkg-cmd">
+<span class="pkg-prompt">$</span> npm i peeler</code>
+</div>
+<div class="info">
+<h4>peeler</h4>
+<p>括弧の入れ子構造を木にパースするシンプルなパーサ</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://www.npmjs.com/package/peeler" target="_blank" rel="noopener noreferrer" class="ext-link" title="npm" aria-label="peeler on npm">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+</path>
+</svg>
+</a>
+<a href="https://github.com/elzup/peeler" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="peeler on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="app">
+<a href="https://tools.anozon.me/nigate-typing" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media placeholder" style="background: hsl(281, 25%, 92%); color: hsl(281, 30%, 35%);">
+<span>苦手タイパー</span>
+</div>
+<div class="info">
+<h4>苦手タイパー</h4>
+<p>簡易単語タイピングツール</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/nigate-typing" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="苦手タイパー website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="app">
+<a href="https://github.com/elzup/DesktopStickers" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media placeholder" style="background: hsl(130, 25%, 92%); color: hsl(130, 30%, 35%);">
+<span>DesktopStickers</span>
+</div>
+<div class="info">
+<h4>DesktopStickers</h4>
+<p>好きな技術ロゴを並べたデスクトップ壁紙</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://github.com/elzup/DesktopStickers" target="_blank" rel="noopener noreferrer" class="ext-link" title="GitHub" aria-label="DesktopStickers on GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="app">
+<a href="https://tools.anozon.me/weekday-calc" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/weekday-calc.png" alt="曜日計算" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>曜日計算</h4>
+<p>曜日計算アルゴリズムのステップ可視化</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/weekday-calc" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="曜日計算 website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="app">
+<a href="https://tools.anozon.me/googol" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/googol.png" alt="Googol" width="16" height="10" decoding="async">
+</div>
+<div class="info">
+<h4>Googol</h4>
+<p>10^100 歯車装置 3D ビジュアライザー</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/googol" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="Googol website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="app">
+<a href="https://tools.anozon.me/lissajous" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media fit-cover">
+<img src="/static/lissajous.png" alt="リサージュ曲線" width="16" height="10" decoding="async">
+<img src="/static/icon-lissajous.png" alt="リサージュ曲線 icon" width="28" height="28" decoding="async" class="icon-overlay">
+</div>
+<div class="info">
+<h4>リサージュ曲線</h4>
+<p>リサージュ曲線グリッド可視化</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/lissajous" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="リサージュ曲線 website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="card-wrapper" data-size="S" data-kind="app">
+<a href="https://tools.anozon.me/mushikui-search" target="_blank" data-disabled="false" rel="noopener noreferrer" class="card-link">
+<article class="card">
+<div class="media placeholder" style="background: hsl(124, 25%, 92%); color: hsl(124, 30%, 35%);">
+<span>虫食い検索</span>
+</div>
+<div class="info">
+<h4>虫食い検索</h4>
+<p>ワイルドカード単語検索</p>
+</div>
+</article>
+</a>
+<div class="link-icons">
+<a href="https://tools.anozon.me/mushikui-search" target="_blank" rel="noopener noreferrer" class="ext-link" title="Web" aria-label="虫食い検索 website">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10">
+</circle>
+<line x1="2" y1="12" x2="22" y2="12">
+</line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+</path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>"
+`;

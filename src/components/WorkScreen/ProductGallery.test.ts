@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { products } from '../../api/data'
 import type { ProductSize } from '../../types'
-import { renderFragment } from '../../test/render'
+import { renderFragment, renderNormalizedHtml } from '../../test/render'
 import ProductGallery from './ProductGallery.astro'
 
 const gallery = () => renderFragment(ProductGallery)
@@ -38,6 +38,13 @@ describe('ProductGallery', () => {
 		for (const section of el.querySelectorAll('.sec')) {
 			expect(section.querySelectorAll('.card-wrapper').length).toBeGreaterThan(0)
 		}
+	})
+
+	// 個別の assert が拾わない構造変化 (カードの並び順、意図しない要素の増減) を
+	// 一覧まるごとで押さえる。products.ts の増減でも差分が出るので、
+	// 作品追加時は差分を目視してから -u する
+	it('一覧全体の構造が変わっていない', async () => {
+		expect(await renderNormalizedHtml(ProductGallery)).toMatchSnapshot()
 	})
 
 	it('各カードを自身の size のセクションに入れる', async () => {
