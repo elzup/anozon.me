@@ -1482,9 +1482,39 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/scope-timer-960.webp" srcset="/static/_r/scope-timer-960.webp 960w, /static/_r/scope-timer-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/static/_r/scope-timer-960.webp" srcset="/static/_r/scope-timer-960.webp 960w, /static/_r/scope-timer-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (1/3)" loading="lazy" decoding="async" width="16" height="10">
+</figure>
+<figure class="pm-slide" data-pm-slide>
+<img src="/static/_r/gallery/scope-timer/01-960.webp" srcset="/static/_r/gallery/scope-timer/01-960.webp 960w, /static/_r/gallery/scope-timer/01-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (2/3)" loading="lazy" decoding="async" width="16" height="10">
+</figure>
+<figure class="pm-slide" data-pm-slide>
+<img src="/static/_r/gallery/scope-timer/02-960.webp" srcset="/static/_r/gallery/scope-timer/02-960.webp 960w, /static/_r/gallery/scope-timer/02-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (3/3)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
+<button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="m15 18-6-6 6-6">
+</path>
+</svg>
+</button>
+<button type="button" class="pm-nav pm-next" data-pm-next aria-label="次の画像">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="m9 18 6-6-6-6">
+</path>
+</svg>
+</button>
+<span class="pm-count" data-pm-count aria-live="polite">1 / 3</span>
+</div>
+<div class="pm-thumbs" aria-label="画像の選択">
+<button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
+<img src="/static/_r/scope-timer-480.webp" srcset="/static/_r/scope-timer-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
+<button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
+<img src="/static/_r/gallery/scope-timer/01-480.webp" srcset="/static/_r/gallery/scope-timer/01-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
+<button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
+<img src="/static/_r/gallery/scope-timer/02-480.webp" srcset="/static/_r/gallery/scope-timer/02-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
 </div>
 <div class="pm-body">
 <h3 id="pm-scope-timer-title">Scope Timer</h3>
