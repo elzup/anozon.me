@@ -28,3 +28,6 @@ dist/
 # local tooling
 .agents/
 .rigg/
+
+# 幅別 webp (integrations/responsive-images.ts が dev / build 時に生成)
+/public/static/_r/
