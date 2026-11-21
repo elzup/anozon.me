@@ -19,6 +19,8 @@ export const renderNormalizedHtml = async (
 	return html
 		.replace(/\s+data-astro-cid-[a-z0-9]+(?:="")?/g, '')
 		.replace(/\s+data-astro-source-(?:file|loc)="[^"]*"/g, '')
+		// クライアント script の src もリポの絶対パスになる
+		.replaceAll(process.cwd(), '<root>')
 		.replace(/>\s*</g, '>\n<')
 		.trim()
 }

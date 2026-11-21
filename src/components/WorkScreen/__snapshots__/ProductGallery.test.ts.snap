@@ -3562,6 +3562,6 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 </div>
 </div>
-<script type="module" src="/Users/hiro/.ghq/github.com/elzup/anozon.me/src/components/WorkScreen/ProductGallery.astro?astro&type=script&index=0&lang.ts">
+<script type="module" src="<root>/src/components/WorkScreen/ProductGallery.astro?astro&type=script&index=0&lang.ts">
 </script>"
 `;
