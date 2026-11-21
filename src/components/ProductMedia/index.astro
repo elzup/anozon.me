@@ -1,0 +1,304 @@
+---
+// カードの媒体部分 (16:10)。カードとモーダル (画像の無い作品のヒーロー) で共有する
+import { CARD_WIDTHS, responsiveAttrs } from '../../lib/responsiveImage'
+import type { Product } from '../../types'
+export interface Props {
+	product: Product
+}
+const { product } = Astro.props
+const kind = product.kind ?? 'app'
+const isPackage = kind === 'package'
+const isVsCodeExtension = kind === 'vscode-extension'
+const hasImage = product.hasImage ?? false
+const hasIcon = !!product.iconFilename
+const imageFit = product.imageFit ?? 'cover'
+const packageName = product.packageName ?? product.title
+const extensionId = product.extensionId ?? product.title
+
+const mainImage = responsiveAttrs(`/static/${product.filename}`, CARD_WIDTHS)
+// カードの媒体は最大 ~320px 幅 (ProductGallery の L 列)。スマホは 2 列前後
+const sizes = '(max-width: 600px) 50vw, 320px'
+const iconImage = product.iconFilename ? responsiveAttrs(`/static/${product.iconFilename}`, [480]) : undefined
+
+const titleHash = product.title.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)
+const hue = titleHash % 360
+const placeholderBg = `hsl(${hue}, 25%, 92%)`
+const placeholderColor = `hsl(${hue}, 30%, 35%)`
+---
+
+{isPackage && hasImage && (
+	<div class="media pkg-media-img">
+		<div class="pkg-bar pkg-bar-img">
+			<span class="pkg-badge">npm</span>
+			<code class="pkg-cmd"><span class="pkg-prompt">$</span> npm i {packageName}</code>
+		</div>
+		<div class="pkg-frame">
+			<img {...mainImage} sizes={sizes} alt={product.title} loading="lazy" decoding="async" />
+		</div>
+	</div>
+)}
+{isPackage && !hasImage && (
+	<div class="media pkg-media">
+		<div class="pkg-bar">
+			<span class="pkg-badge">npm</span>
+			<span class="pkg-dots"><i></i><i></i><i></i></span>
+		</div>
+		<code class="pkg-cmd"><span class="pkg-prompt">$</span> npm i {packageName}</code>
+	</div>
+)}
+{isVsCodeExtension && (
+	<div class="media vscode-media">
+		<div class="vscode-mark">VS</div>
+		<div class="vscode-lines">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<code class="vscode-cmd"><span class="pkg-prompt">$</span> code --install-extension {extensionId}</code>
+	</div>
+)}
+{!isPackage && !isVsCodeExtension && hasImage && (
+	<div class:list={['media', `fit-${imageFit}`]}>
+		<img {...mainImage} sizes={sizes} alt={product.title} width="16" height="10" loading="lazy" decoding="async" />
+		{hasIcon && (
+			<img {...iconImage} alt={`${product.title} icon`} width="28" height="28" loading="lazy" decoding="async" class="icon-overlay" />
+		)}
+	</div>
+)}
+{!isPackage && !isVsCodeExtension && !hasImage && hasIcon && (
+	<div class="media icon-only">
+		<img {...iconImage} alt={product.title} width="64" height="64" loading="lazy" decoding="async" class="icon-center" />
+	</div>
+)}
+{!isPackage && !isVsCodeExtension && !hasImage && !hasIcon && (
+	<div class="media placeholder" style={`background: ${placeholderBg}; color: ${placeholderColor};`}>
+		<span>{product.title}</span>
+	</div>
+)}
+
+<style>
+	/* === Media (uniform fixed-ratio area) === */
+	.media {
+		position: relative;
+		aspect-ratio: 16 / 10;
+		line-height: 0;
+		/* 余白が出るとき（contain / 細長画像）の下地 */
+		background: #ececec;
+		overflow: hidden;
+	}
+
+	.media > img:first-child {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	/* デフォルトは上下を切って全面を埋める */
+	.fit-cover > img:first-child {
+		object-fit: cover;
+	}
+
+	/* 細長画像などはレターボックス表示（背景 gray が見える） */
+	.fit-contain > img:first-child {
+		object-fit: contain;
+	}
+
+	.icon-overlay {
+		position: absolute;
+		bottom: 6px;
+		left: 6px;
+		width: 28px;
+		height: 28px;
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 2px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+		object-fit: contain;
+	}
+
+	.icon-only {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #f5f5f5;
+		padding: 16px;
+		box-sizing: border-box;
+	}
+
+	.icon-center {
+		max-width: 64px;
+		max-height: 64px;
+		object-fit: contain;
+	}
+
+	/* === Placeholder === */
+	.placeholder {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 12px;
+		box-sizing: border-box;
+	}
+
+	.placeholder span {
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-align: center;
+		letter-spacing: 0.02em;
+		line-height: 1.25;
+	}
+
+	/* === Package (npm / CLI module) === */
+	.pkg-media {
+		display: flex;
+		flex-direction: column;
+		background: #0f1117;
+		border-bottom: 2px solid #cb3837;
+		box-sizing: border-box;
+		padding: 8px 10px;
+		gap: 8px;
+	}
+
+	.pkg-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 1;
+	}
+
+	.pkg-badge {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.6rem;
+		font-weight: 700;
+		color: #fff;
+		background: #cb3837;
+		padding: 2px 5px;
+		border-radius: 3px;
+		letter-spacing: 0.04em;
+	}
+
+	.pkg-dots {
+		display: flex;
+		gap: 4px;
+	}
+
+	.pkg-dots i {
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: #3a3f4b;
+	}
+
+	.pkg-cmd {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.62rem;
+		color: #d4d8e0;
+		/* .media の line-height: 0 を継ぐと行の高さが 0 になり、下の overflow: hidden で文字ごと切れる */
+		line-height: 1.4;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-top: auto;
+	}
+
+	.pkg-prompt {
+		color: #5ce26a;
+		margin-right: 4px;
+	}
+
+	/* === Package with README image (framed) === */
+	.pkg-media-img {
+		display: flex;
+		flex-direction: column;
+		background: #0f1117;
+		border-bottom: 2px solid #cb3837;
+		box-sizing: border-box;
+		padding: 6px 8px 8px;
+		gap: 6px;
+	}
+
+	.pkg-bar-img {
+		justify-content: flex-start;
+		gap: 6px;
+	}
+
+	.pkg-bar-img .pkg-cmd {
+		margin-top: 0;
+		flex: 1;
+		min-width: 0;
+	}
+
+	.pkg-frame {
+		flex: 1;
+		min-height: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.pkg-frame img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		border-radius: 4px;
+		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+	}
+
+	/* === VS Code extension === */
+	.vscode-media {
+		display: grid;
+		grid-template-columns: 36px 1fr;
+		grid-template-rows: 1fr auto;
+		align-items: center;
+		background: linear-gradient(135deg, #007acc 0%, #0b4f82 100%);
+		border-bottom: 2px solid #22a4f2;
+		box-sizing: border-box;
+		padding: 10px;
+		gap: 8px;
+	}
+
+	.vscode-mark {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 4px;
+		background: rgba(255, 255, 255, 0.16);
+		color: #fff;
+		font-size: 0.78rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.vscode-lines {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.vscode-lines span {
+		display: block;
+		height: 5px;
+		border-radius: 2px;
+		background: rgba(255, 255, 255, 0.42);
+	}
+
+	.vscode-lines span:nth-child(2) {
+		width: 72%;
+	}
+
+	.vscode-lines span:nth-child(3) {
+		width: 48%;
+	}
+
+	.vscode-cmd {
+		grid-column: 1 / -1;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.56rem;
+		color: #eaf6ff;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+</style>

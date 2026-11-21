@@ -20,16 +20,42 @@ describe('ProductGallery', () => {
 		expect(titles).toHaveLength(visibleProducts.length)
 	})
 
-	it('セクションを L → M → S → XS の順に並べる', async () => {
+	it('各グループ内でセクションを L → M → S → XS の順に並べる', async () => {
 		const el = await gallery()
-		const grids = [...el.querySelectorAll('.sec .grid')].map(
-			(grid) => [...grid.classList].find((name) => name.startsWith('grid-'))
-		)
-		const expected = (['L', 'M', 'S', 'XS'] as ProductSize[])
-			.filter((size) => visibleProducts.some((p) => sizeOf(p.size) === size))
-			.map((size) => `grid-${size}`)
 
-		expect(grids).toEqual(expected)
+		for (const group of el.querySelectorAll('.group')) {
+			const isPackages = group.getAttribute('data-group') === 'packages'
+			const members = visibleProducts.filter(
+				(p) => (p.kind === 'package' || p.kind === 'vscode-extension') === isPackages
+			)
+			const grids = [...group.querySelectorAll('.sec .grid')].map(
+				(grid) => [...grid.classList].find((name) => name.startsWith('grid-'))
+			)
+			const expected = (['L', 'M', 'S', 'XS'] as ProductSize[])
+				.filter((size) => members.some((p) => sizeOf(p.size) === size))
+				.map((size) => `grid-${size}`)
+
+			expect(grids).toEqual(expected)
+		}
+	})
+
+	it('npm / VS Code 拡張は Packages グループにだけ入る', async () => {
+		const el = await gallery()
+
+		for (const card of el.querySelectorAll('.card-wrapper')) {
+			const kind = card.getAttribute('data-kind')
+			const group = card.closest('.group')?.getAttribute('data-group')
+			const isPackageLike = kind === 'package' || kind === 'vscode-extension'
+			expect(group).toBe(isPackageLike ? 'packages' : 'apps')
+		}
+	})
+
+	it('モーダルの id が作品間で衝突しない (filename 由来)', async () => {
+		const el = await gallery()
+		const ids = [...el.querySelectorAll('dialog.pm')].map((dialog) => dialog.id)
+
+		expect(ids).toHaveLength(visibleProducts.length)
+		expect(new Set(ids).size).toBe(ids.length)
 	})
 
 	it('該当作品が無いサイズのセクションは描画しない', async () => {

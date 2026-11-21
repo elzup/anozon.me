@@ -1,33 +1,119 @@
 ---
 import { products } from '../../api/data'
-import type { ProductSize } from '../../types'
+import type { Product, ProductSize } from '../../types'
 import ProductCard from '../ProductCard/index.astro'
 
 const order: ProductSize[] = ['L', 'M', 'S', 'XS']
 
+// npm / CLI と VS Code 拡張は見た目 (ターミナル風カード) が違うので、アプリと混ぜずに別グループにする
+const isPackageLike = (product: Product) =>
+	product.kind === 'package' || product.kind === 'vscode-extension'
+
 const visibleProducts = products.filter((product) => !product.hidden)
 
-const sections = order
-	.map((size) => ({
-		size,
-		items: visibleProducts.filter((product) => (product.size ?? 'M') === size),
-	}))
-	.filter((section) => section.items.length > 0)
+const toSections = (items: Product[]) =>
+	order
+		.map((size) => ({
+			size,
+			items: items.filter((product) => (product.size ?? 'M') === size),
+		}))
+		.filter((section) => section.items.length > 0)
+
+const groups = [
+	{ key: 'apps', label: 'Apps', items: visibleProducts.filter((p) => !isPackageLike(p)) },
+	{ key: 'packages', label: 'Packages', items: visibleProducts.filter(isPackageLike) },
+]
+	.map((group) => ({ ...group, sections: toSections(group.items) }))
+	.filter((group) => group.sections.length > 0)
 ---
 
-<div class="sections">
+<div class="groups">
 	{
-		sections.map((section) => (
-			<section class="sec">
-				<div class:list={['grid', `grid-${section.size}`]}>
-					{section.items.map((product) => <ProductCard product={product} />)}
+		groups.map((group) => (
+			<div class="group" data-group={group.key}>
+				<h3 class="group-title">{group.label}</h3>
+				<div class="sections">
+					{group.sections.map((section) => (
+						<section class="sec">
+							<div class:list={['grid', `grid-${section.size}`]}>
+								{section.items.map((product) => <ProductCard product={product} />)}
+							</div>
+						</section>
+					))}
 				</div>
-			</section>
+			</div>
 		))
 	}
 </div>
 
+<script>
+	import { setupProductModals } from '../ProductModal/client'
+	setupProductModals()
+</script>
+
+<style is:global>
+	/* モーダル表示中は背面をスクロールさせない */
+	html:has(dialog.pm[open]) {
+		overflow: hidden;
+	}
+
+	/* カード媒体 → モーダル画像のモーフ。既定 (0.25s / ease) より少し長く、終わりを緩める */
+	::view-transition-group(pm-hero) {
+		animation-duration: 0.38s;
+		animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+	}
+
+	::view-transition-old(pm-hero),
+	::view-transition-new(pm-hero) {
+		/* 縦横比の違う媒体同士でも引き伸ばさずに重ねる */
+		height: 100%;
+		object-fit: cover;
+	}
+
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.24s;
+	}
+
+	::view-transition-new(pm-panel):only-child {
+		animation: pm-panel-in 0.38s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+	}
+
+	::view-transition-old(pm-panel):only-child {
+		animation: pm-panel-out 0.24s ease both;
+	}
+
+	@keyframes pm-panel-in {
+		from {
+			opacity: 0;
+			transform: translateY(14px) scale(0.985);
+		}
+	}
+
+	@keyframes pm-panel-out {
+		to {
+			opacity: 0;
+			transform: translateY(10px) scale(0.985);
+		}
+	}
+</style>
+
 <style>
+	.groups {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		width: 100%;
+	}
+
+	.group-title {
+		margin: 0 0 12px;
+		font-size: 1rem;
+		letter-spacing: 0.08em;
+		color: #666;
+		font-weight: normal;
+	}
+
 	.sections {
 		display: flex;
 		flex-direction: column;

@@ -26,6 +26,8 @@ export type Product = {
 	extensionId?: string
 	/** true の作品は Works 一覧に表示しない (データは残す非公開扱い) */
 	hidden?: boolean
+	/** ooparts 系の作品か (正本は Notion の checkbox「ooparts」) */
+	ooparts?: boolean
 }
 
 export type HobbyNote = {

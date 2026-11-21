@@ -27,6 +27,8 @@ type Product = {
 	imageFit: 'cover' | 'contain'
 	gridColumn: string
 	gridRow: string
+	/** Notion の checkbox「ooparts」。ooparts 系の作品か */
+	ooparts: boolean
 }
 
 const TAG_MAP: Record<string, string> = {
@@ -106,7 +108,10 @@ function extractProduct(page: PageObjectResponse): Product | null {
 	const hasImage = existsSync(imgPath)
 	const imageFit = hasImage ? detectImageFit(imgPath) : 'contain' as const
 
-	return { title, url, urlLive, description, filename, tags, size, hasImage, imageFit }
+	const oopartsProp = props['ooparts']
+	const ooparts = oopartsProp?.type === 'checkbox' && oopartsProp.checkbox
+
+	return { title, url, urlLive, description, filename, tags, size, hasImage, imageFit, ooparts }
 }
 
 async function main() {
@@ -238,6 +243,8 @@ function generateDataFile(products: Product[]): string {
 		lines.push(`\t\timageFit: ${JSON.stringify(p.imageFit)},`)
 		lines.push(`\t\tgridColumn: ${JSON.stringify(p.gridColumn)},`)
 		lines.push(`\t\tgridRow: ${JSON.stringify(p.gridRow)},`)
+		// 付いている作品にだけ出す (他の作品の差分を増やさない)
+		if (p.ooparts) lines.push('\t\tooparts: true,')
 		lines.push('\t},')
 	}
 

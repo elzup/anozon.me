@@ -43,14 +43,15 @@ describe('ProductCard メディア分岐', () => {
 		const media = el.querySelector('.media')
 
 		expect(media?.classList.contains('fit-contain')).toBe(true)
-		expect(media?.querySelector('img')?.getAttribute('src')).toBe('/static/sample.png')
+		expect(media?.querySelector('img')?.getAttribute('src')).toBe('/static/_r/sample-480.webp')
+		expect(media?.querySelector('img')?.getAttribute('srcset')).toContain('/static/_r/sample-960.webp 960w')
 	})
 
 	it('画像なし・アイコンありはアイコン中央表示になる', async () => {
 		const el = await render({ hasImage: false, iconFilename: 'icon.png' })
 
 		expect(el.querySelector('.media.icon-only')).not.toBeNull()
-		expect(el.querySelector('.icon-center')?.getAttribute('src')).toBe('/static/icon.png')
+		expect(el.querySelector('.icon-center')?.getAttribute('src')).toBe('/static/_r/icon-480.webp')
 	})
 
 	it('画像もアイコンも無ければタイトル入り placeholder になる', async () => {
@@ -123,18 +124,10 @@ describe('ProductCard 主リンクの優先順位', () => {
 		).toBe('https://github.com/x')
 	})
 
-	it('リンクが 1 つも無ければ # の disabled カードになる', async () => {
+	it('リンクが 1 つも無くても # のカードとして出す (クリックでモーダルを開く)', async () => {
 		const el = await render({ urlLive: false })
-		const link = el.querySelector('.card-link')
 
-		expect(link?.getAttribute('href')).toBe('#')
-		expect(link?.getAttribute('data-disabled')).toBe('true')
-	})
-
-	it('リンクがあれば disabled にならない', async () => {
-		expect((await render()).querySelector('.card-link')?.getAttribute('data-disabled')).toBe(
-			'false'
-		)
+		expect(el.querySelector('.card-link')?.getAttribute('href')).toBe('#')
 	})
 })
 
@@ -173,5 +166,61 @@ describe('ProductCard 外部リンクアイコン', () => {
 		expect(el.querySelector('.link-icons [title="Web"]')?.getAttribute('aria-label')).toBe(
 			'Sample website'
 		)
+	})
+})
+
+describe('ProductCard 詳細モーダル', () => {
+	it('カードと対になる dialog を出し、data-pm-target で結ぶ', async () => {
+		const el = await render()
+		const target = el.querySelector('.card-wrapper')?.getAttribute('data-pm-target')
+
+		expect(target).toBe('pm-sample')
+		expect(el.querySelector(`dialog#${target}`)).not.toBeNull()
+	})
+
+	it('モーダルにタイトル・説明・持っているリンクを出す', async () => {
+		const el = await render({ githubUrl: 'https://github.com/x' })
+		const dialog = el.querySelector('dialog')
+
+		expect(dialog?.querySelector('h3')?.textContent).toBe('Sample')
+		expect(dialog?.querySelector('.pm-desc')?.textContent).toBe('sample description')
+		expect([...(dialog?.querySelectorAll('.pm-link') ?? [])].map((a) => a.getAttribute('href'))).toEqual([
+			'https://example.com/',
+			'https://github.com/x',
+		])
+	})
+
+	it('画像が 1 枚なら送りボタンを出さない', async () => {
+		const el = await render()
+
+		expect(el.querySelectorAll('dialog [data-pm-slide]')).toHaveLength(1)
+		expect(el.querySelector('dialog [data-pm-next]')).toBeNull()
+	})
+
+	it('画像の無い作品はカードと同じ媒体をヒーローに出す', async () => {
+		const el = await render({ hasImage: false })
+
+		expect(el.querySelector('dialog .pm-hero .media.placeholder')).not.toBeNull()
+	})
+})
+
+describe('ProductCard ooparts 属性', () => {
+	it('ooparts: true の作品だけ data-ooparts を付ける', async () => {
+		const attr = async (ooparts?: boolean) =>
+			(await render({ ooparts })).querySelector('.card-wrapper')?.getAttribute('data-ooparts')
+
+		expect(await attr(true)).toBe('true')
+		expect(await attr(undefined)).toBeNull()
+	})
+})
+
+describe('ProductCard モーダルの画像なしパッケージ', () => {
+	it('画像の無い package はカードの媒体ではなく端末パネルとコピーボタンを出す', async () => {
+		const el = await render({ kind: 'package', hasImage: false, packageName: 'tagset-parser' })
+		const dialog = el.querySelector('dialog')
+
+		expect(dialog?.querySelector('.pm-hero')).toBeNull()
+		expect(dialog?.querySelector('.pm-term code')?.textContent).toContain('npm i tagset-parser')
+		expect(dialog?.querySelector('[data-pm-copy]')?.getAttribute('data-pm-copy')).toBe('npm i tagset-parser')
 	})
 })

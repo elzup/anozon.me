@@ -1,0 +1,543 @@
+---
+// 作品の詳細モーダル。開閉と画像送りは ./client.ts が担う (カード側の .card-link クリックで開く)
+import { MODAL_WIDTHS, responsiveAttrs } from '../../lib/responsiveImage'
+import type { Product } from '../../types'
+import ProductMedia from '../ProductMedia/index.astro'
+export interface Props {
+	product: Product
+	images: string[]
+	id: string
+}
+const { product, images, id } = Astro.props
+const kind = product.kind ?? 'app'
+const hasWebUrl = !!product.url && product.urlLive
+const installCmd =
+	kind === 'package'
+		? `npm i ${product.packageName ?? product.title}`
+		: kind === 'vscode-extension'
+			? `code --install-extension ${product.extensionId ?? product.title}`
+			: undefined
+const links = [
+	hasWebUrl && { href: product.url, label: 'Web で開く', primary: true },
+	product.npmUrl && { href: product.npmUrl, label: 'npm' },
+	product.marketplaceUrl && { href: product.marketplaceUrl, label: 'Marketplace' },
+	product.githubUrl && { href: product.githubUrl, label: 'GitHub' },
+].filter((link): link is { href: string; label: string; primary?: boolean } => !!link)
+const isMulti = images.length > 1
+// 画像の無い npm / VS Code 拡張は、カードの小さい端末を拡大せず、読める大きさの端末パネルを出す
+const showTerminal = images.length === 0 && !!installCmd
+const badge = kind === 'vscode-extension' ? 'VS Code' : 'npm'
+---
+
+<dialog class="pm" id={id} aria-labelledby={`${id}-title`}>
+	<div class="pm-panel">
+		<div class="pm-stage">
+			{images.length > 0 ? (
+				<div class="pm-track" data-pm-track tabindex="-1">
+					{images.map((src, index) => (
+						<figure class="pm-slide" data-pm-slide>
+							<img
+								{...responsiveAttrs(src, MODAL_WIDTHS)}
+								sizes="min(880px, 100vw)"
+								alt={`${product.title} (${index + 1}/${images.length})`}
+								loading="lazy"
+								decoding="async"
+								width="16"
+								height="10"
+							/>
+						</figure>
+					))}
+				</div>
+			) : showTerminal ? (
+				<div class:list={['pm-term', `is-${kind}`]} data-pm-slide>
+					<div class="pm-term-bar">
+						<span class="pm-term-badge">{badge}</span>
+					</div>
+					<div class="pm-term-line">
+						<code><span class="pm-prompt">$</span> {installCmd}</code>
+						<button type="button" class="pm-copy" data-pm-copy={installCmd}>コピー</button>
+					</div>
+				</div>
+			) : (
+				<div class="pm-hero" data-pm-slide>
+					<ProductMedia product={product} />
+				</div>
+			)}
+			{isMulti && (
+				<>
+					<button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+					</button>
+					<button type="button" class="pm-nav pm-next" data-pm-next aria-label="次の画像">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+					</button>
+					<span class="pm-count" data-pm-count aria-live="polite">1 / {images.length}</span>
+				</>
+			)}
+		</div>
+		{isMulti && (
+			<div class="pm-thumbs" aria-label="画像の選択">
+				{images.map((src, index) => (
+					<button type="button" class="pm-thumb" data-pm-thumb={index} aria-label={`${index + 1} 枚目を表示`} aria-current={index === 0 ? 'true' : 'false'}>
+						<img {...responsiveAttrs(src, [480])} sizes="80px" alt="" loading="lazy" decoding="async" />
+					</button>
+				))}
+			</div>
+		)}
+		<div class="pm-body">
+			<h3 id={`${id}-title`}>{product.title}</h3>
+			<p class="pm-desc">{product.description}</p>
+			{installCmd && !showTerminal && (
+				<code class="pm-cmd"><span class="pm-prompt">$</span> {installCmd}</code>
+			)}
+			{product.tags.length > 0 && (
+				<ul class="pm-tags">
+					{product.tags.map((tag) => <li>{tag}</li>)}
+				</ul>
+			)}
+			{links.length > 0 && (
+				<div class="pm-links">
+					{links.map((link) => (
+						<a href={link.href} target="_blank" rel="noopener noreferrer" class:list={['pm-link', link.primary && 'is-primary']}>
+							{link.label}
+							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg>
+						</a>
+					))}
+				</div>
+			)}
+		</div>
+		<button type="button" class="pm-close" data-pm-close aria-label="閉じる">
+			<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg>
+		</button>
+	</div>
+</dialog>
+
+<style>
+	.pm {
+		width: min(880px, 100vw - 24px);
+		max-width: none;
+		max-height: calc(100dvh - 24px);
+		padding: 0;
+		border: none;
+		border-radius: 14px;
+		background: #fff;
+		color: #222;
+		box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+		overflow: hidden;
+		/* View Transitions が使えないブラウザ向けの開閉アニメ。使えるときは client.ts が html.pm-vt を付けて止める */
+		opacity: 0;
+		translate: 0 16px;
+		scale: 0.98;
+		transition:
+			opacity 0.22s ease,
+			translate 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+			scale 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+			overlay 0.32s allow-discrete,
+			display 0.32s allow-discrete;
+	}
+
+	.pm[open] {
+		opacity: 1;
+		translate: 0 0;
+		scale: 1;
+	}
+
+	@starting-style {
+		.pm[open] {
+			opacity: 0;
+			translate: 0 16px;
+			scale: 0.98;
+		}
+	}
+
+	.pm::backdrop {
+		background: rgba(18, 18, 22, 0.5);
+		backdrop-filter: blur(4px);
+		opacity: 0;
+		transition:
+			opacity 0.22s ease,
+			overlay 0.32s allow-discrete,
+			display 0.32s allow-discrete;
+	}
+
+	.pm[open]::backdrop {
+		opacity: 1;
+	}
+
+	@starting-style {
+		.pm[open]::backdrop {
+			opacity: 0;
+		}
+	}
+
+	:global(html.pm-vt) .pm,
+	:global(html.pm-vt) .pm::backdrop {
+		transition: none;
+	}
+
+	.pm-panel {
+		position: relative;
+		max-height: calc(100dvh - 24px);
+		overflow-y: auto;
+		overscroll-behavior: contain;
+	}
+
+	/* === 画像 === */
+	.pm-stage {
+		position: relative;
+		background: #f1f1f1;
+	}
+
+	.pm-track {
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		overscroll-behavior-x: contain;
+		scrollbar-width: none;
+		outline: none;
+	}
+
+	.pm-track::-webkit-scrollbar {
+		display: none;
+	}
+
+	.pm-slide {
+		flex: 0 0 100%;
+		margin: 0;
+		aspect-ratio: 16 / 10;
+		scroll-snap-align: center;
+		scroll-snap-stop: always;
+	}
+
+	.pm-slide img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: contain;
+	}
+
+	.pm-term {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 22px;
+		min-height: 220px;
+		padding: 28px clamp(20px, 5vw, 48px);
+		box-sizing: border-box;
+		background: #0f1117;
+		border-bottom: 3px solid #cb3837;
+	}
+
+	.pm-term.is-vscode-extension {
+		background: linear-gradient(135deg, #007acc 0%, #0b4f82 100%);
+		border-bottom-color: #22a4f2;
+	}
+
+	.pm-term-bar {
+		display: flex;
+		align-items: center;
+	}
+
+	.pm-term-badge {
+		padding: 3px 8px;
+		border-radius: 4px;
+		background: #cb3837;
+		color: #fff;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+	}
+
+	.is-vscode-extension .pm-term-badge {
+		background: rgba(255, 255, 255, 0.18);
+	}
+
+	.pm-term-line {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		min-width: 0;
+	}
+
+	.pm-term-line code {
+		flex: 1;
+		min-width: 0;
+		overflow-x: auto;
+		white-space: nowrap;
+		color: #e6e9ef;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: clamp(0.95rem, 2.6vw, 1.35rem);
+		line-height: 1.5;
+	}
+
+	.pm-copy {
+		flex: none;
+		padding: 6px 12px;
+		border: 1px solid rgba(255, 255, 255, 0.28);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.08);
+		color: #fff;
+		font-size: 0.78rem;
+		cursor: pointer;
+		transition: background 0.15s ease, border-color 0.15s ease;
+	}
+
+	.pm-copy:hover {
+		background: rgba(255, 255, 255, 0.18);
+		border-color: rgba(255, 255, 255, 0.5);
+		color: #fff;
+	}
+
+	.pm-copy:focus-visible {
+		outline: 2px solid #8fb4ff;
+		outline-offset: 2px;
+	}
+
+	.pm-hero :global(.media) {
+		border-radius: 0;
+	}
+
+	.pm-nav {
+		position: absolute;
+		top: 50%;
+		translate: 0 -50%;
+		display: grid;
+		place-items: center;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		border: none;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.92);
+		color: #222;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+		cursor: pointer;
+		transition:
+			opacity 0.2s ease,
+			background 0.15s ease,
+			scale 0.15s ease;
+	}
+
+	.pm-nav:hover {
+		background: #fff;
+		color: #000;
+		scale: 1.06;
+	}
+
+	.pm-nav:active {
+		scale: 0.96;
+	}
+
+	.pm-nav:disabled {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.pm-nav:focus-visible,
+	.pm-close:focus-visible,
+	.pm-link:focus-visible {
+		outline: 2px solid #2b6cff;
+		outline-offset: 2px;
+	}
+
+	.pm-prev {
+		left: 12px;
+	}
+
+	.pm-next {
+		right: 12px;
+	}
+
+	.pm-count {
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		padding: 4px 10px;
+		border-radius: 999px;
+		background: rgba(15, 17, 23, 0.72);
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: 700;
+		font-variant-numeric: tabular-nums;
+		line-height: 1.2;
+	}
+
+	/* 画像の下に小さいサムネを並べ、枚数と今の位置を一目で分かるようにする */
+	.pm-thumbs {
+		display: flex;
+		gap: 8px;
+		padding: 12px 22px 0;
+		overflow-x: auto;
+		scrollbar-width: thin;
+	}
+
+	.pm-thumb {
+		flex: none;
+		width: 80px;
+		aspect-ratio: 16 / 10;
+		padding: 0;
+		border: 2px solid transparent;
+		border-radius: 6px;
+		overflow: hidden;
+		background: #f1f1f1;
+		opacity: 0.55;
+		cursor: pointer;
+		transition:
+			opacity 0.2s ease,
+			border-color 0.2s ease;
+	}
+
+	.pm-thumb img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+
+	.pm-thumb:hover {
+		opacity: 0.85;
+	}
+
+	.pm-thumb[aria-current='true'] {
+		opacity: 1;
+		border-color: #222;
+	}
+
+	.pm-thumb:focus-visible {
+		outline: 2px solid #2b6cff;
+		outline-offset: 2px;
+	}
+
+	/* === 本文 === */
+	.pm-body {
+		padding: 18px 22px 22px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1.15rem;
+		line-height: 1.3;
+	}
+
+	.pm-desc {
+		margin: 0;
+		color: #555;
+		font-size: 0.9rem;
+		line-height: 1.6;
+	}
+
+	.pm-cmd {
+		align-self: flex-start;
+		max-width: 100%;
+		overflow-x: auto;
+		white-space: nowrap;
+		padding: 6px 10px;
+		border-radius: 6px;
+		background: #0f1117;
+		color: #d4d8e0;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.8rem;
+	}
+
+	.pm-prompt {
+		color: #5ce26a;
+	}
+
+	.pm-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.pm-tags li {
+		padding: 2px 8px;
+		border-radius: 999px;
+		background: #f0f0f0;
+		color: #555;
+		font-size: 0.72rem;
+	}
+
+	.pm-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 4px;
+	}
+
+	.pm-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		padding: 7px 14px;
+		border-radius: 999px;
+		border: 1px solid #d6d6d6;
+		background: #fff;
+		color: #222;
+		font-size: 0.82rem;
+		text-decoration: none;
+		transition:
+			background 0.15s ease,
+			border-color 0.15s ease,
+			color 0.15s ease;
+	}
+
+	.pm-link:hover {
+		background: #f3f3f3;
+		border-color: #bbb;
+		color: #000;
+	}
+
+	.pm-link.is-primary {
+		background: #222;
+		border-color: #222;
+		color: #fff;
+	}
+
+	.pm-link.is-primary:hover {
+		background: #000;
+		border-color: #000;
+		color: #fff;
+	}
+
+	.pm-close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		display: grid;
+		place-items: center;
+		width: 34px;
+		height: 34px;
+		padding: 0;
+		border: none;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.92);
+		color: #333;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+		cursor: pointer;
+		transition:
+			background 0.15s ease,
+			color 0.15s ease;
+	}
+
+	.pm-close:hover {
+		background: #fff;
+		color: #000;
+	}
+
+	@media (max-width: 600px) {
+		.pm-nav {
+			display: none;
+		}
+
+		.pm-body {
+			padding: 14px 16px 18px;
+		}
+	}
+</style>
