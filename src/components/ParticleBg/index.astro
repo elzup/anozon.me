@@ -1,0 +1,98 @@
+---
+import type { ParticlePreset } from './presets'
+
+export interface Props {
+	preset?: ParticlePreset
+	// fill: 親の箱いっぱいに敷く / sticky: 画面に貼り付けたまま中身をその上に流す
+	// gutter: sticky と同じ重ね方で、中央のコンテンツ幅だけ mask で抜いて左右の余白にだけ見せる
+	mode?: 'fill' | 'sticky' | 'gutter'
+}
+const { preset, mode: defaultMode = 'fill' } = Astro.props
+// preset 側の指定を優先する (短いセクションは sticky だと 100vh まで伸びてしまうので fill にしたい等)
+const mode = preset?.mode ?? defaultMode
+// count と mobile 上書きはクライアントで画面サイズを見てから属性にする (下の script)
+// OS の「視差効果を減らす」が ON でも静止画にせず常に動かす (サイトの方針。preset で 'true' を渡せば戻せる)
+const { count, ...attrs } = preset?.params ?? {}
+---
+
+{
+	preset ? (
+		<div class:list={['pbg', mode === 'fill' ? 'fill' : 'sticky', mode === 'gutter' && 'gutter']}>
+			<particle-life-bg
+				class="layer"
+				respect-reduced-motion="false"
+				{...attrs}
+				data-base-count={count}
+				data-mobile={JSON.stringify(preset.mobile ?? {})}
+			/>
+			<div class="body">
+				<slot />
+			</div>
+		</div>
+	) : (
+		<slot />
+	)
+}
+
+<script>
+	import { applyResponsive } from './responsive'
+
+	// 属性を決めてから element を登録する。先に登録すると既定値で 1 回 spawn してから作り直しになる
+	document
+		.querySelectorAll<HTMLElement>('particle-life-bg[data-base-count]')
+		.forEach(applyResponsive)
+	import('particle-life-bg/element')
+</script>
+
+<style>
+	.pbg {
+		position: relative;
+	}
+
+	.fill {
+		height: 100%;
+	}
+
+	.fill .layer {
+		position: absolute;
+		inset: 0;
+	}
+
+	.body {
+		position: relative;
+		height: 100%;
+	}
+
+	/* sticky: 背景を 100vh で貼り付け、中身を同じ高さだけ引き上げて重ねる */
+	.sticky .layer {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+	}
+
+	.sticky .body {
+		margin-top: -100vh;
+		min-height: 100vh;
+		/* 子の margin が外へ抜けて重なりがずれないよう BFC を作る */
+		display: flow-root;
+	}
+
+	/* 中央 (Works の 960px 幅 + 少しの余裕) を透明にし、端へ向けて fade で出す。
+	   canvas を 2 枚に分けると sim も 2 つ回るので、1 枚を mask で抜く */
+	.gutter {
+		--gutter-hole: min(1000px, 96vw);
+		--gutter-fade: 120px;
+	}
+
+	.gutter .layer {
+		mask-image: linear-gradient(
+			to right,
+			#000 0,
+			#000 calc(50% - var(--gutter-hole) / 2 - var(--gutter-fade)),
+			transparent calc(50% - var(--gutter-hole) / 2),
+			transparent calc(50% + var(--gutter-hole) / 2),
+			#000 calc(50% + var(--gutter-hole) / 2 + var(--gutter-fade)),
+			#000 100%
+		);
+	}
+</style>

@@ -20,7 +20,8 @@
 		"@iconify-json/mdi": "^1.2.0",
 		"@iconify-json/ri": "^1.2.0",
 		"astro": "^5.0.0",
-		"astro-icon": "^1.1.0"
+		"astro-icon": "^1.1.0",
+		"particle-life-bg": "^0.1.0"
 	},
 	"devDependencies": {
 		"@notionhq/client": "2",

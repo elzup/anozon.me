@@ -11,6 +11,7 @@
         "@iconify-json/ri": "^1.2.0",
         "astro": "^5.0.0",
         "astro-icon": "^1.1.0",
+        "particle-life-bg": "^0.1.0",
       },
       "devDependencies": {
         "@notionhq/client": "2",
@@ -891,6 +892,8 @@
     "parse5-htmlparser2-tree-adapter": ["parse5-htmlparser2-tree-adapter@7.1.0", "", { "dependencies": { "domhandler": "^5.0.3", "parse5": "^7.0.0" } }, "sha512-ruw5xyKs6lrpo9x9rCZqZZnIUntICjQAd0Wsmp396Ul9lN/h+ifgVV1x1gZHi8euej6wTfpqX8j+BFQxF0NS/g=="],
 
     "parse5-parser-stream": ["parse5-parser-stream@7.1.2", "", { "dependencies": { "parse5": "^7.0.0" } }, "sha512-JyeQc9iwFLn5TbvvqACIF/VXG6abODeB3Fwmv/TGdLk2LfbWkaySGY72at4+Ty7EkPZj854u4CrICqNk2qIbow=="],
+
+    "particle-life-bg": ["particle-life-bg@0.1.0", "", { "peerDependencies": { "react": ">=18" }, "optionalPeers": ["react"] }, "sha512-3GhFFcuTqX65wCICcPUEtDF29HMfybLUkkpFKH1x+k4/377O4X5u5y5uLT8+TX7hZtQixWcYbyP4KFxfEFDHAA=="],
 
     "path-key": ["path-key@3.1.1", "", {}, "sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q=="],
 

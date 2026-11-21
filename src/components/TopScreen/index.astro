@@ -2,13 +2,22 @@
 import Links from '../Links/index.astro'
 import Menu from '../Menu/index.astro'
 import Decoration from './Decoration.astro'
+import ParticleBg from '../ParticleBg/index.astro'
+import type { ParticlePreset } from '../ParticleBg/presets'
+
+export interface Props {
+	particle?: ParticlePreset
+}
+const { particle } = Astro.props
 ---
 
 <div>
 	<Decoration />
 	<div class="content">
 		<div class="eye-catch">
-			<div class="image-wrap" title="Another Node - anozon"></div>
+			<ParticleBg preset={particle} mode="fill">
+				<div class="image-wrap" title="Another Node - anozon"></div>
+			</ParticleBg>
 		</div>
 		<Menu />
 		<Links />

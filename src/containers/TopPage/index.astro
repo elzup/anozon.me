@@ -1,21 +1,30 @@
 ---
 import Footer from '../../components/Footer/index.astro'
 import HobbyScreen from '../../components/HobbyScreen/index.astro'
+import ParticleBg from '../../components/ParticleBg/index.astro'
+import type { ParticlePreset, ParticleSlot } from '../../components/ParticleBg/presets'
 import ProfileScreen from '../../components/ProfileScreen/index.astro'
 import TopScreen from '../../components/TopScreen/index.astro'
 import WorkScreen from '../../components/WorkScreen/index.astro'
+
+export interface Props {
+	// 指定したセクションにだけ particle-life-bg を敷く (未指定なら従来どおり)
+	particles?: Partial<Record<ParticleSlot, ParticlePreset>>
+}
+const { particles = {} } = Astro.props
 ---
 
 <div>
-	<TopScreen />
+	<TopScreen particle={particles.eyecatch} />
 	<div class="screen">
-		<ProfileScreen />
-		<WorkScreen />
-		<HobbyScreen />
-		<Footer />
+		<ParticleBg preset={particles.screen} mode="gutter">
+			<ParticleBg preset={particles.profile} mode="sticky"><ProfileScreen /></ParticleBg>
+			<ParticleBg preset={particles.works} mode="sticky"><WorkScreen /></ParticleBg>
+			<ParticleBg preset={particles.hobby} mode="sticky"><HobbyScreen /></ParticleBg>
+			<Footer />
+		</ParticleBg>
 	</div>
 </div>
-
 <style>
 	:root > div {
 		position: absolute;
