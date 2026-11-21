@@ -462,13 +462,13 @@ export const products: Product[] = [
 	{
 		title: "999",
 		url: "https://anoz-memosupo.web.app/",
-		urlLive: true,
+		urlLive: false,
 		githubUrl: "https://github.com/elzup/999",
 		description: "メモリースポーツ用 3桁数字変換表作成ツール",
 		filename: "999.png",
 		iconFilename: "icon-999.png",
 		tags: ["TypeScript","React"],
-		size: "M",
+		size: "L",
 		hasImage: true,
 	},
 	{
