@@ -17,17 +17,30 @@ const { count, ...attrs } = preset?.params ?? {}
 
 {
 	preset ? (
-		<div class:list={['pbg', mode === 'fill' ? 'fill' : 'sticky', mode === 'gutter' && 'gutter']}>
+		<div
+			class:list={[
+				'pbg',
+				mode === 'fill' ? 'fill' : 'sticky',
+				mode === 'gutter' && 'gutter',
+				preset.night && 'night',
+			]}
+		>
 			<particle-life-bg
 				class="layer"
 				respect-reduced-motion="false"
 				{...attrs}
 				data-base-count={count}
 				data-mobile={JSON.stringify(preset.mobile ?? {})}
+				data-week-colors={preset.weekColors ? '' : undefined}
+				data-aster-spawn={preset.asterSpawn ? '' : undefined}
 			/>
 			<div class="body">
 				<slot />
 			</div>
+			<aside class="params" aria-label="particle parameters">
+				<span class="params-badge">params</span>
+				<div class="params-panel" data-param-panel />
+			</aside>
 		</div>
 	) : (
 		<slot />
@@ -35,13 +48,41 @@ const { count, ...attrs } = preset?.params ?? {}
 }
 
 <script>
+	import { ensureSeed, renderParamTable } from './paramTable'
 	import { applyResponsive } from './responsive'
+	import { createAsterSpawn } from './asterSpawn'
+	import { weekTypeColors } from './weekColor'
+
+	const elements = [...document.querySelectorAll<HTMLElement>('particle-life-bg[data-base-count]')]
 
 	// 属性を決めてから element を登録する。先に登録すると既定値で 1 回 spawn してから作り直しになる
-	document
-		.querySelectorAll<HTMLElement>('particle-life-bg[data-base-count]')
-		.forEach(applyResponsive)
+	elements.forEach((el) => {
+		applyResponsive(el)
+		ensureSeed(el)
+		// build 時ではなく閲覧時の曜日にする (静的サイトなので build 日の色で固まってしまう)
+		if (el.hasAttribute('data-week-colors')) {
+			// 曜日によって種類数が 6 か 7 に変わるので types も合わせる
+			const colors = weekTypeColors()
+			el.setAttribute('types', String(colors.length))
+			el.setAttribute('colors', colors.join(' '))
+		}
+		// spawn は関数なので属性では渡せない。登録前に代入しておくと element が最初の撒きで拾う
+		if (el.hasAttribute('data-aster-spawn')) {
+			Object.assign(el, { options: { spawn: createAsterSpawn() } })
+		}
+	})
 	import('particle-life-bg/element')
+		.then(() => customElements.whenDefined('particle-life-bg'))
+		.then(() =>
+			elements.forEach((el) => {
+				const params = el.parentElement?.querySelector<HTMLElement>(':scope > .params')
+				const panel = params?.querySelector<HTMLElement>('[data-param-panel]')
+				if (!params || !panel) return
+				renderParamTable(el, panel)
+				params.addEventListener('mouseenter', () => renderParamTable(el, panel))
+			})
+		)
+		.catch((error) => console.error('[ParticleBg] particle-life-bg の読み込みに失敗', error))
 </script>
 
 <style>
@@ -75,6 +116,96 @@ const { count, ...attrs } = preset?.params ?? {}
 		min-height: 100vh;
 		/* 子の margin が外へ抜けて重なりがずれないよう BFC を作る */
 		display: flow-root;
+	}
+
+	/* 暗い背景の preset。中の文字は --text / --text-dim を読む (ProfileScreen, Screen) */
+	.night {
+		color: #ececec;
+		--text-dim: #b8b8b8;
+		--rule: #444;
+	}
+
+	/* 右下の小さなバッジ。hover した時だけ引力行列の表を開く */
+	.params {
+		position: absolute;
+		right: 8px;
+		bottom: 8px;
+		z-index: 1;
+		font: 10px/1.3 ui-monospace, monospace;
+	}
+
+	.params-badge {
+		display: block;
+		text-align: right;
+		opacity: 0.35;
+		cursor: default;
+	}
+
+	.params-panel {
+		display: none;
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		padding: 6px;
+		/* バッジは地の文字色を継ぐが、表は白い板なので暗い背景の preset でも暗い文字に固定する */
+		color: #333;
+		background: rgba(255, 255, 255, 0.92);
+		border-radius: 4px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		white-space: nowrap;
+	}
+
+	.params:hover .params-badge {
+		opacity: 0.8;
+	}
+
+	.params:hover .params-panel {
+		display: block;
+	}
+
+	.params-panel :global(p) {
+		margin: 0 0 4px;
+	}
+
+	.params-panel :global(table) {
+		border-collapse: collapse;
+	}
+
+	/* Layout.astro の `* { font-family }` が要素ごとに当たり、親からの monospace の継承を潰すので各セルに直接書く */
+	.params-badge,
+	.params-panel :global(p),
+	.params-panel :global(th),
+	.params-panel :global(td) {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.params-panel :global(th),
+	.params-panel :global(td) {
+		padding: 1px 3px;
+		text-align: right;
+		font-weight: normal;
+	}
+
+	/* 行見出し (番号 + draw-style の略字) は左揃え */
+	.params-panel :global(tr > th:first-child) {
+		text-align: left;
+	}
+
+	/* 種類の色見本。gray scheme だと白に近い色もあるので枠を付ける */
+	.params-panel :global(th)::before {
+		content: '';
+		display: inline-block;
+		width: 7px;
+		height: 7px;
+		margin-right: 2px;
+		background: var(--swatch, transparent);
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		vertical-align: middle;
+	}
+
+	.params-panel :global(tr:first-child th:first-child)::before {
+		display: none;
 	}
 
 	/* 中央 (Works の 960px 幅 + 少しの余裕) を透明にし、端へ向けて fade で出す。

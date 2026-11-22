@@ -64,6 +64,8 @@ import Screen from '../Screen/index.astro'
 		font-size: 2rem;
 		letter-spacing: 0.1em;
 		padding: 4px 2em;
+		/* 地が明るい板なので、暗い背景の preset で文字色が明るくなっても暗い文字に固定する */
+		color: #222;
 		background: #f5f5f5;
 		border: 2px solid #e0e0e0;
 		border-radius: 4px;
@@ -76,6 +78,6 @@ import Screen from '../Screen/index.astro'
 
 	.bio p {
 		margin: 4px 0;
-		color: #444;
+		color: var(--text-dim, #444);
 	}
 </style>
