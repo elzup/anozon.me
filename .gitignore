@@ -29,5 +29,9 @@ dist/
 .agents/
 .rigg/
 
-# 幅別 webp (integrations/responsive-images.ts が dev / build 時に生成)
+# 旧 integrations/responsive-images.ts の生成物 (幅別は /cdn-cgi/image/ に移した)
 /public/static/_r/
+
+# R2 (img.anozon.me) が正本。script/syncImagesToR2.ts で上げる
+/public/static/tumblr/
+/public/static/gallery/

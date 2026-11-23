@@ -11,8 +11,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://dentime.anozon.me/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/dentime-480.webp" srcset="/static/_r/dentime-480.webp 480w, /static/_r/dentime-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Dentime" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-dentime-480.webp" srcset="/static/_r/icon-dentime-480.webp 480w" alt="Dentime icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/dentime.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/dentime.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/dentime.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Dentime" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-dentime.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-dentime.png 480w" alt="Dentime icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>Dentime</h4>
@@ -37,7 +37,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/dentime-960.webp" srcset="/static/_r/dentime-960.webp 960w, /static/_r/dentime-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Dentime (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/dentime.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/dentime.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/dentime.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Dentime (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -69,7 +69,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://elzup.com" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/elzup-480.webp" srcset="/static/_r/elzup-480.webp 480w, /static/_r/elzup-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="elzup.com" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/elzup.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/elzup.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/elzup.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="elzup.com" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>elzup.com</h4>
@@ -94,13 +94,13 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/elzup-960.webp" srcset="/static/_r/elzup-960.webp 960w, /static/_r/elzup-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="elzup.com (1/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/elzup.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/elzup.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/elzup.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="elzup.com (1/3)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/elzup/01-960.webp" srcset="/static/_r/gallery/elzup/01-960.webp 960w, /static/_r/gallery/elzup/01-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="elzup.com (2/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/elzup/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/elzup/01.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/elzup/01.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="elzup.com (2/3)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/elzup/02-960.webp" srcset="/static/_r/gallery/elzup/02-960.webp 960w, /static/_r/gallery/elzup/02-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="elzup.com (3/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/elzup/02.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/elzup/02.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/elzup/02.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="elzup.com (3/3)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -119,13 +119,13 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/elzup-480.webp" srcset="/static/_r/elzup-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/elzup.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/elzup.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/elzup/01-480.webp" srcset="/static/_r/gallery/elzup/01-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/elzup/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/elzup/01.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/elzup/02-480.webp" srcset="/static/_r/gallery/elzup/02-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/elzup/02.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/elzup/02.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -155,8 +155,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://nozctf.web.app" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/nozctf-480.webp" srcset="/static/_r/nozctf-480.webp 480w, /static/_r/nozctf-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="nozctf" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-nozctf-480.webp" srcset="/static/_r/icon-nozctf-480.webp 480w" alt="nozctf icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/nozctf.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/nozctf.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/nozctf.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="nozctf" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-nozctf.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-nozctf.png 480w" alt="nozctf icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>nozctf</h4>
@@ -181,7 +181,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/nozctf-960.webp" srcset="/static/_r/nozctf-960.webp 960w, /static/_r/nozctf-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="nozctf (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/nozctf.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/nozctf.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/nozctf.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="nozctf (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -213,8 +213,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/code-explorer" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/code-explorer-480.webp" srcset="/static/_r/code-explorer-480.webp 480w, /static/_r/code-explorer-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Code Explorer" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-code-explorer-480.webp" srcset="/static/_r/icon-code-explorer-480.webp 480w" alt="Code Explorer icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/code-explorer.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/code-explorer.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/code-explorer.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Code Explorer" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-code-explorer.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-code-explorer.png 480w" alt="Code Explorer icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>Code Explorer</h4>
@@ -239,13 +239,19 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/code-explorer-960.webp" srcset="/static/_r/code-explorer-960.webp 960w, /static/_r/code-explorer-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (1/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/code-explorer.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/code-explorer.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/code-explorer.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (1/5)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/code-explorer/01-960.webp" srcset="/static/_r/gallery/code-explorer/01-960.webp 960w, /static/_r/gallery/code-explorer/01-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (2/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/01-byte.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/01-byte.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/code-explorer/01-byte.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (2/5)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/code-explorer/02-960.webp" srcset="/static/_r/gallery/code-explorer/02-960.webp 960w, /static/_r/gallery/code-explorer/02-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (3/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/02-utf8.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/02-utf8.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/code-explorer/02-utf8.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (3/5)" loading="lazy" decoding="async" width="16" height="10">
+</figure>
+<figure class="pm-slide" data-pm-slide>
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/03-packet.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/03-packet.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/code-explorer/03-packet.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (4/5)" loading="lazy" decoding="async" width="16" height="10">
+</figure>
+<figure class="pm-slide" data-pm-slide>
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/04-top.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/code-explorer/04-top.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/code-explorer/04-top.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Code Explorer (5/5)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -260,17 +266,23 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </path>
 </svg>
 </button>
-<span class="pm-count" data-pm-count aria-live="polite">1 / 3</span>
+<span class="pm-count" data-pm-count aria-live="polite">1 / 5</span>
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/code-explorer-480.webp" srcset="/static/_r/code-explorer-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/code-explorer.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/code-explorer.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/code-explorer/01-480.webp" srcset="/static/_r/gallery/code-explorer/01-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/01-byte.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/01-byte.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/code-explorer/02-480.webp" srcset="/static/_r/gallery/code-explorer/02-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/02-utf8.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/02-utf8.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
+<button type="button" class="pm-thumb" data-pm-thumb="3" aria-label="4 枚目を表示" aria-current="false">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/03-packet.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/03-packet.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
+<button type="button" class="pm-thumb" data-pm-thumb="4" aria-label="5 枚目を表示" aria-current="false">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/04-top.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/code-explorer/04-top.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -301,8 +313,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://github.com/elzup/999" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/999-480.webp" srcset="/static/_r/999-480.webp 480w, /static/_r/999-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="999" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-999-480.webp" srcset="/static/_r/icon-999-480.webp 480w" alt="999 icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/999.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/999.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/999.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="999" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-999.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-999.png 480w" alt="999 icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>999</h4>
@@ -323,16 +335,16 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/999-960.webp" srcset="/static/_r/999-960.webp 960w, /static/_r/999-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (1/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/999.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/999.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/999.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (1/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/999/01-960.webp" srcset="/static/_r/gallery/999/01-960.webp 960w, /static/_r/gallery/999/01-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (2/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/999/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/999/01.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/999/01.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (2/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/999/02-960.webp" srcset="/static/_r/gallery/999/02-960.webp 960w, /static/_r/gallery/999/02-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (3/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/999/02.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/999/02.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/999/02.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (3/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/999/03-960.webp" srcset="/static/_r/gallery/999/03-960.webp 960w, /static/_r/gallery/999/03-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (4/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/999/03.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/999/03.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/999/03.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="999 (4/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -351,16 +363,16 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/999-480.webp" srcset="/static/_r/999-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/999.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/999.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/999/01-480.webp" srcset="/static/_r/gallery/999/01-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/999/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/999/01.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/999/02-480.webp" srcset="/static/_r/gallery/999/02-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/999/02.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/999/02.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="3" aria-label="4 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/999/03-480.webp" srcset="/static/_r/gallery/999/03-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/999/03.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/999/03.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -391,7 +403,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://saikorone.web.app/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/saikoron-480.webp" srcset="/static/_r/saikoron-480.webp 480w, /static/_r/saikoron-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Saikoron" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/saikoron.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/saikoron.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/saikoron.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Saikoron" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>Saikoron</h4>
@@ -416,7 +428,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/saikoron-960.webp" srcset="/static/_r/saikoron-960.webp 960w, /static/_r/saikoron-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Saikoron (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/saikoron.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/saikoron.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/saikoron.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Saikoron (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -444,7 +456,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="#" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/another-node-480.webp" srcset="/static/_r/another-node-480.webp 480w, /static/_r/another-node-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="anozon.me" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/another-node.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/another-node.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/another-node.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="anozon.me" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>anozon.me</h4>
@@ -459,7 +471,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/another-node-960.webp" srcset="/static/_r/another-node-960.webp 960w, /static/_r/another-node-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="anozon.me (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/another-node.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/another-node.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/another-node.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="anozon.me (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -483,7 +495,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://blog.anozon.me/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/anozonblog-480.webp" srcset="/static/_r/anozonblog-480.webp 480w, /static/_r/anozonblog-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="blog.anozon.me" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/anozonblog.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/anozonblog.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/anozonblog.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="blog.anozon.me" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>blog.anozon.me</h4>
@@ -508,7 +520,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/anozonblog-960.webp" srcset="/static/_r/anozonblog-960.webp 960w, /static/_r/anozonblog-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="blog.anozon.me (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/anozonblog.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/anozonblog.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/anozonblog.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="blog.anozon.me (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -540,8 +552,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/pikbl-memo" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/pikuburu-memo-480.webp" srcset="/static/_r/pikuburu-memo-480.webp 480w, /static/_r/pikuburu-memo-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="ピクブルMEMO" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-pikuburu-memo-480.webp" srcset="/static/_r/icon-pikuburu-memo-480.webp 480w" alt="ピクブルMEMO icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/pikuburu-memo.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/pikuburu-memo.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/pikuburu-memo.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="ピクブルMEMO" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-pikuburu-memo.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-pikuburu-memo.png 480w" alt="ピクブルMEMO icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>ピクブルMEMO</h4>
@@ -566,7 +578,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/pikuburu-memo-960.webp" srcset="/static/_r/pikuburu-memo-960.webp 960w, /static/_r/pikuburu-memo-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="ピクブルMEMO (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/pikuburu-memo.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/pikuburu-memo.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/pikuburu-memo.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="ピクブルMEMO (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -598,8 +610,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://mitelop.anozon.me/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/mitelop-480.webp" srcset="/static/_r/mitelop-480.webp 480w, /static/_r/mitelop-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Mitelop" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-mitelop-480.webp" srcset="/static/_r/icon-mitelop-480.webp 480w" alt="Mitelop icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/mitelop.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/mitelop.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/mitelop.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Mitelop" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-mitelop.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-mitelop.png 480w" alt="Mitelop icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>Mitelop</h4>
@@ -624,7 +636,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/mitelop-960.webp" srcset="/static/_r/mitelop-960.webp 960w, /static/_r/mitelop-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Mitelop (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/mitelop.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/mitelop.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/mitelop.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Mitelop (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -661,7 +673,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://elzup.github.io/fupf/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/fupf-480.webp" srcset="/static/_r/fupf-480.webp 480w, /static/_r/fupf-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="fupf glyph" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/fupf.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/fupf.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/fupf.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="fupf glyph" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>fupf glyph</h4>
@@ -692,16 +704,16 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/fupf-960.webp" srcset="/static/_r/fupf-960.webp 960w, /static/_r/fupf-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (1/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/fupf.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/fupf.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/fupf.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (1/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/fupf/fupf-1-960.webp" srcset="/static/_r/gallery/fupf/fupf-1-960.webp 960w, /static/_r/gallery/fupf/fupf-1-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (2/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-1.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-1.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-1.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (2/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/fupf/fupf-2-960.webp" srcset="/static/_r/gallery/fupf/fupf-2-960.webp 960w, /static/_r/gallery/fupf/fupf-2-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (3/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-2.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-2.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-2.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (3/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/fupf/fupf-3-960.webp" srcset="/static/_r/gallery/fupf/fupf-3-960.webp 960w, /static/_r/gallery/fupf/fupf-3-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (4/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-3.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-3.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-3.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="fupf glyph (4/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -720,16 +732,16 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/fupf-480.webp" srcset="/static/_r/fupf-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/fupf.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/fupf.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/fupf/fupf-1-480.webp" srcset="/static/_r/gallery/fupf/fupf-1-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-1.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-1.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/fupf/fupf-2-480.webp" srcset="/static/_r/gallery/fupf/fupf-2-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-2.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-2.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="3" aria-label="4 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/fupf/fupf-3-480.webp" srcset="/static/_r/gallery/fupf/fupf-3-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-3.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/fupf/fupf-3.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -766,8 +778,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://hash-mania.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/hash-mania-480.webp" srcset="/static/_r/hash-mania-480.webp 480w, /static/_r/hash-mania-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Hash Mania" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-hash-mania-480.webp" srcset="/static/_r/icon-hash-mania-480.webp 480w" alt="Hash Mania icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/hash-mania.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/hash-mania.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/hash-mania.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Hash Mania" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-hash-mania.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-hash-mania.png 480w" alt="Hash Mania icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>Hash Mania</h4>
@@ -792,7 +804,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/hash-mania-960.webp" srcset="/static/_r/hash-mania-960.webp 960w, /static/_r/hash-mania-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Hash Mania (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/hash-mania.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/hash-mania.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/hash-mania.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Hash Mania (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -824,8 +836,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://github.com/elzup/bayalhost" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/bayalhost-480.webp" srcset="/static/_r/bayalhost-480.webp 480w, /static/_r/bayalhost-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="bayalhost" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-bayalhost-480.webp" srcset="/static/_r/icon-bayalhost-480.webp 480w" alt="bayalhost icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/bayalhost.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/bayalhost.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/bayalhost.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="bayalhost" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-bayalhost.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-bayalhost.png 480w" alt="bayalhost icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>bayalhost</h4>
@@ -846,7 +858,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/bayalhost-960.webp" srcset="/static/_r/bayalhost-960.webp 960w, /static/_r/bayalhost-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="bayalhost (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/bayalhost.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/bayalhost.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/bayalhost.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="bayalhost (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -878,8 +890,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="#" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-contain">
-<img src="/static/_r/dabod-480.webp" srcset="/static/_r/dabod-480.webp 480w, /static/_r/dabod-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="ddaabb" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-dabod-480.webp" srcset="/static/_r/icon-dabod-480.webp 480w" alt="ddaabb icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/dabod.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/dabod.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/dabod.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="ddaabb" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-dabod.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-dabod.png 480w" alt="ddaabb icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>ddaabb</h4>
@@ -894,7 +906,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/dabod-960.webp" srcset="/static/_r/dabod-960.webp 960w, /static/_r/dabod-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="ddaabb (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/dabod.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/dabod.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/dabod.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="ddaabb (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -920,7 +932,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="#" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/quota-480.webp" srcset="/static/_r/quota-480.webp 480w, /static/_r/quota-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="quota" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/quota.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/quota.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/quota.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="quota" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>quota</h4>
@@ -935,10 +947,10 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/quota-960.webp" srcset="/static/_r/quota-960.webp 960w, /static/_r/quota-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="quota (1/2)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/quota.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/quota.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/quota.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="quota (1/2)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/quota/01-960.webp" srcset="/static/_r/gallery/quota/01-960.webp 960w, /static/_r/gallery/quota/01-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="quota (2/2)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/quota/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/quota/01.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/quota/01.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="quota (2/2)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -957,10 +969,10 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/quota-480.webp" srcset="/static/_r/quota-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/quota.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/quota.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/quota/01-480.webp" srcset="/static/_r/gallery/quota/01-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/quota/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/quota/01.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -984,7 +996,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://speed-marubatsu.anozon.workers.dev" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/marubatsu-480.webp" srcset="/static/_r/marubatsu-480.webp 480w, /static/_r/marubatsu-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="marubatsu" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/marubatsu.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/marubatsu.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/marubatsu.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="marubatsu" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>marubatsu</h4>
@@ -1015,7 +1027,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/marubatsu-960.webp" srcset="/static/_r/marubatsu-960.webp 960w, /static/_r/marubatsu-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="marubatsu (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/marubatsu.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/marubatsu.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/marubatsu.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="marubatsu (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1053,7 +1065,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://mathkb.anozon.me/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/math-kb-480.webp" srcset="/static/_r/math-kb-480.webp 480w, /static/_r/math-kb-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="math-kb" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/math-kb.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/math-kb.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/math-kb.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="math-kb" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>math-kb</h4>
@@ -1084,10 +1096,10 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/math-kb-960.webp" srcset="/static/_r/math-kb-960.webp 960w, /static/_r/math-kb-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="math-kb (1/2)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/math-kb.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/math-kb.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/math-kb.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="math-kb (1/2)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/math-kb/01-960.webp" srcset="/static/_r/gallery/math-kb/01-960.webp 960w, /static/_r/gallery/math-kb/01-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="math-kb (2/2)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/math-kb/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/math-kb/01.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/math-kb/01.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="math-kb (2/2)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -1106,10 +1118,10 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/math-kb-480.webp" srcset="/static/_r/math-kb-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/math-kb.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/math-kb.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/math-kb/01-480.webp" srcset="/static/_r/gallery/math-kb/01-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/math-kb/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/math-kb/01.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -1146,7 +1158,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://github.com/elzup/hakugin-font" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/hakugin-font-480.webp" srcset="/static/_r/hakugin-font-480.webp 480w, /static/_r/hakugin-font-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="hakugin-font" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/hakugin-font.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/hakugin-font.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/hakugin-font.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="hakugin-font" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>hakugin-font</h4>
@@ -1167,7 +1179,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/hakugin-font-960.webp" srcset="/static/_r/hakugin-font-960.webp 960w, /static/_r/hakugin-font-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="hakugin-font (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/hakugin-font.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/hakugin-font.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/hakugin-font.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="hakugin-font (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1199,7 +1211,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://cistercian-svg-api.vercel.app" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/cistercian-480.webp" srcset="/static/_r/cistercian-480.webp 480w, /static/_r/cistercian-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Cistercian SVG API" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/cistercian.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/cistercian.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/cistercian.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Cistercian SVG API" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>Cistercian SVG API</h4>
@@ -1230,7 +1242,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/cistercian-960.webp" srcset="/static/_r/cistercian-960.webp 960w, /static/_r/cistercian-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Cistercian SVG API (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/cistercian.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/cistercian.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/cistercian.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Cistercian SVG API (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1336,7 +1348,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://github.com/elzup/seufinder" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/seufinder-480.webp" srcset="/static/_r/seufinder-480.webp 480w, /static/_r/seufinder-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="seufinder" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/seufinder.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/seufinder.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/seufinder.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="seufinder" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>seufinder</h4>
@@ -1357,7 +1369,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/seufinder-960.webp" srcset="/static/_r/seufinder-960.webp 960w, /static/_r/seufinder-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="seufinder (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/seufinder.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/seufinder.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/seufinder.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="seufinder (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1389,7 +1401,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://elzup.github.io/jigtor/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-contain">
-<img src="/static/_r/jigtor-480.webp" srcset="/static/_r/jigtor-480.webp 480w, /static/_r/jigtor-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="jigtor" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/jigtor.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/jigtor.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/jigtor.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="jigtor" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>jigtor</h4>
@@ -1420,7 +1432,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/jigtor-960.webp" srcset="/static/_r/jigtor-960.webp 960w, /static/_r/jigtor-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="jigtor (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/jigtor.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/jigtor.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/jigtor.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="jigtor (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1457,7 +1469,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/scope-timer" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/scope-timer-480.webp" srcset="/static/_r/scope-timer-480.webp 480w, /static/_r/scope-timer-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Scope Timer" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/scope-timer.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/scope-timer.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/scope-timer.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Scope Timer" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>Scope Timer</h4>
@@ -1482,13 +1494,13 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/scope-timer-960.webp" srcset="/static/_r/scope-timer-960.webp 960w, /static/_r/scope-timer-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (1/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/scope-timer.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/scope-timer.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/scope-timer.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (1/3)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/scope-timer/01-960.webp" srcset="/static/_r/gallery/scope-timer/01-960.webp 960w, /static/_r/gallery/scope-timer/01-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (2/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/scope-timer/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/scope-timer/01.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/scope-timer/01.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (2/3)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/scope-timer/02-960.webp" srcset="/static/_r/gallery/scope-timer/02-960.webp 960w, /static/_r/gallery/scope-timer/02-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (3/3)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/scope-timer/02.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/scope-timer/02.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/scope-timer/02.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Scope Timer (3/3)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -1507,13 +1519,13 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/scope-timer-480.webp" srcset="/static/_r/scope-timer-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/scope-timer.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/scope-timer.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/scope-timer/01-480.webp" srcset="/static/_r/gallery/scope-timer/01-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/scope-timer/01.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/scope-timer/01.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/scope-timer/02-480.webp" srcset="/static/_r/gallery/scope-timer/02-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/scope-timer/02.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/scope-timer/02.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -1544,8 +1556,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/clipsh" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/clipsh-480.webp" srcset="/static/_r/clipsh-480.webp 480w, /static/_r/clipsh-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Clipsh" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-clipsh-480.webp" srcset="/static/_r/icon-clipsh-480.webp 480w" alt="Clipsh icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/clipsh.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/clipsh.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/clipsh.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Clipsh" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-clipsh.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-clipsh.png 480w" alt="Clipsh icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>Clipsh</h4>
@@ -1570,7 +1582,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/clipsh-960.webp" srcset="/static/_r/clipsh-960.webp 960w, /static/_r/clipsh-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Clipsh (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/clipsh.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/clipsh.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/clipsh.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Clipsh (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1601,7 +1613,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="#" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/daily-report-ai-480.webp" srcset="/static/_r/daily-report-ai-480.webp 480w, /static/_r/daily-report-ai-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Daily Report" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/daily-report-ai.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/daily-report-ai.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/daily-report-ai.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Daily Report" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>Daily Report</h4>
@@ -1616,7 +1628,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/daily-report-ai-960.webp" srcset="/static/_r/daily-report-ai-960.webp 960w, /static/_r/daily-report-ai-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Daily Report (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/daily-report-ai.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/daily-report-ai.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/daily-report-ai.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Daily Report (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1641,7 +1653,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/spanbox" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/spanbox-480.webp" srcset="/static/_r/spanbox-480.webp 480w, /static/_r/spanbox-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="SpanBox" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/spanbox.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/spanbox.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/spanbox.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="SpanBox" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>SpanBox</h4>
@@ -1666,16 +1678,16 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/spanbox-960.webp" srcset="/static/_r/spanbox-960.webp 960w, /static/_r/spanbox-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (1/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/spanbox.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/spanbox.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/spanbox.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (1/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/spanbox/spanbox-1-960.webp" srcset="/static/_r/gallery/spanbox/spanbox-1-960.webp 960w, /static/_r/gallery/spanbox/spanbox-1-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (2/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-1.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-1.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-1.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (2/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/spanbox/spanbox-3-960.webp" srcset="/static/_r/gallery/spanbox/spanbox-3-960.webp 960w, /static/_r/gallery/spanbox/spanbox-3-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (3/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-3.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-3.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-3.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (3/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gallery/spanbox/spanbox-4-960.webp" srcset="/static/_r/gallery/spanbox/spanbox-4-960.webp 960w, /static/_r/gallery/spanbox/spanbox-4-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (4/4)" loading="lazy" decoding="async" width="16" height="10">
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-4.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-4.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-4.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="SpanBox (4/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 <button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
@@ -1694,16 +1706,16 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 </div>
 <div class="pm-thumbs" aria-label="画像の選択">
 <button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
-<img src="/static/_r/spanbox-480.webp" srcset="/static/_r/spanbox-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/spanbox.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/spanbox.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/spanbox/spanbox-1-480.webp" srcset="/static/_r/gallery/spanbox/spanbox-1-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-1.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-1.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/spanbox/spanbox-3-480.webp" srcset="/static/_r/gallery/spanbox/spanbox-3-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-3.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-3.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 <button type="button" class="pm-thumb" data-pm-thumb="3" aria-label="4 枚目を表示" aria-current="false">
-<img src="/static/_r/gallery/spanbox/spanbox-4-480.webp" srcset="/static/_r/gallery/spanbox/spanbox-4-480.webp 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-4.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/spanbox/spanbox-4.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
 </button>
 </div>
 <div class="pm-body">
@@ -1734,7 +1746,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/progress-timer" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/progress-timer-480.webp" srcset="/static/_r/progress-timer-480.webp 480w, /static/_r/progress-timer-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="進行タイマー" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/progress-timer.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/progress-timer.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/progress-timer.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="進行タイマー" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>進行タイマー</h4>
@@ -1759,7 +1771,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/progress-timer-960.webp" srcset="/static/_r/progress-timer-960.webp 960w, /static/_r/progress-timer-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="進行タイマー (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/progress-timer.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/progress-timer.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/progress-timer.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="進行タイマー (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1795,7 +1807,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://elzup.github.io/henteko-bar/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/henteko-bar-480.webp" srcset="/static/_r/henteko-bar-480.webp 480w, /static/_r/henteko-bar-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="henteko-bar" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/henteko-bar.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/henteko-bar.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/henteko-bar.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="henteko-bar" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>henteko-bar</h4>
@@ -1826,7 +1838,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/henteko-bar-960.webp" srcset="/static/_r/henteko-bar-960.webp 960w, /static/_r/henteko-bar-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="henteko-bar (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/henteko-bar.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/henteko-bar.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/henteko-bar.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="henteko-bar (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1863,7 +1875,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://elzup.github.io/ImmortaClock/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/immortaclock-480.webp" srcset="/static/_r/immortaclock-480.webp 480w, /static/_r/immortaclock-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="ImmortaClock" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/immortaclock.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/immortaclock.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/immortaclock.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="ImmortaClock" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>ImmortaClock</h4>
@@ -1894,7 +1906,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/immortaclock-960.webp" srcset="/static/_r/immortaclock-960.webp 960w, /static/_r/immortaclock-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="ImmortaClock (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/immortaclock.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/immortaclock.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/immortaclock.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="ImmortaClock (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1931,7 +1943,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://elzup.github.io/x-clock/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/x-clock-480.webp" srcset="/static/_r/x-clock-480.webp 480w, /static/_r/x-clock-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="x-clock" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/x-clock.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/x-clock.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/x-clock.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="x-clock" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>x-clock</h4>
@@ -1962,7 +1974,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/x-clock-960.webp" srcset="/static/_r/x-clock-960.webp 960w, /static/_r/x-clock-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="x-clock (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/x-clock.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/x-clock.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/x-clock.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="x-clock (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -1999,7 +2011,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://elzup.github.io/kyoupro-lib/" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/kyoupro-lib-480.webp" srcset="/static/_r/kyoupro-lib-480.webp 480w, /static/_r/kyoupro-lib-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="kyoupro-lib" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/kyoupro-lib.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/kyoupro-lib.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/kyoupro-lib.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="kyoupro-lib" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>kyoupro-lib</h4>
@@ -2030,7 +2042,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/kyoupro-lib-960.webp" srcset="/static/_r/kyoupro-lib-960.webp 960w, /static/_r/kyoupro-lib-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="kyoupro-lib (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/kyoupro-lib.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/kyoupro-lib.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/kyoupro-lib.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="kyoupro-lib (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -2067,7 +2079,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/nigate-typing" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/nigate-typer-480.webp" srcset="/static/_r/nigate-typer-480.webp 480w, /static/_r/nigate-typer-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="苦手タイパー" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/nigate-typer.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/nigate-typer.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/nigate-typer.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="苦手タイパー" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>苦手タイパー</h4>
@@ -2092,7 +2104,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/nigate-typer-960.webp" srcset="/static/_r/nigate-typer-960.webp 960w, /static/_r/nigate-typer-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="苦手タイパー (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/nigate-typer.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/nigate-typer.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/nigate-typer.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="苦手タイパー (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -2123,7 +2135,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://github.com/elzup/DesktopStickers" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/desktopstickers-480.webp" srcset="/static/_r/desktopstickers-480.webp 480w, /static/_r/desktopstickers-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="DesktopStickers" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/desktopstickers.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/desktopstickers.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/desktopstickers.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="DesktopStickers" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>DesktopStickers</h4>
@@ -2144,7 +2156,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/desktopstickers-960.webp" srcset="/static/_r/desktopstickers-960.webp 960w, /static/_r/desktopstickers-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="DesktopStickers (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/desktopstickers.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/desktopstickers.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/desktopstickers.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="DesktopStickers (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -2175,7 +2187,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/weekday-calc" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/weekday-calc-480.webp" srcset="/static/_r/weekday-calc-480.webp 480w, /static/_r/weekday-calc-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="曜日計算" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/weekday-calc.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/weekday-calc.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/weekday-calc.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="曜日計算" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>曜日計算</h4>
@@ -2200,7 +2212,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/weekday-calc-960.webp" srcset="/static/_r/weekday-calc-960.webp 960w, /static/_r/weekday-calc-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="曜日計算 (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/weekday-calc.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/weekday-calc.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/weekday-calc.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="曜日計算 (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -2232,7 +2244,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/googol" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/googol-480.webp" srcset="/static/_r/googol-480.webp 480w, /static/_r/googol-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Googol" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/googol.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/googol.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/googol.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="Googol" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>Googol</h4>
@@ -2257,7 +2269,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/googol-960.webp" srcset="/static/_r/googol-960.webp 960w, /static/_r/googol-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Googol (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/googol.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/googol.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/googol.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="Googol (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -2290,8 +2302,8 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/lissajous" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/lissajous-480.webp" srcset="/static/_r/lissajous-480.webp 480w, /static/_r/lissajous-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="リサージュ曲線" width="16" height="10" loading="lazy" decoding="async">
-<img src="/static/_r/icon-lissajous-480.webp" srcset="/static/_r/icon-lissajous-480.webp 480w" alt="リサージュ曲線 icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/lissajous.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/lissajous.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/lissajous.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="リサージュ曲線" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-lissajous.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/icon-lissajous.png 480w" alt="リサージュ曲線 icon" width="28" height="28" loading="lazy" decoding="async" class="icon-overlay">
 </div>
 <div class="info">
 <h4>リサージュ曲線</h4>
@@ -2316,7 +2328,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/lissajous-960.webp" srcset="/static/_r/lissajous-960.webp 960w, /static/_r/lissajous-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="リサージュ曲線 (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/lissajous.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/lissajous.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/lissajous.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="リサージュ曲線 (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -2348,7 +2360,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <a href="https://tools.anozon.me/mushikui-search" target="_blank" rel="noopener noreferrer" class="card-link" aria-haspopup="dialog">
 <article class="card">
 <div class="media fit-cover">
-<img src="/static/_r/mushikui-search-480.webp" srcset="/static/_r/mushikui-search-480.webp 480w, /static/_r/mushikui-search-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="虫食い検索" width="16" height="10" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/mushikui-search.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/mushikui-search.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/mushikui-search.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="虫食い検索" width="16" height="10" loading="lazy" decoding="async">
 </div>
 <div class="info">
 <h4>虫食い検索</h4>
@@ -2373,7 +2385,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/mushikui-search-960.webp" srcset="/static/_r/mushikui-search-960.webp 960w, /static/_r/mushikui-search-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="虫食い検索 (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/mushikui-search.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/mushikui-search.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/mushikui-search.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="虫食い検索 (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -2706,7 +2718,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <span class="pkg-prompt">$</span> npm i particle-life-bg</code>
 </div>
 <div class="pkg-frame">
-<img src="/static/_r/particle-life-bg-480.webp" srcset="/static/_r/particle-life-bg-480.webp 480w, /static/_r/particle-life-bg-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="particle-life-bg" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="particle-life-bg" loading="lazy" decoding="async">
 </div>
 </div>
 <div class="info">
@@ -2744,9 +2756,45 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/particle-life-bg-960.webp" srcset="/static/_r/particle-life-bg-960.webp 960w, /static/_r/particle-life-bg-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="particle-life-bg (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="particle-life-bg (1/4)" loading="lazy" decoding="async" width="16" height="10">
+</figure>
+<figure class="pm-slide" data-pm-slide>
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/1-title.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/1-title.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/1-title.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="particle-life-bg (2/4)" loading="lazy" decoding="async" width="16" height="10">
+</figure>
+<figure class="pm-slide" data-pm-slide>
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/2-ember.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/2-ember.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/2-ember.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="particle-life-bg (3/4)" loading="lazy" decoding="async" width="16" height="10">
+</figure>
+<figure class="pm-slide" data-pm-slide>
+<img src="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/3-neon.png" srcset="https://img.anozon.me/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/3-neon.png 960w, https://img.anozon.me/cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/3-neon.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="particle-life-bg (4/4)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
+<button type="button" class="pm-nav pm-prev" data-pm-prev aria-label="前の画像">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="m15 18-6-6 6-6">
+</path>
+</svg>
+</button>
+<button type="button" class="pm-nav pm-next" data-pm-next aria-label="次の画像">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="m9 18 6-6-6-6">
+</path>
+</svg>
+</button>
+<span class="pm-count" data-pm-count aria-live="polite">1 / 4</span>
+</div>
+<div class="pm-thumbs" aria-label="画像の選択">
+<button type="button" class="pm-thumb" data-pm-thumb="0" aria-label="1 枚目を表示" aria-current="true">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/particle-life-bg.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
+<button type="button" class="pm-thumb" data-pm-thumb="1" aria-label="2 枚目を表示" aria-current="false">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/1-title.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/1-title.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
+<button type="button" class="pm-thumb" data-pm-thumb="2" aria-label="3 枚目を表示" aria-current="false">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/2-ember.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/2-ember.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
+<button type="button" class="pm-thumb" data-pm-thumb="3" aria-label="4 枚目を表示" aria-current="false">
+<img src="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/3-neon.png" srcset="https://img.anozon.me/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/gallery/particle-life-bg/3-neon.png 480w" class="astro-3rjstelj" sizes="80px" alt="" loading="lazy" decoding="async">
+</button>
 </div>
 <div class="pm-body">
 <h3 id="pm-particle-life-bg-title">particle-life-bg</h3>
@@ -2795,7 +2843,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <span class="pkg-prompt">$</span> npm i @gamod/tic-tac-toe</code>
 </div>
 <div class="pkg-frame">
-<img src="/static/_r/gamod-480.webp" srcset="/static/_r/gamod-480.webp 480w, /static/_r/gamod-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="gamod" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/gamod.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/gamod.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/gamod.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="gamod" loading="lazy" decoding="async">
 </div>
 </div>
 <div class="info">
@@ -2833,7 +2881,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/gamod-960.webp" srcset="/static/_r/gamod-960.webp 960w, /static/_r/gamod-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="gamod (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/gamod.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/gamod.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/gamod.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="gamod (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>
@@ -3102,7 +3150,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <span class="pkg-prompt">$</span> npm i unicode-palette</code>
 </div>
 <div class="pkg-frame">
-<img src="/static/_r/unicode-palette-480.webp" srcset="/static/_r/unicode-palette-480.webp 480w, /static/_r/unicode-palette-960.webp 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="unicode-palette" loading="lazy" decoding="async">
+<img src="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/unicode-palette.png" srcset="/cdn-cgi/image/width=480,fit=scale-down,format=auto,quality=80/static/unicode-palette.png 480w, /cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/unicode-palette.png 960w" class="astro-macrhtcw" sizes="(max-width: 600px) 50vw, 320px" alt="unicode-palette" loading="lazy" decoding="async">
 </div>
 </div>
 <div class="info">
@@ -3130,7 +3178,7 @@ exports[`ProductGallery > 一覧全体の構造が変わっていない 1`] = `
 <div class="pm-stage">
 <div class="pm-track" data-pm-track tabindex="-1">
 <figure class="pm-slide" data-pm-slide>
-<img src="/static/_r/unicode-palette-960.webp" srcset="/static/_r/unicode-palette-960.webp 960w, /static/_r/unicode-palette-1800.webp 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="unicode-palette (1/1)" loading="lazy" decoding="async" width="16" height="10">
+<img src="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/unicode-palette.png" srcset="/cdn-cgi/image/width=960,fit=scale-down,format=auto,quality=80/static/unicode-palette.png 960w, /cdn-cgi/image/width=1800,fit=scale-down,format=auto,quality=80/static/unicode-palette.png 1800w" class="astro-3rjstelj" sizes="min(880px, 100vw)" alt="unicode-palette (1/1)" loading="lazy" decoding="async" width="16" height="10">
 </figure>
 </div>
 </div>

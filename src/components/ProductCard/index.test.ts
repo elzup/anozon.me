@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { Product } from '../../types'
 import { renderFragment } from '../../test/render'
+import { variantUrl } from '../../lib/responsiveImage'
 import ProductCard from './index.astro'
 
 const baseProduct: Product = {
@@ -43,15 +44,15 @@ describe('ProductCard メディア分岐', () => {
 		const media = el.querySelector('.media')
 
 		expect(media?.classList.contains('fit-contain')).toBe(true)
-		expect(media?.querySelector('img')?.getAttribute('src')).toBe('/static/_r/sample-480.webp')
-		expect(media?.querySelector('img')?.getAttribute('srcset')).toContain('/static/_r/sample-960.webp 960w')
+		expect(media?.querySelector('img')?.getAttribute('src')).toBe(variantUrl('/static/sample.png', 480))
+		expect(media?.querySelector('img')?.getAttribute('srcset')).toContain(`${variantUrl('/static/sample.png', 960)} 960w`)
 	})
 
 	it('画像なし・アイコンありはアイコン中央表示になる', async () => {
 		const el = await render({ hasImage: false, iconFilename: 'icon.png' })
 
 		expect(el.querySelector('.media.icon-only')).not.toBeNull()
-		expect(el.querySelector('.icon-center')?.getAttribute('src')).toBe('/static/_r/icon-480.webp')
+		expect(el.querySelector('.icon-center')?.getAttribute('src')).toBe(variantUrl('/static/icon.png', 480))
 	})
 
 	it('画像もアイコンも無ければタイトル入り placeholder になる', async () => {
