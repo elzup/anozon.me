@@ -1,3 +1,15 @@
 name = "anozon-me"
-compatibility_date = "2026-06-10"
-pages_build_output_dir = "./dist"
+compatibility_date = "2026-11-01"
+# 本番ドメインとは別に、確認・ベンチ用に workers.dev も残す
+workers_dev = true
+
+routes = [
+  { pattern = "anozon.me", custom_domain = true },
+  { pattern = "www.anozon.me", custom_domain = true },
+]
+
+# スクリプト (main) を持たない assets だけの Worker。静的配信のリクエストは課金・無料枠の計上対象外
+[assets]
+directory = "./dist"
+# Netlify の _redirects `/* /index.html 200` と同じ挙動 (存在しないパスは index.html を返す)
+not_found_handling = "single-page-application"

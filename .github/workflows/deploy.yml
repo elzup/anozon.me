@@ -1,6 +1,6 @@
-# .github/workflows/netlify.yml
-# ここで build して dist をアップロードする (ホスティング側ではビルドしない)
-name: Build and Deploy to Netlify
+# .github/workflows/deploy.yml
+# ここで build して dist を Cloudflare Workers (static assets) へ上げる。PR ではテストとビルドだけ行う
+name: Build and Deploy to Cloudflare Workers
 on:
   push:
   pull_request:
@@ -22,15 +22,12 @@ jobs:
       - run: bun run test
       - run: bun run build
 
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3
+      # 本番 (anozon.me / www の Custom Domain) は main だけ。設定は wrangler.toml
+      - name: Deploy to Cloudflare Workers
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: cloudflare/wrangler-action@v3
         with:
-          publish-dir: './dist'
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: 'Deploy from GitHub Actions'
-          enable-commit-comment: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
         timeout-minutes: 5
